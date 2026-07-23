@@ -1,0 +1,618 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>School Outreach Playbook — Dorina School Wellbeing Strategy</title>
+<style>
+:root{
+  --teal:#164F4A;--teal-2:#0F3835;--sand:#F4E8D2;--sand-2:#FBF7EF;--apricot:#EBA36B;--rose:#B86B5B;
+  --ink:#182220;--muted:#60706C;--line:#E6D9C5;--card:#FFFDF8;--white:#fff;--shadow:0 20px 55px rgba(31,45,42,.12);
+  --radius:22px;--content:900px;--nav:330px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:linear-gradient(180deg,var(--sand-2),#fff 42%,#f7efe1);color:var(--ink);font:16px/1.68 Georgia,'Times New Roman',serif;text-rendering:optimizeLegibility}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 8% 8%,rgba(235,163,107,.18),transparent 26%),radial-gradient(circle at 92% 20%,rgba(22,79,74,.10),transparent 30%);pointer-events:none;z-index:-1}
+a{color:var(--teal);text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--rose)}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(251,247,239,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 28px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}.mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,var(--teal),#24756c);display:grid;place-items:center;color:#fff;font:700 20px Arial,sans-serif;box-shadow:0 10px 25px rgba(22,79,74,.2)}.brand-text{font-family:Arial,sans-serif;font-weight:700;letter-spacing:.02em}.brand-sub{display:block;font-weight:500;color:var(--muted);font-size:12px;letter-spacing:.04em;text-transform:uppercase}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{font-family:Arial,sans-serif;border:1px solid var(--line);background:var(--white);color:var(--teal);padding:9px 13px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:700}.btn.primary{background:var(--teal);color:#fff;border-color:var(--teal)}
+.shell{display:grid;grid-template-columns:var(--nav) minmax(0,1fr);gap:30px;max-width:1380px;margin:0 auto;padding:34px 28px 80px}.sidebar{position:sticky;top:82px;height:calc(100vh - 105px);overflow:auto;align-self:start;background:rgba(255,253,248,.84);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:0 14px 35px rgba(31,45,42,.08)}
+.sidebar h2{font:800 13px/1.2 Arial,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0 0 14px}.nav-list{list-style:none;margin:0;padding:0;display:grid;gap:7px}.nav-list a{display:block;text-decoration:none;border-radius:14px;padding:10px 11px;color:var(--ink);font:700 14px/1.3 Arial,sans-serif}.nav-list a:hover,.nav-list a.active{background:var(--sand);color:var(--teal)}.nav-list span{display:block;color:var(--muted);font-weight:500;font-size:12px;margin-top:3px}.mini-toc{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}.mini-toc a{display:block;font:500 13px/1.35 Arial,sans-serif;color:var(--muted);text-decoration:none;padding:6px 0 6px 10px;border-left:2px solid transparent}.mini-toc a:hover{color:var(--teal);border-left-color:var(--apricot)}.mini-toc .h3{padding-left:24px;font-size:12px}
+.content{min-width:0}.hero{background:linear-gradient(135deg,var(--teal),var(--teal-2));color:#fff;border-radius:30px;padding:42px 44px;margin-bottom:24px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero::after{content:'نبتة';position:absolute;right:34px;bottom:-18px;font:800 96px/1 Arial,sans-serif;color:rgba(255,255,255,.08)}.eyebrow{font:800 12px/1 Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#F5D2A6;margin-bottom:14px}.hero h1{font:700 clamp(32px,5vw,58px)/1.05 Georgia,'Times New Roman',serif;margin:0 0 15px;max-width:880px}.hero p{max-width:820px;margin:0;color:rgba(255,255,255,.88);font:18px/1.6 Arial,sans-serif}.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.pill{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.09);border-radius:999px;padding:7px 11px;font:700 12px/1 Arial,sans-serif;color:#fff}
+.article{background:rgba(255,253,248,.94);border:1px solid var(--line);border-radius:30px;padding:46px min(6vw,72px);box-shadow:var(--shadow);max-width:1050px}.article h1{font-size:44px;line-height:1.08;margin:0 0 24px;color:var(--teal)}.article h2{font-size:29px;line-height:1.18;margin:46px 0 15px;color:var(--teal);padding-top:8px;border-top:1px solid var(--line)}.article h3{font-size:21px;line-height:1.25;margin:30px 0 10px;color:#243b37}.article h4{font:800 15px/1.3 Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:var(--rose);margin:24px 0 8px}.article p{margin:0 0 16px}.article strong{color:#203b37}.article blockquote{margin:24px 0;padding:20px 24px;background:#F6EDDE;border-left:5px solid var(--apricot);border-radius:0 18px 18px 0}.article ul,.article ol{padding-left:28px;margin:0 0 20px}.article li{margin:6px 0}.article hr{border:0;border-top:1px solid var(--line);margin:36px 0}.article code{background:#F2E8DA;border:1px solid #E2D2BA;border-radius:7px;padding:2px 5px;font-family:Consolas,monospace;font-size:.9em}.article pre{overflow:auto;background:#132b28;color:#f8f1e6;border-radius:18px;padding:18px}.article table{width:100%;border-collapse:separate;border-spacing:0;margin:22px 0;border:1px solid var(--line);border-radius:18px;background:#fff;table-layout:auto;overflow:hidden}.article th,.article td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;min-width:0;overflow-wrap:anywhere}.article th{background:#F4E8D2;color:var(--teal);font:800 13px/1.3 Arial,sans-serif;text-align:left}.article tr:last-child td{border-bottom:0}.article img{max-width:100%;border-radius:16px}.article [dir='rtl'],.article :lang(ar){font-family:Tahoma,Arial,sans-serif}.doc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:24px}.doc-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;text-decoration:none;color:var(--ink);box-shadow:0 10px 26px rgba(31,45,42,.07)}.doc-card:hover{transform:translateY(-2px);box-shadow:0 16px 35px rgba(31,45,42,.11)}.doc-card b{display:block;color:var(--teal);font:800 18px/1.2 Arial,sans-serif;margin-bottom:6px}.doc-card span{color:var(--muted);font:14px/1.45 Arial,sans-serif}.footer-nav{display:flex;justify-content:space-between;gap:18px;margin-top:26px;max-width:1050px}.footer-nav a{flex:1;background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;text-decoration:none;font:700 14px/1.4 Arial,sans-serif}.footer-nav a:last-child{text-align:right}.print-note{display:none}
+@media(max-width:980px){.shell{grid-template-columns:1fr;padding:18px}.sidebar{position:relative;top:0;height:auto}.topbar{position:relative;padding:14px 18px}.hero{padding:30px 24px}.article{padding:30px 22px}.actions{display:none}.footer-nav{flex-direction:column}.footer-nav a:last-child{text-align:left}}
+@media print{body{background:#fff}.topbar,.sidebar,.footer-nav{display:none}.shell{display:block;padding:0}.hero{box-shadow:none;border-radius:0;color:#111;background:#fff;border-bottom:2px solid #ddd}.hero::after{display:none}.article{box-shadow:none;border:0;border-radius:0;max-width:none;padding:20px}.article h2{break-after:avoid}.article table{display:table}.print-note{display:block}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="mark">D</span><span class="brand-text">Dorina Strategy<span class="brand-sub">Beirut School Wellbeing</span></span></a>
+  <nav class="actions"><a class="btn" href="index.html">Index</a><button class="btn" onclick="window.print()">Print / Save PDF</button></nav>
+</header>
+<main class="shell">
+  <aside class="sidebar"><h2>Documents</h2><ul class="nav-list"><li><a href="index.html">Start Here / Package Index<span>Overview and reading order</span></a></li>
+<li><a href="DORINA_SENDABLE_SUMMARY.html">Sendable Summary for Dorina<span>Warm executive summary to share first</span></a></li>
+<li><a href="MASTER_PLAN.html">A-to-Z Strategic Plan<span>Market, positioning, go-to-market and KPIs</span></a></li>
+<li><a href="BRAND_STRATEGY.html">Brand Strategy<span>Personal brand now, consulting company later</span></a></li>
+<li><a href="LOGO_BRAND_KIT.html">Logo &amp; Brand Kit<span>Logo concepts, colors, typography and usage</span></a></li>
+<li><a href="OFFER_ARCHITECTURE.html">Offer Architecture<span>Workshops, pilots, packages and pricing logic</span></a></li>
+<li><a class="active" href="SCHOOL_OUTREACH_PLAYBOOK.html">School Outreach Playbook<span>Targets, scripts, meetings and follow-ups</span></a></li>
+<li><a href="EXECUTIVE_PRESENCE_LINKEDIN_X_PR.html">Executive Presence / LinkedIn / X / PR<span>Profile, content calendar and media angles</span></a></li>
+<li><a href="90_DAY_ACTION_PLAN.html">90-Day Action Plan<span>Weekly execution roadmap</span></a></li>
+<li><a href="SCHOOL_PITCH_DECK_OUTLINE.html">School Pitch Deck Outline<span>Slide-by-slide deck structure</span></a></li>
+<li><a href="BILINGUAL_COPY_BANK.html">Bilingual Copy Bank<span>English and Arabic copy blocks</span></a></li>
+<li><a href="RISK_ETHICS_COMPLIANCE.html">Risk, Ethics &amp; Compliance<span>Guardrails, consent, safety and disclaimers</span></a></li></ul><div class="mini-toc"><h2>On this page</h2>
+<a class="h2" href="#parent-child-emotional-wellbeing-workshops-for-schools-in-beirut-outreach-playbook">Parent &amp; Child Emotional Wellbeing Workshops for Schools in Beirut — Outreach Playbook</a>
+<a class="h2" href="#1-target-universe-who-we-are-selling-to">1. Target Universe — Who We Are Selling To</a>
+<a class="h3" href="#11-segment-a-premium-private-international-schools-primary-revenue-segment">1.1 Segment A — Premium private / international schools (primary revenue segment)</a>
+<a class="h3" href="#12-segment-b-community-private-schools-incl-faith-affiliated-networks">1.2 Segment B — Community private schools (incl. faith-affiliated networks)</a>
+<a class="h3" href="#13-segment-c-ngos-education-programs-partners-and-channels-not-competitors">1.3 Segment C — NGOs / education programs (partners and channels, NOT competitors)</a>
+<a class="h3" href="#14-segment-d-parent-associations-committees">1.4 Segment D — Parent associations / committees</a>
+<a class="h2" href="#2-decision-maker-map-who-signs-who-champions-who-blocks">2. Decision-Maker Map — Who Signs, Who Champions, Who Blocks</a>
+<a class="h3" href="#the-counselor-ally-never-gatekeeper-how-to-approach">The counselor: ally, never gatekeeper — how to approach</a>
+<a class="h3" href="#who-to-contact-first-per-segment">Who to contact first, per segment</a>
+<a class="h2" href="#3-channel-strategy-for-lebanon">3. Channel Strategy for Lebanon</a>
+<a class="h2" href="#4-scripts-ready-to-send">4. Scripts — Ready to Send</a>
+<a class="h3" href="#41-warm-intro-request-to-a-mutual-contact-whatsapp">4.1 Warm intro request to a mutual contact (WhatsApp)</a>
+<a class="h3" href="#42-cold-email-premium-school-principal-en">4.2 Cold email — premium school principal (EN)</a>
+<a class="h3" href="#43-cold-email-community-school-ar-forward-warmer">4.3 Cold email — community school (AR-forward, warmer)</a>
+<a class="h3" href="#44-whatsapp-first-touch-short">4.4 WhatsApp first touch (short)</a>
+<a class="h3" href="#45-linkedin-connection-note-follow-up-en">4.5 LinkedIn — connection note + follow-up (EN)</a>
+<a class="h3" href="#46-ngo-partnership-email-en">4.6 NGO partnership email (EN)</a>
+<a class="h3" href="#47-parent-association-message-ar">4.7 Parent-association message (AR)</a>
+<a class="h3" href="#48-follow-up-sequence-all-channels-adapt-greeting">4.8 Follow-up sequence (all channels; adapt greeting)</a>
+<a class="h3" href="#49-response-handling-exact-replies">4.9 Response handling — exact replies</a>
+<a class="h2" href="#5-discovery-meeting-45-minutes-that-win-the-pilot">5. Discovery Meeting — 45 Minutes That Win the Pilot</a>
+<a class="h3" href="#51-minute-by-minute-agenda">5.1 Minute-by-minute agenda</a>
+<a class="h3" href="#52-twelve-discovery-questions">5.2 Twelve discovery questions</a>
+<a class="h3" href="#53-materials-to-bring">5.3 Materials to bring</a>
+</div></aside>
+  <section class="content">
+    <div class="hero"><div class="eyebrow">Dorina · Beirut · Arabic + English</div><h1>School Outreach Playbook</h1><p>Targets, scripts, meetings and follow-ups</p><div class="meta"><span class="pill">School-facing</span><span class="pill">Parent & Child Wellbeing</span><span class="pill">Personal brand now → consulting vehicle later</span></div></div>
+    <article class="article"><h1 id="schooloutreachplaybookmd">SCHOOL_OUTREACH_PLAYBOOK.md</h1>
+<h2 id="parent-child-emotional-wellbeing-workshops-for-schools-in-beirut-outreach-playbook">Parent &amp; Child Emotional Wellbeing Workshops for Schools in Beirut — Outreach Playbook</h2>
+<blockquote>
+<p><strong>How to use this document.</strong> This is the operating manual for filling the pipeline: who to contact, in what order, through which channel, with which exact words. Every script below is ready to send after inserting names and dates. All school-facing copy must be approved by Dorina before sending (see 90_DAY_ACTION_PLAN.md approval gates). Credentials are always stated exactly as: <strong>Master in Clinical Hypnotherapy, Master in NLP / Coaching, Master in Time Line Therapy</strong> — and never in the first line of any first-touch message.</p>
+</blockquote>
+<hr />
+<h2 id="1-target-universe-who-we-are-selling-to">1. Target Universe — Who We Are Selling To</h2>
+<p>Lebanon has one of the world's highest private-school enrollment shares (~70% pre-crisis, ranked 3rd worldwide in private elementary enrollment, with 1,600+ private schools), and the premium tier in Beirut is dollarized, with top-tier fees around $14,000–22,000/yr (sources: <a href="https://www.thenationalnews.com/mena/2022/08/26/lebanons-private-school-pupils-move-to-public-sector-amid-economic-crisis/">The National</a>, <a href="https://www.thebeiruter.com/article/lebanon%E2%80%99s-education-paradox-private-schools-soar-as-public-system-collapses/479">The Beiruter</a>, <a href="https://www.tutopiya.com/blog/international-school-fees/international-school-fees-lebanon-guide/">Tutopiya fee guide</a>). These schools compete on holistic offerings — which is exactly the door Dorina walks through.</p>
+<p><strong>Goal: a living list of 30 named schools by end of Week 4</strong> (KPI anchor). The categories and known examples below are the starting grid. <strong>Important: names below are drawn from desk research; verify current leadership, contact details, and school status before any outreach — Lebanese school staffing changes frequently.</strong></p>
+<h3 id="11-segment-a-premium-private-international-schools-primary-revenue-segment">1.1 Segment A — Premium private / international schools (primary revenue segment)</h3>
+<p>Formal, outcome-driven buyers. They buy: emotional intelligence, parent–school cooperation, child performance &amp; confidence, stress management, modern parenting tools.</p>
+<table>
+<thead>
+<tr>
+<th>Named example (verify contacts)</th>
+<th>Why it fits</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>International College (IC), Beirut</td>
+<td>Flagship premium school, strong parent-engagement culture, dollarized fees (~$14k–22k senior years)</td>
+</tr>
+<tr>
+<td>American Community School (ACS) Beirut</td>
+<td>International curriculum, active parent community, English-forward</td>
+</tr>
+<tr>
+<td>Collège Protestant Français</td>
+<td>Prestigious francophone school; bilingual delivery is a differentiator here</td>
+</tr>
+<tr>
+<td>Wellspring Learning Community</td>
+<td>IB school with explicit wellbeing/values positioning — natural early adopter</td>
+</tr>
+<tr>
+<td>SABIS network schools (e.g., International School of Choueifat)</td>
+<td>Network structure: one relationship can open multiple campuses</td>
+</tr>
+<tr>
+<td>Lycée schools (Grand Lycée Franco-Libanais, Lycée Abdel Kader and other MLF/AFLEC schools)</td>
+<td>Large francophone segment; parent committees are influential</td>
+</tr>
+</tbody>
+</table>
+<p>Target: <strong>12 schools</strong> in this segment on the list of 30.</p>
+<h3 id="12-segment-b-community-private-schools-incl-faith-affiliated-networks">1.2 Segment B — Community private schools (incl. faith-affiliated networks)</h3>
+<p>Warm, practical, family-centered buyers. They buy: everyday parenting tools, communication at home, reducing conflict, confidence &amp; emotional safety. Budgets are smaller but decisions are faster and relationships are stickier.</p>
+<ul>
+<li>Faith-affiliated networks — one relationship can unlock many campuses: Maronite and Catholic school networks (e.g., Collège des Frères, Collège Notre-Dame de Jamhour–adjacent networks, Antonine and Sagesse school families), Orthodox schools, Makassed (Sunni philanthropic) schools, Amlieh schools, Armenian community schools (e.g., AGBU schools).</li>
+<li>Independent mid-fee neighborhood private schools in Achrafieh, Hamra/Ras Beirut, Badaro, Furn el Chebbak, and Metn/Baabda suburbs.</li>
+</ul>
+<p>Target: <strong>10 schools</strong> in this segment on the list of 30.</p>
+<h3 id="13-segment-c-ngos-education-programs-partners-and-channels-not-competitors">1.3 Segment C — NGOs / education programs (partners and channels, NOT competitors)</h3>
+<p>Mission-driven, trauma-sensitive. NGOs buy per-project with funder budgets, and — more importantly — they are <strong>channels</strong> into dozens of schools and community centers. UNICEF's 2025 rapid assessment (72% of caregivers reporting anxious children, 62% depressed/sad after the 2024 escalation — <a href="https://www.unicef.org/press-releases/decline-childrens-mental-health-nutrition-and-education-after-war-lebanon-unicef">source</a>) means psychosocial support is funded and on every NGO's agenda.</p>
+<table>
+<thead>
+<tr>
+<th>Organization</th>
+<th>Role for Dorina</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Himaya (child protection, school programs)</td>
+<td>Referral partner for protection cases; potential co-delivery of parent sessions</td>
+</tr>
+<tr>
+<td>Embrace (mental health, Lifeline 1564)</td>
+<td>Referral pathway for clinical needs; credibility ally; awareness-campaign partner</td>
+</tr>
+<tr>
+<td>War Child</td>
+<td>Funder-backed programs; potential subcontracted parent-support facilitation</td>
+</tr>
+<tr>
+<td>Right To Play</td>
+<td>Play-based methodology alignment; school-network access</td>
+</tr>
+<tr>
+<td>SHEILD</td>
+<td>Community-based family programming in South Lebanon / Beirut suburbs</td>
+</tr>
+</tbody>
+</table>
+<p>Target: <strong>4–5 organizations</strong> (counted toward the 30 as accounts).</p>
+<h3 id="14-segment-d-parent-associations-committees">1.4 Segment D — Parent associations / committees</h3>
+<p>Not budget holders in most cases, but they are the <strong>fastest warm route into a principal's office</strong>. A parent-committee head who attends one free talk becomes an internal champion. Every premium and community school on the list should have its parent-committee contact identified as a secondary entry point.</p>
+<p>Target: <strong>3–4 parent committees</strong> as standalone entry accounts, plus committee contacts mapped for all Segment A/B schools.</p>
+<hr />
+<h2 id="2-decision-maker-map-who-signs-who-champions-who-blocks">2. Decision-Maker Map — Who Signs, Who Champions, Who Blocks</h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>What they care about</th>
+<th>Power</th>
+<th>Contact order</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Principal / Head of School</strong></td>
+<td>School reputation, parent satisfaction, differentiation, safeguarding, cost</td>
+<td>Final signature on partnerships</td>
+<td>First in <strong>community schools</strong> (they decide alone, fast)</td>
+</tr>
+<tr>
+<td><strong>Head of Elementary / Cycle Director</strong></td>
+<td>Age-appropriate content, timetable fit, teacher buy-in</td>
+<td>Strong recommender; often the real evaluator in premium schools</td>
+<td>First or second in <strong>premium schools</strong></td>
+</tr>
+<tr>
+<td><strong>School Counselor / Psychologist</strong></td>
+<td>Student welfare, professional boundaries, not being undermined</td>
+<td>Veto power. Can kill a deal silently</td>
+<td>Engage <strong>early and respectfully</strong> — see below</td>
+</tr>
+<tr>
+<td><strong>Parent Committee Head</strong></td>
+<td>Value for parents, practical help, event success</td>
+<td>Door-opener; can fund small events from committee budget</td>
+<td>Parallel warm route</td>
+</tr>
+<tr>
+<td><strong>NGO Program Manager</strong></td>
+<td>Funder deliverables, safeguarding compliance, measurable outcomes</td>
+<td>Signs project-based contracts</td>
+<td>First contact in NGO segment</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-counselor-ally-never-gatekeeper-how-to-approach">The counselor: ally, never gatekeeper — how to approach</h3>
+<p>The counselor is the person most likely to feel threatened by an external "wellbeing expert." Handle this deliberately:</p>
+<ol>
+<li><strong>Never position around them; position beside them.</strong> Standard line: <em>"My work is coaching-based and preventive — parent skills and child confidence. Anything clinical belongs with your counselor, and part of my role is to strengthen referrals to them."</em></li>
+<li><strong>Ask for their input before the pilot</strong> — offer a 20-minute call to align content with what they see in students.</li>
+<li><strong>Name them in the room.</strong> In every parent workshop, publicly direct parents to the school counselor as the first port of call.</li>
+<li><strong>Share materials in advance.</strong> No surprises.</li>
+</ol>
+<p>If the principal is met first, always say: <em>"Before we run anything, I'd like your counselor's eyes on the content."</em> This sentence wins deals.</p>
+<h3 id="who-to-contact-first-per-segment">Who to contact first, per segment</h3>
+<ul>
+<li><strong>Premium schools:</strong> warm intro to Principal or Head of Elementary → counselor alignment call → parent-committee awareness.</li>
+<li><strong>Community schools:</strong> Principal directly (often owner-director) — decisions in one or two meetings.</li>
+<li><strong>NGOs:</strong> Program Manager (education/child protection portfolio), referencing funder-relevant outcomes.</li>
+<li><strong>Parent committees:</strong> Committee head via WhatsApp warm intro; goal is a free/low-cost talk that creates internal pull.</li>
+</ul>
+<hr />
+<h2 id="3-channel-strategy-for-lebanon">3. Channel Strategy for Lebanon</h2>
+<p>Beirut is relationship-driven. Cold email alone will produce near-zero results. Channel priority:</p>
+<ol>
+<li><strong>Warm introductions (always first).</strong> Before any cold touch, Dorina and AK map mutual contacts: parents at target schools, alumni networks, former colleagues, family friends, professionals who serve schools (pediatricians, speech therapists, activity providers). One warm intro is worth 20 cold emails.</li>
+<li><strong>WhatsApp (dominant channel).</strong> Most Lebanese school administrators live on WhatsApp. Use WhatsApp Business with a professional profile (name, logo, one-line description, catalog link). Rules: short messages, no voice notes on first touch, send 9:00–13:00 or 16:00–19:00, never Sunday, never after 20:30.</li>
+<li><strong>Email.</strong> For premium schools and NGOs — the "formal record" channel. Attach the one-pager PDF (&lt; 2 MB). Follow every meaningful WhatsApp exchange with a confirming email.</li>
+<li><strong>LinkedIn.</strong> For premium-school leadership and NGO managers; also the credibility backdrop (they <em>will</em> check Dorina's profile before replying — profile rewrite precedes outreach; see 90-day plan Weeks 3–4).</li>
+<li><strong>School events &amp; fairs.</strong> Back-to-school open days (late Sept–Oct), education fairs, NGO conferences: attend, don't pitch hard; collect three names per event.</li>
+</ol>
+<p><strong>Etiquette rules (non-negotiable):</strong><br />
+- Greet properly and use titles (Madame la Directrice / حضرة المدير / Dr. / Mrs.). Formality first; warmth follows.<br />
+- Never pressure for a same-week decision; propose "a short coffee or call whenever suits you."<br />
+- Mirror language: reply in the language they use; open bilingual when unsure.<br />
+- Ramadan/holiday calendars and any security disruptions: pause promotional touches, send only warm greetings.<br />
+- Never mention another school's name as a client without written permission.</p>
+<hr />
+<h2 id="4-scripts-ready-to-send">4. Scripts — Ready to Send</h2>
+<blockquote>
+<p>Replace: <code>[Mutual Contact]</code>, <code>[Name]</code>, <code>[School]</code>, <code>[Date]</code>. "Dorina [Last Name]" stays a placeholder until the last-name decision (Week 1). Arabic is warm MSA, suitable for Lebanon.</p>
+</blockquote>
+<h3 id="41-warm-intro-request-to-a-mutual-contact-whatsapp">4.1 Warm intro request to a mutual contact (WhatsApp)</h3>
+<p><strong>EN:</strong></p>
+<blockquote>
+<p>Hi [Mutual Contact], hope you're doing well! Quick favor: I've launched Parent &amp; Child Emotional Wellbeing Workshops for schools in Beirut — practical, bilingual sessions helping parents and kids with communication, confidence, and school stress. I believe [School] would find real value in this. Since you know [Name] there, would you be comfortable introducing us? Happy to send you a one-pager you can forward — takes 30 seconds. Thank you so much!</p>
+</blockquote>
+<p><strong>AR:</strong></p>
+<blockquote>
+<p>مرحباً [الاسم]، أتمنى أن تكون بخير! عندي طلب صغير: أطلقتُ ورش عمل حول الصحة النفسية والتوازن العاطفي للأهل والأطفال في مدارس بيروت — جلسات عملية وثنائية اللغة تساعد الأهل والأولاد على التواصل والثقة بالنفس والتعامل مع ضغط المدرسة. أعتقد أن مدرسة [المدرسة] ستستفيد كثيراً من هذا البرنامج. بما أنك تعرف [الاسم] هناك، هل يمكنك أن تعرّفنا ببعض؟ يمكنني أن أرسل لك صفحة تعريفية جاهزة لإعادة توجيهها. شكراً جزيلاً لك!</p>
+</blockquote>
+<h3 id="42-cold-email-premium-school-principal-en">4.2 Cold email — premium school principal (EN)</h3>
+<p><strong>Subject line options:</strong><br />
+1. Parent &amp; child emotional wellbeing programming for [School] — 2026–27<br />
+2. Strengthening parent–school partnership at [School]: a practical proposal<br />
+3. Bilingual wellbeing workshops for [School] families — pilot idea</p>
+<p><strong>Body:</strong></p>
+<blockquote>
+<p>Dear [Title + Name],</p>
+<p>I hope the new school year preparations are going well. My name is Dorina [Last Name]. I work with schools and families in Beirut to strengthen children's emotional wellbeing through practical parent–child support, coaching-based tools, and bilingual workshops adapted to each school community.</p>
+<p>Schools like [School] are increasingly asked by parents for guidance on children's stress, confidence, and screen-age behavior — and UNICEF's 2025 assessment found 72% of caregivers in Lebanon reporting anxiety in their children. Leading schools are responding with structured parent-engagement and wellbeing programming, and I help make that turnkey.</p>
+<p>What I offer:<br />
+- <strong>Parent workshops</strong> — communication, emotional regulation at home, managing school stress, discipline without conflict.<br />
+- <strong>Child support workshops</strong> — confidence, focus, emotional expression (small groups, school staff always present).<br />
+- <strong>Annual school–family wellbeing partnerships</strong> — a year-round calendar co-designed with your team, complementing (never replacing) your counselor's work.</p>
+<p>My training includes a Master in NLP / Coaching, a Master in Time Line Therapy, and a Master in Clinical Hypnotherapy, and my approach is non-clinical, preventive, and aligned with school safeguarding policies.</p>
+<p>Would you be open to a 30–45 minute conversation in the coming two weeks? I'd also be glad to offer [School] a complimentary introductory session for parents this term so your team can evaluate the fit directly.</p>
+<p>Warm regards,<br />
+Dorina [Last Name]<br />
+Parent &amp; Child Emotional Wellbeing — Beirut<br />
+[Phone / WhatsApp] · [LinkedIn] · One-pager attached</p>
+</blockquote>
+<h3 id="43-cold-email-community-school-ar-forward-warmer">4.3 Cold email — community school (AR-forward, warmer)</h3>
+<p><strong>الموضوع: ورش عمل للأهل والأطفال في مدرسة [المدرسة] — دعم عملي للعائلات</strong></p>
+<blockquote>
+<p>حضرة المدير(ة) المحترم(ة) [الاسم]،</p>
+<p>أتمنى أن تصلكم رسالتي وأنتم بخير، وأن تكون التحضيرات للعام الدراسي الجديد على أفضل ما يرام.</p>
+<p>اسمي دورينا [الشهرة]، وأعمل مع المدارس والعائلات في بيروت على تعزيز التوازن العاطفي عند الأطفال من خلال ورش عمل عملية وثنائية اللغة للأهل والأولاد.</p>
+<p>نعرف جميعاً كم يسأل الأهل اليوم عن طرق للتعامل مع قلق الأولاد، والدراسة، والشاشات، والعناد في البيت. ورشي تعطي الأهل أدوات بسيطة وقابلة للتطبيق فوراً: تواصل أفضل مع الأولاد، تهدئة التوتر في البيت، بناء الثقة بالنفس، وتربية من دون صراع دائم.</p>
+<p>يسعدني أن أقدّم لمدرستكم <strong>جلسة تعريفية للأهل</strong> بكلفة رمزية، لتلمسوا الفائدة بأنفسكم قبل أي التزام. الجلسات تُنسَّق دائماً مع إدارة المدرسة وتحترم قيم المجتمع المدرسي.</p>
+<p>هل يناسبكم اتصال قصير أو زيارة سريعة خلال الأسبوعين المقبلين؟</p>
+<p>مع كامل الاحترام والتقدير،<br />
+دورينا [الشهرة]<br />
+ورش عمل الصحة النفسية والتوازن العاطفي للأهل والأطفال — بيروت<br />
+[رقم الواتساب] — الصفحة التعريفية مرفقة</p>
+<p><em>(P.S. in EN: Happy to continue in English or French if easier — sessions are fully bilingual.)</em></p>
+</blockquote>
+<h3 id="44-whatsapp-first-touch-short">4.4 WhatsApp first touch (short)</h3>
+<p><strong>EN:</strong></p>
+<blockquote>
+<p>Good morning [Title + Name], this is Dorina [Last Name]. I run bilingual parent &amp; child emotional wellbeing workshops for schools in Beirut — practical tools for communication, confidence, and school stress. I'd love to share a one-page overview with you. Would a short call this week or next suit you? Thank you!</p>
+</blockquote>
+<p><strong>AR:</strong></p>
+<blockquote>
+<p>صباح الخير [اللقب والاسم]، معكم دورينا [الشهرة]. أنظّم ورش عمل ثنائية اللغة للأهل والأطفال في مدارس بيروت حول التواصل والثقة بالنفس والتعامل مع ضغط المدرسة. يسعدني أن أرسل لكم صفحة تعريفية قصيرة. هل يناسبكم اتصال قصير هذا الأسبوع أو الأسبوع المقبل؟ شكراً جزيلاً!</p>
+</blockquote>
+<h3 id="45-linkedin-connection-note-follow-up-en">4.5 LinkedIn — connection note + follow-up (EN)</h3>
+<p><strong>Connection note (≤ 300 chars):</strong></p>
+<blockquote>
+<p>Dear [Name], I work with Beirut schools on parent &amp; child emotional wellbeing — bilingual, coaching-based workshops complementing school counselors. I admire [School]'s commitment to its families and would be glad to connect. — Dorina</p>
+</blockquote>
+<p><strong>Follow-up message (send 2–3 days after acceptance):</strong></p>
+<blockquote>
+<p>Thank you for connecting, [Name]. As schools plan the 2026–27 year, many are adding structured parent-engagement and wellbeing programming — parents are asking for it more than ever. I offer parent workshops, child confidence sessions, and annual school–family wellbeing partnerships, all bilingual and designed to work alongside your counseling team. Could I send you a one-page overview? And if useful, I'd be happy to offer [School] a complimentary introductory session for parents this term. Warm regards, Dorina</p>
+</blockquote>
+<h3 id="46-ngo-partnership-email-en">4.6 NGO partnership email (EN)</h3>
+<p><strong>Subject: Partnership inquiry — bilingual parent &amp; family wellbeing facilitation for your school programs</strong></p>
+<blockquote>
+<p>Dear [Name],</p>
+<p>I'm writing to explore how I might support [Organization]'s work with children and families. I'm Dorina [Last Name], a Beirut-based facilitator delivering bilingual parent &amp; child emotional wellbeing workshops — practical, coaching-based, trauma-sensitive sessions on parent–child communication, emotional regulation, resilience, and child confidence.</p>
+<p>The need is well documented — UNICEF's 2025 rapid assessment found 72% of caregivers reporting anxiety in their children after the 2024 escalation — and I know organizations like yours carry much of the response. Where I can add value:</p>
+<ul>
+<li><strong>Parent-support facilitation</strong> within your existing school or community programs (Arabic, English, or bilingual).</li>
+<li><strong>Caregiver skills workshops</strong> aligned with your psychosocial support frameworks — always non-clinical, with clear referral pathways to licensed professionals and to your case-management teams.</li>
+<li><strong>Co-designed awareness campaigns</strong> for school communities.</li>
+</ul>
+<p>My approach is preventive and complementary: I do not provide therapy or clinical services, and I work within safeguarding policies (staff present in all child sessions, parental consent, alignment with Law 422 principles). My training includes a Master in NLP / Coaching, a Master in Time Line Therapy, and a Master in Clinical Hypnotherapy.</p>
+<p>Would a 30-minute call be possible in the coming weeks to see if there's a fit with your current or upcoming programs? Fees are structured per-project to fit funder budgets, with sliding-scale options.</p>
+<p>With appreciation for your work,<br />
+Dorina [Last Name]</p>
+</blockquote>
+<h3 id="47-parent-association-message-ar">4.7 Parent-association message (AR)</h3>
+<blockquote>
+<p>حضرة رئيس(ة) لجنة الأهل المحترم(ة)،</p>
+<p>تحية طيبة، اسمي دورينا [الشهرة]، وأنظّم ورش عمل للأهل في مدارس بيروت حول مواضيع يسأل عنها كل بيت: كيف نتواصل مع أولادنا بشكل أفضل؟ كيف نساعدهم على تخطي قلق المدرسة والامتحانات؟ كيف نبني ثقتهم بأنفسهم ونقلل الصراع اليومي في البيت؟</p>
+<p>الورش عملية وثنائية اللغة، ومدتها ساعتان تقريباً، ويخرج منها الأهل بأدوات بسيطة يطبقونها من اليوم نفسه. يسعدني أن أقدّم للجنتكم الكريمة <strong>جلسة تعريفية</strong> لأهالي المدرسة، بالتنسيق الكامل مع الإدارة.</p>
+<p>هل يمكن أن نتحدث قليلاً هذا الأسبوع لأشرح لكم الفكرة؟ وأرسل لكم بكل سرور صفحة تعريفية قصيرة.</p>
+<p>مع خالص التحية والتقدير،<br />
+دورينا [الشهرة] — [رقم الواتساب]</p>
+</blockquote>
+<h3 id="48-follow-up-sequence-all-channels-adapt-greeting">4.8 Follow-up sequence (all channels; adapt greeting)</h3>
+<p><strong>Day 4 — gentle nudge (WhatsApp or email reply-on-thread):</strong></p>
+<blockquote>
+<p>Good morning [Name], just following up gently on my message — I know this is a busy season. If it's easier, I can send a 1-page overview now and we can speak whenever your schedule opens. Which would you prefer? / صباح الخير [الاسم]، فقط للمتابعة بلطف على رسالتي — أعرف أنها فترة مزدحمة. إذا كان أسهل، أرسل لكم الصفحة التعريفية الآن ونتحدث وقتما يناسبكم.</p>
+</blockquote>
+<p><strong>Day 10 — value-add (share the parenting tip sheet):</strong></p>
+<blockquote>
+<p>Hi [Name], I thought of [School] when finalizing this: a one-page tip sheet for parents — "5 Calm Responses to Back-to-School Stress" (AR/EN). Feel free to share it with your parent community with my compliments, no strings attached. If you'd like, I can prepare a version with [School]'s name on it — and it doubles as a preview of what my workshops feel like. Warm regards, Dorina<br />
+<em>(Attach: PARENT_TIP_SHEET.pdf — produced in Week 5 of the 90-day plan.)</em></p>
+</blockquote>
+<p><strong>Day 21 — last touch (respectful close):</strong></p>
+<blockquote>
+<p>Dear [Name], I don't want to crowd your inbox, so this is my last note for now. If parent and child wellbeing programming becomes a priority this year — whether a single parent evening or a year-round partnership — I'd be delighted to help, and my door stays open. Wishing you and the [School] community an excellent start to the year. Warm regards, Dorina<br />
+<em>(Then: move to "Nurture" in the tracker; re-approach next term with a new asset or a mutual-contact route.)</em></p>
+</blockquote>
+<h3 id="49-response-handling-exact-replies">4.9 Response handling — exact replies</h3>
+<p><strong>"Send more info."</strong></p>
+<blockquote>
+<p>With pleasure — attached is a one-page overview and the workshop menu. To point you to the most relevant option: is your priority this term more on the <strong>parents' side</strong> (communication, school stress at home) or the <strong>students' side</strong> (confidence, focus)? Based on that I can suggest one specific session and two possible dates. Would a 20-minute call this week help you decide faster?</p>
+</blockquote>
+<p><em>(Rule: always answer info requests with the attachment PLUS one question and a call proposal. "Info sent" is not an outcome.)</em></p>
+<p><strong>"We have no budget."</strong></p>
+<blockquote>
+<p>Completely understood — budgets are tight everywhere in Lebanon this year. Three thoughts: (1) The introductory parent session can be complimentary [premium] / at a symbolic fee [community] so the value proves itself first. (2) Several schools run parent sessions through the <strong>parent committee's</strong> activity budget or a modest per-family contribution of a few dollars. (3) If it's genuinely a hardship context, I partner with NGOs whose funders cover family-support programming, and I'm happy to explore that route together. Which of these is worth a short conversation?</p>
+</blockquote>
+<p><strong>"We already have a counselor."</strong></p>
+<blockquote>
+<p>That's excellent — and important. My work is not counseling and doesn't overlap with it: I don't do assessment, therapy, or case work. I work on the <strong>preventive, parent-facing side</strong> — giving parents practical communication and calm-parenting tools, and building children's everyday confidence in group workshops. In practice this makes the counselor's job easier: parents become more receptive, and in every session I direct families to your counselor as the first port of call. I'd genuinely welcome a short call with your counselor before anything runs, so the content aligns with what they're seeing. Would that be a good first step?</p>
+</blockquote>
+<p><strong>"What about hypnotherapy?" (sensitive — coaching-led framing)</strong></p>
+<blockquote>
+<p>Good question — let me be precise. My school programs are <strong>coaching-based and educational</strong>: communication skills, emotional regulation tools, confidence-building. There is no hypnotherapy, no clinical treatment, and no therapy of any kind in school workshops. My professional training includes a Master in NLP / Coaching, a Master in Time Line Therapy, and a Master in Clinical Hypnotherapy — that background deepens my understanding of how children and parents manage emotions, but in the school context I work strictly with non-clinical, preventive tools, in full coordination with your counselor, and I refer any clinical needs to licensed professionals. I'm happy to share the full session outlines in advance so your team can review every element.</p>
+</blockquote>
+<hr />
+<h2 id="5-discovery-meeting-45-minutes-that-win-the-pilot">5. Discovery Meeting — 45 Minutes That Win the Pilot</h2>
+<h3 id="51-minute-by-minute-agenda">5.1 Minute-by-minute agenda</h3>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Segment</th>
+<th>What happens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0:00–0:05</td>
+<td>Warm opening</td>
+<td>Thank them; genuine compliment about the school (specific — a program, reputation, campus). Confirm time available.</td>
+</tr>
+<tr>
+<td>0:05–0:10</td>
+<td>Frame</td>
+<td>"I'd love to spend most of this hearing about your school and families; then I'll share briefly how I work; and if it makes sense, we agree on a simple next step."</td>
+</tr>
+<tr>
+<td>0:10–0:25</td>
+<td>Discovery</td>
+<td>Work through questions (below). Listen 80%, note verbatim phrases — they become proposal language.</td>
+</tr>
+<tr>
+<td>0:25–0:33</td>
+<td>Tailored presentation</td>
+<td>Present ONLY the track matching what they said. Show one-pager + 2–3 workshop titles. Mention counselor-collaboration principle explicitly.</td>
+</tr>
+<tr>
+<td>0:33–0:38</td>
+<td>Credentials &amp; safeguards</td>
+<td>Approach (bilingual, practical, non-clinical), training background (exact wording), consent forms, staff-present rule, referral policy.</td>
+</tr>
+<tr>
+<td>0:38–0:43</td>
+<td>Pilot proposal + close</td>
+<td>Propose specific pilot with <strong>two candidate dates</strong>. Handle immediate questions.</td>
+</tr>
+<tr>
+<td>0:43–0:45</td>
+<td>Wrap</td>
+<td>Recap agreements, confirm who sends what by when, thank them, ask for counselor's contact for the alignment call.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-twelve-discovery-questions">5.2 Twelve discovery questions</h3>
+<ol>
+<li>What are the school's top two or three priorities for this academic year?</li>
+<li>What are you hearing from parents lately — what worries them most about their children?</li>
+<li>How would you describe parent engagement here — attendance at events, responsiveness, involvement?</li>
+<li>What's the biggest frustration on the parent-engagement side?</li>
+<li>What wellbeing or psychosocial support does the school currently offer students and families?</li>
+<li>How does your counselor currently work with parents, and where do they wish they had more support?</li>
+<li>Have you run external workshops or speakers for parents before? What worked, what didn't?</li>
+<li>Which age groups or cycles feel the most pressing need this year?</li>
+<li>How do Arabic/English/French preferences run across your parent community?</li>
+<li>How does the school typically budget for parent programming or external providers — and when is that budget set?</li>
+<li>If we ran a pilot session and it went well, what would the decision process look like for something ongoing — who's involved?</li>
+<li>What would need to be true, by June, for you to call a wellbeing partnership a clear success?</li>
+</ol>
+<h3 id="53-materials-to-bring">5.3 Materials to bring</h3>
+<ul>
+<li>[ ] One-pager (EN/AR, print ×3 + PDF on phone)</li>
+<li>[ ] Workshop menu with the three tracks and sample titles</li>
+<li>[ ] Pilot proposal template with two open date fields</li>
+<li>[ ] Sample parent feedback form (shows professionalism + how NPS is captured)</li>
+<li>[ ] Safeguarding one-liner sheet: consent, staff-present rule, referral policy, Law 422 alignment</li>
+<li>[ ] Bio card with exact credentials wording</li>
+<li>[ ] Notebook — handwritten notes signal respect in Lebanese meetings</li>
+</ul>
+<h3 id="54-meeting-close-script">5.4 Meeting close script</h3>
+<blockquote>
+<p>"Based on what you've described — especially [their verbatim pain] — here's what I suggest as a simple first step: a <strong>90-minute introductory workshop for parents</strong>, in [language mix they indicated], on [topic matching their pain]. [Premium: I'd offer this first session with my compliments / Community: at a symbolic fee of $X] so your team and parents can judge the value directly. I have [Date A] and [Date B] available — which works better for your calendar? … Wonderful. I'll send a short confirmation email today with the outline, and I'd love 20 minutes with [counselor name] before the session so the content aligns with what they're seeing. Thank you for the time — I'm genuinely excited to work with the [School] community."</p>
+</blockquote>
+<p><strong>Never leave without:</strong> a date (or a named date-decision step), the counselor's name, and permission to send the confirmation email.</p>
+<hr />
+<h2 id="6-pilot-to-partnership-conversion-flow">6. Pilot-to-Partnership Conversion Flow</h2>
+<p>The pilot is not the product; the partnership is. Everything in the pilot is engineered to produce three artifacts: <strong>feedback scores, testimonials, and a debrief meeting.</strong></p>
+<h3 id="61-pilot-delivery-checklist">6.1 Pilot delivery checklist</h3>
+<p><strong>Before (1 week out):</strong> confirmation email with outline sent; counselor alignment call done; consent/communication sent to parents by school; room/projector/language mix confirmed; feedback forms printed (AR/EN); roll-up or slide with Dorina's name and the umbrella title ready.<br />
+<strong>Day of:</strong> arrive 45 min early; greet principal and counselor personally; welcome slide bilingual; deliver 90 min with 2 interactive exercises minimum; close with "one tool you'll use tonight" round; distribute feedback form in-room (target 80% completion — never "email it later"); collect verbal permission from 2–3 enthusiastic parents to quote them; photo of the room (audience from behind, no children's faces, school's permission).<br />
+<strong>Within 48h:</strong> thank-you WhatsApp to principal + counselor; tally NPS and comments; send feedback summary + debrief meeting request.</p>
+<h3 id="62-feedback-form-capture-the-conversion-engine">6.2 Feedback form capture (the conversion engine)</h3>
+<p>Form fields (bilingual, one page): overall value 1–10 (NPS source, target ≥ 8.5); "one thing you'll do differently at home"; "what topic should come next?"; "may we quote your feedback?" (name optional); "would you attend a monthly session?" yes/no. The "topic next" and "monthly?" answers become the partnership proposal's evidence base.</p>
+<h3 id="63-debrief-meeting-script-30-min-within-7-days-of-pilot">6.3 Debrief meeting script (30 min, within 7 days of pilot)</h3>
+<blockquote>
+<p>"Thank you again for hosting the session. Let me share what your parents said: the average value score was [X]/10, [N]% said they'd attend monthly sessions, and the most requested next topics were [A] and [B]. A few comments, in their words: [2 quotes]. From my side, what I noticed in the room was [genuine observation]. My question to you: what did <em>your</em> team think?"<br />
+<em>(Listen. Then:)</em><br />
+"Given the response, here's what a year could look like: [present Essentials / Growth tier matching their budget signals — monthly parent sessions, child workshop series, teacher–parent collaboration session, an annual calendar we design together]. Schools typically invest between [range from the internal strategy reference §6 for their segment] annually, and we shape the exact package to your priorities. Shall I send you a two-page proposal with two options this week?"</p>
+</blockquote>
+<h3 id="64-partnership-proposal-follow-up-email-send-within-48h-of-debrief">6.4 Partnership proposal follow-up email (send within 48h of debrief)</h3>
+<blockquote>
+<p>Dear [Title + Name],</p>
+<p>Thank you for Wednesday's conversation — and again for the warmth of the [School] community at the pilot session.</p>
+<p>As promised, attached is the partnership proposal. In summary:</p>
+<p><strong>What parents told us:</strong> average value rating [X]/10; [N]% would attend monthly sessions; top requested topics: [A], [B].</p>
+<p><strong>Option 1 — Essentials Partnership:</strong> one parent session per term plus one school-wide awareness campaign, co-designed with your team. Investment: $[within 2,500–4,000]/year.</p>
+<p><strong>Option 2 — Growth Partnership:</strong> monthly parent sessions, two child confidence workshop series (small groups, staff present), one teacher–parent collaboration session per term, and an annual wellbeing calendar. Investment: $[within 6,000–10,000]/year.</p>
+<p>Both options include coordination with [Counselor name], bilingual delivery, and end-of-term feedback reports for your leadership. Pricing is for the 2026–27 year and can be phased termly.</p>
+<p>Could we hold 20 minutes next week to choose the direction? I'm keeping [two date options] for [School] in my calendar in the meantime.</p>
+<p>With appreciation,<br />
+Dorina [Last Name]</p>
+</blockquote>
+<h3 id="65-negotiation-guardrails">6.5 Negotiation guardrails</h3>
+<ol>
+<li><strong>Never free beyond the pilot.</strong> One complimentary/symbolic-fee session per school, ever. Second session onward is paid — even a small amount. Line: <em>"The introductory session was my investment in the relationship; ongoing work is priced so I can deliver it at full quality."</em></li>
+<li><strong>Scholarship seats, not discounts.</strong> If cost objections come on parent-paid models: <em>"Rather than lowering the standard, I include [N] sponsored seats per session for families the school nominates."</em> Protects price integrity and serves the mission.</li>
+<li><strong>Trade money for scope, not price for nothing.</strong> Budget short? Remove a component (fewer child series, per-term instead of monthly) — do not cut the rate.</li>
+<li><strong>Anchor with Growth, fall back to Essentials.</strong> Never open with Essentials.</li>
+<li><strong>Termly payment is fine; per-session drip pricing is not</strong> — partnerships are annual commitments with termly invoicing.</li>
+<li><strong>All figures are working ranges to validate in the first 10 conversations</strong> — log every price reaction in the tracker.</li>
+</ol>
+<hr />
+<h2 id="7-crm-lite-tracking">7. CRM-Lite Tracking</h2>
+<p>One Google Sheet, named <code>Dorina_School_Pipeline_2026</code>. No CRM software until 15+ active conversations.</p>
+<h3 id="71-column-spec">7.1 Column spec</h3>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Values / format</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>School / Org</td>
+<td>Text</td>
+</tr>
+<tr>
+<td>Segment</td>
+<td>Premium / Community / NGO / Parent Assoc</td>
+</tr>
+<tr>
+<td>Area</td>
+<td>Achrafieh, Ras Beirut, Metn…</td>
+</tr>
+<tr>
+<td>Contact 1 name + role</td>
+<td>Text</td>
+</tr>
+<tr>
+<td>Contact 1 WhatsApp / email</td>
+<td>Text</td>
+</tr>
+<tr>
+<td>Counselor name</td>
+<td>Text (fill by discovery stage)</td>
+</tr>
+<tr>
+<td>Warm route</td>
+<td>Mutual contact name, or "cold"</td>
+</tr>
+<tr>
+<td>Stage</td>
+<td>Listed → Contacted → Replied → Meeting booked → Meeting done → Pilot booked → Pilot delivered → Proposal sent → <strong>Partner</strong> / Nurture / Dead</td>
+</tr>
+<tr>
+<td>Last touch date</td>
+<td>Date</td>
+</tr>
+<tr>
+<td>Next action + due date</td>
+<td>Text + date — <strong>never blank for any live row</strong></td>
+</tr>
+<tr>
+<td>Language pref</td>
+<td>AR / EN / FR / bilingual</td>
+</tr>
+<tr>
+<td>Price signals</td>
+<td>Free-form notes (feeds pricing validation)</td>
+</tr>
+<tr>
+<td>NPS (if piloted)</td>
+<td>Number</td>
+</tr>
+<tr>
+<td>Notes</td>
+<td>Free-form</td>
+</tr>
+</tbody>
+</table>
+<h3 id="72-weekly-pipeline-review-ritual-fridays-30-min-dorina-ak">7.2 Weekly pipeline review ritual (Fridays, 30 min, Dorina + AK)</h3>
+<ol>
+<li>Count each stage; write the week's numbers in a log tab.</li>
+<li>Every live row gets a next action with a date; anything untouched 10+ days gets a decision (nudge / nurture / dead).</li>
+<li>Compare against KPI pace (below). Behind on meetings? The fix is always more warm-intro requests, not more cold volume.</li>
+<li>Pick the top 3 accounts for next week and the single asset that would unblock the most deals.</li>
+</ol>
+<h3 id="73-targets">7.3 Targets</h3>
+<table>
+<thead>
+<tr>
+<th>KPI</th>
+<th>Day-90 target</th>
+<th>Healthy pace</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Schools listed</td>
+<td>30</td>
+<td>Done by Week 4</td>
+</tr>
+<tr>
+<td>Contacted</td>
+<td>20</td>
+<td>~5/week across Weeks 5–8</td>
+</tr>
+<tr>
+<td>Discovery meetings</td>
+<td>8</td>
+<td>2/week in Weeks 6–9</td>
+</tr>
+<tr>
+<td>Pilots delivered</td>
+<td>3</td>
+<td>Weeks 9–11</td>
+</tr>
+<tr>
+<td>Signed partnerships</td>
+<td>1</td>
+<td>By Week 13</td>
+</tr>
+<tr>
+<td>Parent NPS</td>
+<td>≥ 8.5/10</td>
+<td>Every pilot</td>
+</tr>
+<tr>
+<td>School testimonials</td>
+<td>2</td>
+<td>Weeks 10–12</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-outreach-calendar-august-vs-september-vs-october">8. Outreach Calendar — August vs September vs October</h2>
+<h3 id="august-2026-weeks-15-planning-season-low-staffing">August 2026 (Weeks 1–5) — planning season, low staffing</h3>
+<p>Schools are lightly staffed; leadership is planning the year. <strong>Do:</strong> build the 30-school list, map warm routes, send warm-intro requests to mutual contacts, soft first touches to principals known to work summers, contact NGOs (they work year-round and plan Q4 programming now), get LinkedIn and assets live. <strong>Don't:</strong> push hard for meetings mid-August or expect fast replies. Tone: "as you plan the 2026–27 year…"</p>
+<h3 id="september-2026-weeks-69-back-to-school-peak">September 2026 (Weeks 6–9) — back-to-school peak</h3>
+<p>The window. Principals are present, parent anxiety is at annual peak, activity calendars are being locked. <strong>Do:</strong> full outreach wave (hit 20 contacted), 2 discovery meetings/week, book pilots for late Sept/Oct, attend open days, run the day 4/10/21 follow-up engine, publish 2 LinkedIn posts/week on back-to-school themes ("helping your child with the first-week jitters"). Lebanese school year starts late September/early October — position pilots as "start-of-year support for your parents."</p>
+<h3 id="october-2026-weeks-1013-deliver-and-convert">October 2026 (Weeks 10–13) — deliver and convert</h3>
+<p><strong>Do:</strong> deliver the 3 pilots, capture feedback forms and testimonials, run debriefs within 7 days, send partnership proposals within 48h of each debrief, close the first partnership, and book November dates before leaving any successful pilot room. Nurture-track everyone who said "not this term" with the day-10 tip sheet. Begin PR first touch (one media/podcast pitch) using pilot results as the story.</p>
+<hr />
+<p><em>Internal working document — prices are ranges to validate; verify all named contacts before outreach; all school-facing copy requires Dorina's approval before sending.</em></p></article>
+    <nav class="footer-nav"><a href="OFFER_ARCHITECTURE.html">← Previous<br>Offer Architecture</a><span></span><a href="EXECUTIVE_PRESENCE_LINKEDIN_X_PR.html">Next →<br>Executive Presence / LinkedIn / X / PR</a></nav>
+  </section>
+</main>
+<script>
+document.querySelectorAll('.article p, .article li, .article td, .article blockquote').forEach(el=>{if(/[؀-ۿ]/.test(el.textContent)) el.setAttribute('dir','auto');});
+</script>
+</body></html>

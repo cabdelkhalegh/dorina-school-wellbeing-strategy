@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>School Pitch Deck Outline — Dorina School Wellbeing Strategy</title>
+<style>
+:root{
+  --teal:#164F4A;--teal-2:#0F3835;--sand:#F4E8D2;--sand-2:#FBF7EF;--apricot:#EBA36B;--rose:#B86B5B;
+  --ink:#182220;--muted:#60706C;--line:#E6D9C5;--card:#FFFDF8;--white:#fff;--shadow:0 20px 55px rgba(31,45,42,.12);
+  --radius:22px;--content:900px;--nav:330px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:linear-gradient(180deg,var(--sand-2),#fff 42%,#f7efe1);color:var(--ink);font:16px/1.68 Georgia,'Times New Roman',serif;text-rendering:optimizeLegibility}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 8% 8%,rgba(235,163,107,.18),transparent 26%),radial-gradient(circle at 92% 20%,rgba(22,79,74,.10),transparent 30%);pointer-events:none;z-index:-1}
+a{color:var(--teal);text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--rose)}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(251,247,239,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 28px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}.mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,var(--teal),#24756c);display:grid;place-items:center;color:#fff;font:700 20px Arial,sans-serif;box-shadow:0 10px 25px rgba(22,79,74,.2)}.brand-text{font-family:Arial,sans-serif;font-weight:700;letter-spacing:.02em}.brand-sub{display:block;font-weight:500;color:var(--muted);font-size:12px;letter-spacing:.04em;text-transform:uppercase}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{font-family:Arial,sans-serif;border:1px solid var(--line);background:var(--white);color:var(--teal);padding:9px 13px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:700}.btn.primary{background:var(--teal);color:#fff;border-color:var(--teal)}
+.shell{display:grid;grid-template-columns:var(--nav) minmax(0,1fr);gap:30px;max-width:1380px;margin:0 auto;padding:34px 28px 80px}.sidebar{position:sticky;top:82px;height:calc(100vh - 105px);overflow:auto;align-self:start;background:rgba(255,253,248,.84);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:0 14px 35px rgba(31,45,42,.08)}
+.sidebar h2{font:800 13px/1.2 Arial,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0 0 14px}.nav-list{list-style:none;margin:0;padding:0;display:grid;gap:7px}.nav-list a{display:block;text-decoration:none;border-radius:14px;padding:10px 11px;color:var(--ink);font:700 14px/1.3 Arial,sans-serif}.nav-list a:hover,.nav-list a.active{background:var(--sand);color:var(--teal)}.nav-list span{display:block;color:var(--muted);font-weight:500;font-size:12px;margin-top:3px}.mini-toc{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}.mini-toc a{display:block;font:500 13px/1.35 Arial,sans-serif;color:var(--muted);text-decoration:none;padding:6px 0 6px 10px;border-left:2px solid transparent}.mini-toc a:hover{color:var(--teal);border-left-color:var(--apricot)}.mini-toc .h3{padding-left:24px;font-size:12px}
+.content{min-width:0}.hero{background:linear-gradient(135deg,var(--teal),var(--teal-2));color:#fff;border-radius:30px;padding:42px 44px;margin-bottom:24px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero::after{content:'نبتة';position:absolute;right:34px;bottom:-18px;font:800 96px/1 Arial,sans-serif;color:rgba(255,255,255,.08)}.eyebrow{font:800 12px/1 Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#F5D2A6;margin-bottom:14px}.hero h1{font:700 clamp(32px,5vw,58px)/1.05 Georgia,'Times New Roman',serif;margin:0 0 15px;max-width:880px}.hero p{max-width:820px;margin:0;color:rgba(255,255,255,.88);font:18px/1.6 Arial,sans-serif}.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.pill{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.09);border-radius:999px;padding:7px 11px;font:700 12px/1 Arial,sans-serif;color:#fff}
+.article{background:rgba(255,253,248,.94);border:1px solid var(--line);border-radius:30px;padding:46px min(6vw,72px);box-shadow:var(--shadow);max-width:1050px}.article h1{font-size:44px;line-height:1.08;margin:0 0 24px;color:var(--teal)}.article h2{font-size:29px;line-height:1.18;margin:46px 0 15px;color:var(--teal);padding-top:8px;border-top:1px solid var(--line)}.article h3{font-size:21px;line-height:1.25;margin:30px 0 10px;color:#243b37}.article h4{font:800 15px/1.3 Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:var(--rose);margin:24px 0 8px}.article p{margin:0 0 16px}.article strong{color:#203b37}.article blockquote{margin:24px 0;padding:20px 24px;background:#F6EDDE;border-left:5px solid var(--apricot);border-radius:0 18px 18px 0}.article ul,.article ol{padding-left:28px;margin:0 0 20px}.article li{margin:6px 0}.article hr{border:0;border-top:1px solid var(--line);margin:36px 0}.article code{background:#F2E8DA;border:1px solid #E2D2BA;border-radius:7px;padding:2px 5px;font-family:Consolas,monospace;font-size:.9em}.article pre{overflow:auto;background:#132b28;color:#f8f1e6;border-radius:18px;padding:18px}.article table{width:100%;border-collapse:separate;border-spacing:0;margin:22px 0;border:1px solid var(--line);border-radius:18px;background:#fff;table-layout:auto;overflow:hidden}.article th,.article td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;min-width:0;overflow-wrap:anywhere}.article th{background:#F4E8D2;color:var(--teal);font:800 13px/1.3 Arial,sans-serif;text-align:left}.article tr:last-child td{border-bottom:0}.article img{max-width:100%;border-radius:16px}.article [dir='rtl'],.article :lang(ar){font-family:Tahoma,Arial,sans-serif}.doc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:24px}.doc-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;text-decoration:none;color:var(--ink);box-shadow:0 10px 26px rgba(31,45,42,.07)}.doc-card:hover{transform:translateY(-2px);box-shadow:0 16px 35px rgba(31,45,42,.11)}.doc-card b{display:block;color:var(--teal);font:800 18px/1.2 Arial,sans-serif;margin-bottom:6px}.doc-card span{color:var(--muted);font:14px/1.45 Arial,sans-serif}.footer-nav{display:flex;justify-content:space-between;gap:18px;margin-top:26px;max-width:1050px}.footer-nav a{flex:1;background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;text-decoration:none;font:700 14px/1.4 Arial,sans-serif}.footer-nav a:last-child{text-align:right}.print-note{display:none}
+@media(max-width:980px){.shell{grid-template-columns:1fr;padding:18px}.sidebar{position:relative;top:0;height:auto}.topbar{position:relative;padding:14px 18px}.hero{padding:30px 24px}.article{padding:30px 22px}.actions{display:none}.footer-nav{flex-direction:column}.footer-nav a:last-child{text-align:left}}
+@media print{body{background:#fff}.topbar,.sidebar,.footer-nav{display:none}.shell{display:block;padding:0}.hero{box-shadow:none;border-radius:0;color:#111;background:#fff;border-bottom:2px solid #ddd}.hero::after{display:none}.article{box-shadow:none;border:0;border-radius:0;max-width:none;padding:20px}.article h2{break-after:avoid}.article table{display:table}.print-note{display:block}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="mark">D</span><span class="brand-text">Dorina Strategy<span class="brand-sub">Beirut School Wellbeing</span></span></a>
+  <nav class="actions"><a class="btn" href="index.html">Index</a><button class="btn" onclick="window.print()">Print / Save PDF</button></nav>
+</header>
+<main class="shell">
+  <aside class="sidebar"><h2>Documents</h2><ul class="nav-list"><li><a href="index.html">Start Here / Package Index<span>Overview and reading order</span></a></li>
+<li><a href="DORINA_SENDABLE_SUMMARY.html">Sendable Summary for Dorina<span>Warm executive summary to share first</span></a></li>
+<li><a href="MASTER_PLAN.html">A-to-Z Strategic Plan<span>Market, positioning, go-to-market and KPIs</span></a></li>
+<li><a href="BRAND_STRATEGY.html">Brand Strategy<span>Personal brand now, consulting company later</span></a></li>
+<li><a href="LOGO_BRAND_KIT.html">Logo &amp; Brand Kit<span>Logo concepts, colors, typography and usage</span></a></li>
+<li><a href="OFFER_ARCHITECTURE.html">Offer Architecture<span>Workshops, pilots, packages and pricing logic</span></a></li>
+<li><a href="SCHOOL_OUTREACH_PLAYBOOK.html">School Outreach Playbook<span>Targets, scripts, meetings and follow-ups</span></a></li>
+<li><a href="EXECUTIVE_PRESENCE_LINKEDIN_X_PR.html">Executive Presence / LinkedIn / X / PR<span>Profile, content calendar and media angles</span></a></li>
+<li><a href="90_DAY_ACTION_PLAN.html">90-Day Action Plan<span>Weekly execution roadmap</span></a></li>
+<li><a class="active" href="SCHOOL_PITCH_DECK_OUTLINE.html">School Pitch Deck Outline<span>Slide-by-slide deck structure</span></a></li>
+<li><a href="BILINGUAL_COPY_BANK.html">Bilingual Copy Bank<span>English and Arabic copy blocks</span></a></li>
+<li><a href="RISK_ETHICS_COMPLIANCE.html">Risk, Ethics &amp; Compliance<span>Guardrails, consent, safety and disclaimers</span></a></li></ul><div class="mini-toc"><h2>On this page</h2>
+<a class="h2" href="#parent-child-emotional-wellbeing-workshops-for-schools-in-beirut-slide-by-slide-pitch-deck">Parent &amp; Child Emotional Wellbeing Workshops for Schools in Beirut — Slide-by-Slide Pitch Deck</a>
+<a class="h2" href="#design-system-from-logobrandkitmd-fixed">Design System (from LOGOBRANDKIT.md — fixed)</a>
+<a class="h2" href="#the-deck-slide-by-slide">The Deck, Slide by Slide</a>
+<a class="h3" href="#slide-1-title">Slide 1 — Title</a>
+<a class="h3" href="#slide-2-the-moment-our-families-are-in">Slide 2 — The Moment Our Families Are In</a>
+<a class="h3" href="#slide-3-what-parents-ask-the-felt-problem">Slide 3 — What Parents Ask (the felt problem)</a>
+<a class="h3" href="#slide-4-what-i-do">Slide 4 — What I Do</a>
+<a class="h3" href="#slide-5-track-1-parent-workshops">Slide 5 — Track 1: Parent Workshops</a>
+<a class="h3" href="#slide-6-track-2-child-support-workshops">Slide 6 — Track 2: Child Support Workshops</a>
+<a class="h3" href="#slide-7-track-3-the-school-partnership-flagship">Slide 7 — Track 3: The School Partnership (flagship)</a>
+<a class="h3" href="#slide-8-who-i-am">Slide 8 — Who I Am</a>
+<a class="h3" href="#slide-9-how-i-work-with-your-team">Slide 9 — How I Work With Your Team</a>
+<a class="h3" href="#slide-10-what-a-session-feels-like-proof">Slide 10 — What a Session Feels Like (proof)</a>
+<a class="h3" href="#slide-11-where-we-start-the-introductory-session">Slide 11 — Where We Start: The Introductory Session</a>
+<a class="h3" href="#slide-12-partnership-options-investment-proposal-deck-only">Slide 12 — Partnership Options &amp; Investment (Proposal Deck only)</a>
+<a class="h3" href="#slide-13-your-schools-year-sketched-proposal-deck-only">Slide 13 — Your School&#x27;s Year, Sketched (Proposal Deck only)</a>
+<a class="h3" href="#slide-14-next-steps">Slide 14 — Next Steps</a>
+<a class="h2" href="#appendix-slides-in-reserve-shown-on-request">Appendix Slides (in reserve, shown on request)</a>
+<a class="h2" href="#segment-variants-one-master-three-decks">Segment Variants — One Master, Three Decks</a>
+<a class="h2" href="#build-delivery-checklist">Build &amp; Delivery Checklist</a>
+</div></aside>
+  <section class="content">
+    <div class="hero"><div class="eyebrow">Dorina · Beirut · Arabic + English</div><h1>School Pitch Deck Outline</h1><p>Slide-by-slide deck structure</p><div class="meta"><span class="pill">School-facing</span><span class="pill">Parent & Child Wellbeing</span><span class="pill">Personal brand now → consulting vehicle later</span></div></div>
+    <article class="article"><h1 id="schoolpitchdeckoutlinemd">SCHOOL_PITCH_DECK_OUTLINE.md</h1>
+<h2 id="parent-child-emotional-wellbeing-workshops-for-schools-in-beirut-slide-by-slide-pitch-deck">Parent &amp; Child Emotional Wellbeing Workshops for Schools in Beirut — Slide-by-Slide Pitch Deck</h2>
+<blockquote>
+<p><strong>What this is:</strong> the complete structure, headline copy, and speaker notes for Dorina's school-facing deck — ready to build in Canva or PowerPoint using LOGO_BRAND_KIT.md. Copy blocks marked <strong>EN/AR</strong> have approved Arabic equivalents in BILINGUAL_COPY_BANK.md.</p>
+<p><strong>Two versions from one master:</strong><br />
+- <strong>Discovery Deck (slides 1–11 + 14):</strong> for the 45-minute discovery meeting. No pricing on screen — pricing is discussed live, and only after discovery (see slide-12 rule).<br />
+- <strong>Proposal Deck (all 14 slides + tailored slide 12):</strong> for the debrief/proposal meeting after a pilot, personalized with the school's own feedback data.</p>
+<p><strong>Compliance (applies to every slide):</strong> never lead with hypnotherapy — credentials appear only on slide 8, exactly worded (Master in Clinical Hypnotherapy · Master in NLP / Coaching · Master in Time Line Therapy). No clinical, diagnostic, or treatment claims anywhere. No children's faces without documented consent. All prices are working USD ranges to validate; never print a single fixed number.</p>
+</blockquote>
+<hr />
+<h2 id="design-system-from-logobrandkitmd-fixed">Design System (from LOGO_BRAND_KIT.md — fixed)</h2>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Palette</td>
+<td>Deep Teal <code>#1F6F6B</code> (headers), Warm Sand <code>#E8DCC8</code> (backgrounds), Apricot <code>#F2A65A</code> (accents only), Ink <code>#2B2B2B</code> (body), Soft White <code>#FAF7F2</code> (alt background)</td>
+</tr>
+<tr>
+<td>Typography</td>
+<td>EN: IBM Plex Sans (Fraunces for premium-deck headlines) · AR: IBM Plex Sans Arabic</td>
+</tr>
+<tr>
+<td>Layout</td>
+<td>Every slide bilingual: EN headline with AR subline (or reversed for community/NGO decks); generous whitespace; max ~30 words visible per slide — the deck supports the conversation, it doesn't replace it</td>
+</tr>
+<tr>
+<td>Imagery</td>
+<td>Consented workshop photos (room-from-the-back, hands, materials — never children's faces), warm Beirut light; no stock clip-art, no clinical symbols (no brain, no cross, no couch)</td>
+</tr>
+<tr>
+<td>Footer</td>
+<td>Dorina [Last Name] · Parent &amp; Child Emotional Wellbeing — Beirut · page number</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="the-deck-slide-by-slide">The Deck, Slide by Slide</h2>
+<h3 id="slide-1-title">Slide 1 — Title</h3>
+<ul>
+<li><strong>Headline (EN):</strong> Parent &amp; Child Emotional Wellbeing Workshops for [School Name]</li>
+<li><strong>AR:</strong> ورش عمل الصحة النفسية والتوازن العاطفي للأهل والأطفال — [اسم المدرسة]</li>
+<li><strong>Subline:</strong> Practical, bilingual support for your parents, your students, and your team · 2026–27</li>
+<li><strong>Visual:</strong> Warm Sand background, seedling/embracing-curve motif in Deep Teal, Dorina's name and title bottom-left. <strong>Always insert the school's name</strong> — a generic title slide reads like a mass mailing.</li>
+<li><strong>Premium variant headline:</strong> School–Family Emotional Wellbeing Program for [School Name].</li>
+<li><strong>Speaker notes:</strong> Thank them for the time; one genuine, specific compliment about the school. Frame the meeting: <em>"I'd love to spend most of our time hearing about your families — I'll keep the slides short."</em> In discovery meetings, this deck follows the 45-minute agenda in SCHOOL_OUTREACH_PLAYBOOK.md §5 — discovery questions come <strong>before</strong> slide 4.</li>
+</ul>
+<h3 id="slide-2-the-moment-our-families-are-in">Slide 2 — The Moment Our Families Are In</h3>
+<ul>
+<li><strong>Headline (EN):</strong> Beirut's parents are asking for help. Schools are where they ask.</li>
+<li><strong>AR:</strong> أهالي بيروت يطلبون الدعم — والمدرسة هي المكان الذي يثقون به.</li>
+<li><strong>Body (3 lines max):</strong> 72% of caregivers in Lebanon report their children anxious or nervous; 62% sad or depressed (UNICEF, 2025) · National Mental Health Strategy 2024–2030 calls for school-linked wellbeing support · Parents increasingly expect schools to lead here.</li>
+<li><strong>Visual:</strong> one large stat (72%) in Deep Teal, source cited small; no distressing imagery.</li>
+<li><strong>Speaker notes:</strong> Deliver with hope, never alarm: <em>"This number isn't meant to worry you — you see it in your corridors already. It means every school that gives parents practical support is meeting a real, felt need."</em> Bridge immediately to agency. <strong>Never</strong> use fear as a lever; that violates the brand and reads as manipulation to seasoned principals.</li>
+<li><strong>Segment adaptation:</strong> NGO deck adds MEHE/UNESCO MHPSS program reference (alignment with funder language); community deck softens the stats into one line and leads with "what parents ask us every day."</li>
+</ul>
+<h3 id="slide-3-what-parents-ask-the-felt-problem">Slide 3 — What Parents Ask (the felt problem)</h3>
+<ul>
+<li><strong>Headline (EN):</strong> "How do I get him to talk to me?" — what we hear from parents everywhere</li>
+<li><strong>AR:</strong> «كيف أجعل ابني يتكلم معي؟» — أسئلة نسمعها من كل الأهالي</li>
+<li><strong>Body:</strong> 5–6 real, anonymized parent questions as floating quote cards: homework battles · school-morning anxiety · screen conflicts · the child who "keeps it all inside" · discipline without daily war · confidence and comparison.</li>
+<li><strong>Visual:</strong> quote cards in Soft White on Warm Sand; mix AR and EN quotes deliberately — the bilingualism is the message.</li>
+<li><strong>Speaker notes:</strong> Pause here. Ask: <em>"Which of these do you hear most from your parents?"</em> Their answer tells you which track to emphasize on slides 5–7. Write their words down — verbatim phrases become the proposal language.</li>
+</ul>
+<h3 id="slide-4-what-i-do">Slide 4 — What I Do</h3>
+<ul>
+<li><strong>Headline (EN):</strong> Practical, bilingual wellbeing support for your whole school community</li>
+<li><strong>AR:</strong> دعم عملي وثنائي اللغة لكل المجتمع المدرسي</li>
+<li><strong>Body — the positioning line verbatim:</strong> "I help schools and families strengthen children's emotional wellbeing through practical parent–child support, coaching-based tools, and bilingual workshops adapted to each school community."</li>
+<li><strong>Three-track diagram:</strong> Parents · Children · School Partnership — three circles feeding one center: <em>the child's wellbeing</em>.</li>
+<li><strong>Speaker notes:</strong> One breath per track, no detail yet: <em>"Parents get tools they use the same evening. Children build confidence in small, safe groups. And for schools that want more than events, we build a year-round program together."</em> Flag the key differentiators now: bilingual by design, practical not theoretical, and — say it explicitly — <em>"coaching-based and non-clinical: I complement your counseling team, never replace it."</em></li>
+</ul>
+<h3 id="slide-5-track-1-parent-workshops">Slide 5 — Track 1: Parent Workshops</h3>
+<ul>
+<li><strong>Headline (EN):</strong> Parents leave with tools they use tonight</li>
+<li><strong>AR:</strong> أدوات يستخدمها الأهل من الليلة نفسها</li>
+<li><strong>Body:</strong> 2-hour interactive workshops, up to 40 parents, AR/EN. Catalog titles (show 4–5, tuned to slide-3 answers): Talk So They Listen · Calm Starts at Home · Firm and Kind · Beside My Anxious Child · School Stress: A Family Toolkit.</li>
+<li><strong>Visual:</strong> workshop-title cards with AR titles beneath; one consented room photo if available.</li>
+<li><strong>Speaker notes:</strong> Walk through ONE workshop in 60 seconds (pick the one matching their pain) — audience, one concrete tool from it, and the take-home sheet. Mention format credibility: <em>"Every session is interactive — pair practice, live demonstrations, printed bilingual tool sheet. Parents don't sit through a lecture."</em></li>
+</ul>
+<h3 id="slide-6-track-2-child-support-workshops">Slide 6 — Track 2: Child Support Workshops</h3>
+<ul>
+<li><strong>Headline (EN):</strong> Small groups. Big skills. Your staff always in the room.</li>
+<li><strong>AR:</strong> مجموعات صغيرة، مهارات كبيرة — وبحضور فريق مدرستكم دائماً.</li>
+<li><strong>Body:</strong> Series of 4–6 sessions, groups of 8–15, activity-based, by age band (6–9 / 10–12 / 13–15). Sample series: The Confidence Club · My Feelings in Colors · Calm and Brave · Focus Power. <strong>Safeguarding banner across the bottom:</strong> School staff present in every session · Written parental consent before session 1 · Non-clinical, skills-based · Concerns referred to your counselor.</li>
+<li><strong>Speaker notes:</strong> Lead with the safeguarding banner, not the catalog: <em>"Before the content — three rules I never break: your staff are in the room for every child session, every child has written parental consent, and anything that needs more than a skills workshop goes straight to your counselor."</em> This slide converts skeptical principals; the rules ARE the pitch.</li>
+</ul>
+<h3 id="slide-7-track-3-the-school-partnership-flagship">Slide 7 — Track 3: The School Partnership (flagship)</h3>
+<ul>
+<li><strong>Headline (EN):</strong> Not an event. A calendar.</li>
+<li><strong>AR:</strong> ليست فعالية واحدة، بل برنامج على مدار السنة.</li>
+<li><strong>Body:</strong> A co-designed October–June wellbeing calendar: monthly parent workshops · child workshop series by age band · teacher mini-sessions each term · awareness campaigns · per-term feedback reports to leadership.</li>
+<li><strong>Visual:</strong> a miniature 9-month calendar strip (from OFFER_ARCHITECTURE.md §4 sample) with icons per month — the single most persuasive visual in the deck.</li>
+<li><strong>Speaker notes:</strong> <em>"One evening helps parents for a week. A calendar changes how a school community talks about feelings for a year."</em> For premium schools add the enrollment angle: <em>"Partner schools present this as their school–family wellbeing program — it becomes part of how the school describes itself to prospective families."</em> Do not discuss price here; if asked, bridge: <em>"There are three partnership levels — let me show you how schools choose, and we'll talk investment once we've defined what fits [School]."</em></li>
+</ul>
+<h3 id="slide-8-who-i-am">Slide 8 — Who I Am</h3>
+<ul>
+<li><strong>Headline (EN):</strong> Dorina [Last Name] — Parent &amp; Child Emotional Wellbeing, Beirut</li>
+<li><strong>AR:</strong> دورينا [الشهرة] — الصحة النفسية والتوازن العاطفي للأهل والأطفال، بيروت</li>
+<li><strong>Body:</strong> Professional portrait (warm, per brand kit) · bilingual facilitator, Beirut-based · <strong>"My training includes: Master in Clinical Hypnotherapy · Master in NLP / Coaching · Master in Time Line Therapy"</strong> · "In schools, my work is coaching-based and educational — non-clinical, preventive, and delivered in coordination with your counseling team."</li>
+<li><strong>Speaker notes:</strong> This is the ONLY slide where credentials appear, in exactly this wording and this order-of-information: role → approach → training → scope boundary. If hypnotherapy questions come, use the approved response in SCHOOL_OUTREACH_PLAYBOOK.md §4.9 verbatim: school programs contain no hypnotherapy and no therapy of any kind; the training deepens understanding; session outlines are shared in advance. Offer the certificate verification pack <em>if they wish</em> — volunteering verifiability builds more trust than the certificates themselves.</li>
+</ul>
+<h3 id="slide-9-how-i-work-with-your-team">Slide 9 — How I Work With Your Team</h3>
+<ul>
+<li><strong>Headline (EN):</strong> Alongside your counselor. Never instead.</li>
+<li><strong>AR:</strong> إلى جانب المرشد(ة) في مدرستكم — لا بديلاً عنه(ا).</li>
+<li><strong>Body — four commitments:</strong> Content shared with your counselor before any session · Staff present in all child workshops · Clear referral pathway: your counselor first; licensed professionals when needed (incl. Embrace Lifeline 1564 on all parent handouts) · Aligned with your safeguarding policy and the spirit of Law 422.</li>
+<li><strong>Speaker notes:</strong> If the counselor is in the room, address this slide to them directly and ask for their input on content. If not: <em>"Before anything runs, I'd like your counselor's eyes on the content — could you introduce us?"</em> This sentence wins deals. The subtext of the whole slide: <em>she makes our counselor's job easier and our risk smaller.</em></li>
+</ul>
+<h3 id="slide-10-what-a-session-feels-like-proof">Slide 10 — What a Session Feels Like (proof)</h3>
+<ul>
+<li><strong>Headline (EN):</strong> What parents say when the forms come back</li>
+<li><strong>AR:</strong> ماذا يقول الأهل بعد الورشة؟</li>
+<li><strong>Body:</strong> feedback statistics from delivered sessions ("average value rating 9.2/10 · 87% said they'd attend monthly") · two short parent quotes (consented, name-optional) · one school-staff testimonial when available.</li>
+<li><strong>Visual:</strong> big NPS number, quote cards, consented room photo.</li>
+<li><strong>Speaker notes:</strong> Before the first pilots exist, this slide shows the <em>measurement system</em> instead: the bilingual feedback form, what gets reported to leadership, and the promise — <em>"You'll never have to wonder whether it worked; your leadership gets the numbers and your parents' own words after every session."</em> Replace with real data after pilot #1 — this slide is why every pilot must produce feedback forms.</li>
+</ul>
+<h3 id="slide-11-where-we-start-the-introductory-session">Slide 11 — Where We Start: The Introductory Session</h3>
+<ul>
+<li><strong>Headline (EN):</strong> Start with one evening. Judge everything from that.</li>
+<li><strong>AR:</strong> نبدأ بلقاء واحد — واحكموا بأنفسكم.</li>
+<li><strong>Body:</strong> <em>Raising Confident Kids in Stressful Times</em> — a 60–90 minute evening for your parents · fully prepared, bilingual, with take-home tool sheet and promotion kit · feedback summary delivered to your leadership within 48 hours.</li>
+<li><strong>Speaker notes:</strong> The close of the discovery meeting. Offer per segment policy: premium — <em>"I'd offer [School] this first session with my compliments — I'm selecting a small number of Beirut schools for the launch series"</em>; community — symbolic fee. <strong>Always propose two concrete dates in this breath</strong> and never leave without a date or a named date-decision step (playbook §5.4 close script).</li>
+</ul>
+<h3 id="slide-12-partnership-options-investment-proposal-deck-only">Slide 12 — Partnership Options &amp; Investment <em>(Proposal Deck only)</em></h3>
+<ul>
+<li><strong>Headline (EN):</strong> Three ways to work together in 2026–27</li>
+<li><strong>AR:</strong> ثلاث صيغ للتعاون خلال العام الدراسي</li>
+<li><strong>Body — three columns (Essentials / Growth / Flagship)</strong> with 4–5 inclusion bullets each (from OFFER_ARCHITECTURE.md §4 inclusion table) and the segment-appropriate annual range from the approved pricing logic. Footnote: <em>Investment ranges for 2026–27; termly invoicing available; final scope co-designed with your team.</em></li>
+<li><strong>Speaker notes:</strong> Present <strong>Growth first, always</strong> (anchor), Essentials as the accessible fallback, Flagship as the ambition tier. Personalize with the school's own pilot data: <em>"68% of your parents said they'd attend monthly — that's what Growth is built for."</em> Negotiation guardrails apply (playbook §6.5): scholarship seats instead of discounts; trade scope, not rate; pilot fee credited against a signed annual package. In the Discovery Deck this slide is <strong>omitted</strong> — showing prices before discovery anchors the conversation on cost instead of fit.</li>
+</ul>
+<h3 id="slide-13-your-schools-year-sketched-proposal-deck-only">Slide 13 — Your School's Year, Sketched <em>(Proposal Deck only)</em></h3>
+<ul>
+<li><strong>Headline (EN):</strong> What [School Name]'s wellbeing year could look like</li>
+<li><strong>AR:</strong> هكذا يمكن أن تبدو سنة مدرستكم</li>
+<li><strong>Body:</strong> a draft Oct–Jun calendar personalized with the topics their parents voted for on the pilot feedback forms, their term dates, and their school name in the title.</li>
+<li><strong>Speaker notes:</strong> This is the emotional close of the proposal meeting — the school sees itself already inside the program. Build it from the sample Growth calendar (OFFER_ARCHITECTURE.md §4) with their feedback data slotted in. Invite co-authorship: <em>"This is a sketch — the real version we build with your counselor."</em></li>
+</ul>
+<h3 id="slide-14-next-steps">Slide 14 — Next Steps</h3>
+<ul>
+<li><strong>Headline (EN):</strong> Three small steps this month</li>
+<li><strong>AR:</strong> ثلاث خطوات بسيطة هذا الشهر</li>
+<li><strong>Body:</strong> 1. A 20-minute call between me and your counselor · 2. [Discovery: introductory parent session on Date A or Date B / Proposal: your chosen option confirmed by (date)] · 3. We announce it to your parents together (invitation kit provided).</li>
+<li><strong>Contact block:</strong> Dorina [Last Name] · WhatsApp · email · LinkedIn · one-pager QR code.</li>
+<li><strong>Speaker notes:</strong> Recap agreements out loud, confirm who sends what by when, ask for the counselor's contact, and book the next touchpoint before leaving. Leave printed one-pagers (never the full deck — the deck is the meeting; the one-pager is the artifact that circulates).</li>
+</ul>
+<hr />
+<h2 id="appendix-slides-in-reserve-shown-on-request">Appendix Slides (in reserve, shown on request)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Slide</th>
+<th>Content</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A1</td>
+<td>Full workshop catalog</td>
+<td>All Track-1 and Track-2 titles with one-line descriptions, AR/EN</td>
+<td>"What else do you offer?"</td>
+</tr>
+<tr>
+<td>A2</td>
+<td>Safeguarding &amp; consent detail</td>
+<td>Consent form preview, staff-present rule, referral protocol card, Law 422 alignment</td>
+<td>Counselor or safeguarding-lead meetings</td>
+</tr>
+<tr>
+<td>A3</td>
+<td>Credentials &amp; verification</td>
+<td>The three Masters (exact wording), issuing bodies, verification offer</td>
+<td>Due-diligence questions</td>
+</tr>
+<tr>
+<td>A4</td>
+<td>Sample tool sheet</td>
+<td>One real bilingual take-home sheet</td>
+<td>"What do parents actually get?"</td>
+</tr>
+<tr>
+<td>A5</td>
+<td>Feedback &amp; reporting sample</td>
+<td>The 8-question form + a sample leadership report page</td>
+<td>Data-minded principals; NGO funder conversations</td>
+</tr>
+<tr>
+<td>A6</td>
+<td>Online-delivery fallback</td>
+<td>How sessions continue through disruptions (contract-embedded)</td>
+<td>Continuity/risk questions</td>
+</tr>
+<tr>
+<td>A7</td>
+<td>NGO alignment page</td>
+<td>MHPSS-adjacent vocabulary, outputs/outcomes framing, per-session unit costs, MoU structure</td>
+<td>NGO deck only</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="segment-variants-one-master-three-decks">Segment Variants — One Master, Three Decks</h2>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Premium private/international</th>
+<th>Community schools</th>
+<th>NGO / social-impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Language order</td>
+<td>EN headline, AR subline</td>
+<td>AR headline, EN subline</td>
+<td>AR-led throughout</td>
+</tr>
+<tr>
+<td>Headline font</td>
+<td>Fraunces (premium serif)</td>
+<td>IBM Plex Sans</td>
+<td>IBM Plex Sans</td>
+</tr>
+<tr>
+<td>Slide 2 emphasis</td>
+<td>EQ ↔ performance; parent–school cooperation; holistic-school differentiation</td>
+<td>What parents ask every day; calmer homes</td>
+<td>UNICEF data + MoPH/MEHE alignment; resilience and protective factors</td>
+</tr>
+<tr>
+<td>Slide 7 angle</td>
+<td>Enrollment-marketing value; annual calendar as school identity</td>
+<td>Practical rhythm; per-term flexibility</td>
+<td>Program outputs, caregiver reach, funder reporting</td>
+</tr>
+<tr>
+<td>Slide 12 ranges</td>
+<td>Top of approved pricing ranges; lead Growth/Flagship</td>
+<td>Lower bands; per-term payment visible</td>
+<td>Replaced by A7 per-project structure</td>
+</tr>
+<tr>
+<td>Tone check</td>
+<td>Formal, polished, outcome-driven</td>
+<td>Warm, practical, family-centered</td>
+<td>Mission-driven, inclusive, trauma-sensitive</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="build-delivery-checklist">Build &amp; Delivery Checklist</h2>
+<ul>
+<li>[ ] Build master deck in Canva/PowerPoint per the design system; duplicate into the three segment variants</li>
+<li>[ ] Dorina approves every slide's copy (standing rule) — AR copy proofed by a native reader for warm, natural register</li>
+<li>[ ] Export: 16:9 presentation + PDF handout version (slides 1, 4–9, 14 only — no pricing in any left-behind document)</li>
+<li>[ ] Insert school name + logo slide 1 before <strong>every</strong> meeting; re-check slide 10 has the latest proof data</li>
+<li>[ ] Rehearse once against the 45-minute discovery agenda: slides are ~15 minutes of a 45-minute meeting — discovery talk comes first, deck second</li>
+<li>[ ] Print: 3 × one-pagers, 1 × sample feedback form, safeguarding one-liner sheet (the deck itself is not printed)</li>
+</ul>
+<hr />
+<p><em>All prices shown live or on slide 12 are working USD ranges to validate in the first 10 school conversations. All copy follows the credential and non-clinical rules in the internal strategy reference §2 and RISK_ETHICS_COMPLIANCE.md. School names and data are inserted per meeting — never present a generic deck to a named school.</em></p></article>
+    <nav class="footer-nav"><a href="90_DAY_ACTION_PLAN.html">← Previous<br>90-Day Action Plan</a><span></span><a href="BILINGUAL_COPY_BANK.html">Next →<br>Bilingual Copy Bank</a></nav>
+  </section>
+</main>
+<script>
+document.querySelectorAll('.article p, .article li, .article td, .article blockquote').forEach(el=>{if(/[؀-ۿ]/.test(el.textContent)) el.setAttribute('dir','auto');});
+</script>
+</body></html>

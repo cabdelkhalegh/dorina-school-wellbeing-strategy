@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Offer Architecture — Dorina School Wellbeing Strategy</title>
+<style>
+:root{
+  --teal:#164F4A;--teal-2:#0F3835;--sand:#F4E8D2;--sand-2:#FBF7EF;--apricot:#EBA36B;--rose:#B86B5B;
+  --ink:#182220;--muted:#60706C;--line:#E6D9C5;--card:#FFFDF8;--white:#fff;--shadow:0 20px 55px rgba(31,45,42,.12);
+  --radius:22px;--content:900px;--nav:330px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:linear-gradient(180deg,var(--sand-2),#fff 42%,#f7efe1);color:var(--ink);font:16px/1.68 Georgia,'Times New Roman',serif;text-rendering:optimizeLegibility}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 8% 8%,rgba(235,163,107,.18),transparent 26%),radial-gradient(circle at 92% 20%,rgba(22,79,74,.10),transparent 30%);pointer-events:none;z-index:-1}
+a{color:var(--teal);text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--rose)}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(251,247,239,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 28px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}.mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,var(--teal),#24756c);display:grid;place-items:center;color:#fff;font:700 20px Arial,sans-serif;box-shadow:0 10px 25px rgba(22,79,74,.2)}.brand-text{font-family:Arial,sans-serif;font-weight:700;letter-spacing:.02em}.brand-sub{display:block;font-weight:500;color:var(--muted);font-size:12px;letter-spacing:.04em;text-transform:uppercase}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{font-family:Arial,sans-serif;border:1px solid var(--line);background:var(--white);color:var(--teal);padding:9px 13px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:700}.btn.primary{background:var(--teal);color:#fff;border-color:var(--teal)}
+.shell{display:grid;grid-template-columns:var(--nav) minmax(0,1fr);gap:30px;max-width:1380px;margin:0 auto;padding:34px 28px 80px}.sidebar{position:sticky;top:82px;height:calc(100vh - 105px);overflow:auto;align-self:start;background:rgba(255,253,248,.84);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:0 14px 35px rgba(31,45,42,.08)}
+.sidebar h2{font:800 13px/1.2 Arial,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0 0 14px}.nav-list{list-style:none;margin:0;padding:0;display:grid;gap:7px}.nav-list a{display:block;text-decoration:none;border-radius:14px;padding:10px 11px;color:var(--ink);font:700 14px/1.3 Arial,sans-serif}.nav-list a:hover,.nav-list a.active{background:var(--sand);color:var(--teal)}.nav-list span{display:block;color:var(--muted);font-weight:500;font-size:12px;margin-top:3px}.mini-toc{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}.mini-toc a{display:block;font:500 13px/1.35 Arial,sans-serif;color:var(--muted);text-decoration:none;padding:6px 0 6px 10px;border-left:2px solid transparent}.mini-toc a:hover{color:var(--teal);border-left-color:var(--apricot)}.mini-toc .h3{padding-left:24px;font-size:12px}
+.content{min-width:0}.hero{background:linear-gradient(135deg,var(--teal),var(--teal-2));color:#fff;border-radius:30px;padding:42px 44px;margin-bottom:24px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero::after{content:'نبتة';position:absolute;right:34px;bottom:-18px;font:800 96px/1 Arial,sans-serif;color:rgba(255,255,255,.08)}.eyebrow{font:800 12px/1 Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#F5D2A6;margin-bottom:14px}.hero h1{font:700 clamp(32px,5vw,58px)/1.05 Georgia,'Times New Roman',serif;margin:0 0 15px;max-width:880px}.hero p{max-width:820px;margin:0;color:rgba(255,255,255,.88);font:18px/1.6 Arial,sans-serif}.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.pill{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.09);border-radius:999px;padding:7px 11px;font:700 12px/1 Arial,sans-serif;color:#fff}
+.article{background:rgba(255,253,248,.94);border:1px solid var(--line);border-radius:30px;padding:46px min(6vw,72px);box-shadow:var(--shadow);max-width:1050px}.article h1{font-size:44px;line-height:1.08;margin:0 0 24px;color:var(--teal)}.article h2{font-size:29px;line-height:1.18;margin:46px 0 15px;color:var(--teal);padding-top:8px;border-top:1px solid var(--line)}.article h3{font-size:21px;line-height:1.25;margin:30px 0 10px;color:#243b37}.article h4{font:800 15px/1.3 Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:var(--rose);margin:24px 0 8px}.article p{margin:0 0 16px}.article strong{color:#203b37}.article blockquote{margin:24px 0;padding:20px 24px;background:#F6EDDE;border-left:5px solid var(--apricot);border-radius:0 18px 18px 0}.article ul,.article ol{padding-left:28px;margin:0 0 20px}.article li{margin:6px 0}.article hr{border:0;border-top:1px solid var(--line);margin:36px 0}.article code{background:#F2E8DA;border:1px solid #E2D2BA;border-radius:7px;padding:2px 5px;font-family:Consolas,monospace;font-size:.9em}.article pre{overflow:auto;background:#132b28;color:#f8f1e6;border-radius:18px;padding:18px}.article table{width:100%;border-collapse:separate;border-spacing:0;margin:22px 0;border:1px solid var(--line);border-radius:18px;background:#fff;table-layout:auto;overflow:hidden}.article th,.article td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;min-width:0;overflow-wrap:anywhere}.article th{background:#F4E8D2;color:var(--teal);font:800 13px/1.3 Arial,sans-serif;text-align:left}.article tr:last-child td{border-bottom:0}.article img{max-width:100%;border-radius:16px}.article [dir='rtl'],.article :lang(ar){font-family:Tahoma,Arial,sans-serif}.doc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:24px}.doc-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;text-decoration:none;color:var(--ink);box-shadow:0 10px 26px rgba(31,45,42,.07)}.doc-card:hover{transform:translateY(-2px);box-shadow:0 16px 35px rgba(31,45,42,.11)}.doc-card b{display:block;color:var(--teal);font:800 18px/1.2 Arial,sans-serif;margin-bottom:6px}.doc-card span{color:var(--muted);font:14px/1.45 Arial,sans-serif}.footer-nav{display:flex;justify-content:space-between;gap:18px;margin-top:26px;max-width:1050px}.footer-nav a{flex:1;background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;text-decoration:none;font:700 14px/1.4 Arial,sans-serif}.footer-nav a:last-child{text-align:right}.print-note{display:none}
+@media(max-width:980px){.shell{grid-template-columns:1fr;padding:18px}.sidebar{position:relative;top:0;height:auto}.topbar{position:relative;padding:14px 18px}.hero{padding:30px 24px}.article{padding:30px 22px}.actions{display:none}.footer-nav{flex-direction:column}.footer-nav a:last-child{text-align:left}}
+@media print{body{background:#fff}.topbar,.sidebar,.footer-nav{display:none}.shell{display:block;padding:0}.hero{box-shadow:none;border-radius:0;color:#111;background:#fff;border-bottom:2px solid #ddd}.hero::after{display:none}.article{box-shadow:none;border:0;border-radius:0;max-width:none;padding:20px}.article h2{break-after:avoid}.article table{display:table}.print-note{display:block}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="mark">D</span><span class="brand-text">Dorina Strategy<span class="brand-sub">Beirut School Wellbeing</span></span></a>
+  <nav class="actions"><a class="btn" href="index.html">Index</a><button class="btn" onclick="window.print()">Print / Save PDF</button></nav>
+</header>
+<main class="shell">
+  <aside class="sidebar"><h2>Documents</h2><ul class="nav-list"><li><a href="index.html">Start Here / Package Index<span>Overview and reading order</span></a></li>
+<li><a href="DORINA_SENDABLE_SUMMARY.html">Sendable Summary for Dorina<span>Warm executive summary to share first</span></a></li>
+<li><a href="MASTER_PLAN.html">A-to-Z Strategic Plan<span>Market, positioning, go-to-market and KPIs</span></a></li>
+<li><a href="BRAND_STRATEGY.html">Brand Strategy<span>Personal brand now, consulting company later</span></a></li>
+<li><a href="LOGO_BRAND_KIT.html">Logo &amp; Brand Kit<span>Logo concepts, colors, typography and usage</span></a></li>
+<li><a class="active" href="OFFER_ARCHITECTURE.html">Offer Architecture<span>Workshops, pilots, packages and pricing logic</span></a></li>
+<li><a href="SCHOOL_OUTREACH_PLAYBOOK.html">School Outreach Playbook<span>Targets, scripts, meetings and follow-ups</span></a></li>
+<li><a href="EXECUTIVE_PRESENCE_LINKEDIN_X_PR.html">Executive Presence / LinkedIn / X / PR<span>Profile, content calendar and media angles</span></a></li>
+<li><a href="90_DAY_ACTION_PLAN.html">90-Day Action Plan<span>Weekly execution roadmap</span></a></li>
+<li><a href="SCHOOL_PITCH_DECK_OUTLINE.html">School Pitch Deck Outline<span>Slide-by-slide deck structure</span></a></li>
+<li><a href="BILINGUAL_COPY_BANK.html">Bilingual Copy Bank<span>English and Arabic copy blocks</span></a></li>
+<li><a href="RISK_ETHICS_COMPLIANCE.html">Risk, Ethics &amp; Compliance<span>Guardrails, consent, safety and disclaimers</span></a></li></ul><div class="mini-toc"><h2>On this page</h2>
+<a class="h2" href="#parent-child-emotional-wellbeing-workshops-for-schools-in-beirut-full-offer-architecture">Parent &amp; Child Emotional Wellbeing Workshops for Schools in Beirut — Full Offer Architecture</a>
+<a class="h2" href="#1-offer-philosophy-the-pilot-to-partnership-ladder">1. Offer Philosophy — The Pilot-to-Partnership Ladder</a>
+<a class="h3" href="#the-four-rungs">The four rungs</a>
+<a class="h3" href="#why-recurring-partnerships-beat-one-off-talks">Why recurring partnerships beat one-off talks</a>
+<a class="h2" href="#2-workshop-catalog-track-1-parent-workshops">2. Workshop Catalog — Track 1: Parent Workshops</a>
+<a class="h3" href="#p1-talk-so-they-listen-everyday-parentchild-communication">P1. Talk So They Listen — Everyday Parent–Child Communication</a>
+<a class="h3" href="#p2-calm-starts-at-home-emotional-regulation-for-the-whole-family">P2. Calm Starts at Home — Emotional Regulation for the Whole Family</a>
+<a class="h3" href="#p3-firm-and-kind-discipline-without-daily-battles">P3. Firm and Kind — Discipline Without Daily Battles</a>
+<a class="h3" href="#p4-beside-my-anxious-child-practical-support-for-worry-and-fear">P4. Beside My Anxious Child — Practical Support for Worry and Fear</a>
+<a class="h3" href="#p5-roots-of-confidence-building-self-esteem-that-lasts">P5. Roots of Confidence — Building Self-Esteem That Lasts</a>
+<a class="h3" href="#p6-school-stress-a-family-toolkit-for-exams-homework-and-pressure">P6. School Stress — A Family Toolkit for Exams, Homework and Pressure</a>
+<a class="h3" href="#p7-the-language-of-feelings-helping-children-express-emotions">P7. The Language of Feelings — Helping Children Express Emotions</a>
+<a class="h2" href="#3-workshop-catalog-track-2-child-support-workshop-series">3. Workshop Catalog — Track 2: Child Support Workshop Series</a>
+<a class="h3" href="#c1-the-confidence-club-self-confidence-series">C1. The Confidence Club — Self-Confidence Series</a>
+<a class="h3" href="#c2-my-feelings-in-colors-emotional-expression-series">C2. My Feelings in Colors — Emotional Expression Series</a>
+<a class="h3" href="#c3-calm-and-brave-stress-worry-skills-series-non-clinical">C3. Calm and Brave — Stress &amp; Worry Skills Series (non-clinical)</a>
+<a class="h3" href="#c4-focus-power-attention-motivation-series">C4. Focus Power — Attention &amp; Motivation Series</a>
+<a class="h3" href="#c5-friendship-skills-social-confidence-series">C5. Friendship Skills — Social Confidence Series</a>
+<a class="h3" href="#c6-i-bounce-back-resilience-positive-identity-series">C6. I Bounce Back — Resilience &amp; Positive Identity Series</a>
+<a class="h2" href="#4-track-3-school-partnership-packages-flagship">4. Track 3 — School Partnership Packages (Flagship)</a>
+<a class="h3" href="#package-inclusion-table">Package inclusion table</a>
+<a class="h3" href="#sample-annual-calendar-growth-package-octjun">Sample annual calendar — Growth package (Oct–Jun)</a>
+<a class="h3" href="#payment-terms-options">Payment terms options</a>
+<a class="h2" href="#5-the-pilot-door-opener-offer">5. The Pilot / Door-Opener Offer</a>
+</div></aside>
+  <section class="content">
+    <div class="hero"><div class="eyebrow">Dorina · Beirut · Arabic + English</div><h1>Offer Architecture</h1><p>Workshops, pilots, packages and pricing logic</p><div class="meta"><span class="pill">School-facing</span><span class="pill">Parent & Child Wellbeing</span><span class="pill">Personal brand now → consulting vehicle later</span></div></div>
+    <article class="article"><h1 id="offerarchitecturemd">OFFER_ARCHITECTURE.md</h1>
+<h2 id="parent-child-emotional-wellbeing-workshops-for-schools-in-beirut-full-offer-architecture">Parent &amp; Child Emotional Wellbeing Workshops for Schools in Beirut — Full Offer Architecture</h2>
+<blockquote>
+<p><strong>Positioning anchor:</strong> Dorina helps schools and families strengthen children's emotional wellbeing through practical parent–child support, coaching-based tools, and bilingual workshops adapted to each school community.</p>
+<p><strong>Pricing note (applies to every figure in this document):</strong> all prices are <strong>working ranges in USD, to validate in first 10 school conversations</strong>. Lebanon's school market is largely dollarized post-crisis; ranges will be firmed up after real pricing feedback.</p>
+<p><strong>Scope note:</strong> Dorina's offer is coaching-based, educational, and non-clinical. It complements — never replaces — school counselors, psychologists, and licensed mental health professionals. Children or families who need clinical support are referred to licensed professionals (e.g., Embrace Lifeline 1564, school counselor pathways).</p>
+</blockquote>
+<hr />
+<h2 id="1-offer-philosophy-the-pilot-to-partnership-ladder">1. Offer Philosophy — The Pilot-to-Partnership Ladder</h2>
+<p>The single most important strategic decision in this offer architecture: <strong>Dorina is not selling talks. She is selling an ongoing school–family wellbeing capability</strong>, delivered through a ladder that starts nearly frictionless and ends in an annual contract.</p>
+<h3 id="the-four-rungs">The four rungs</h3>
+<table>
+<thead>
+<tr>
+<th>Rung</th>
+<th>Offer</th>
+<th>Price posture</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Door-opener</td>
+<td>60–90 min parent talk: "Raising Confident Kids in Stressful Times"</td>
+<td>Free (first 3–5 premium schools) or $150–300 community token fee</td>
+<td>Get in the room; prove the experience; capture feedback data</td>
+</tr>
+<tr>
+<td>2. Paid workshop</td>
+<td>Single 2h parent workshop or one child series</td>
+<td>$200–800 (segment-dependent)</td>
+<td>Convert interest into a first invoice; deepen trust</td>
+</tr>
+<tr>
+<td>3. Term package</td>
+<td>One school term of scheduled sessions</td>
+<td>Pro-rated from annual packages</td>
+<td>De-risked commitment for cautious administrations</td>
+</tr>
+<tr>
+<td>4. Annual partnership</td>
+<td>Essentials / Growth / Flagship (Track 3)</td>
+<td>$2,500–18,000/yr</td>
+<td>The real business; recurring, calendar-embedded revenue</td>
+</tr>
+</tbody>
+</table>
+<h3 id="why-recurring-partnerships-beat-one-off-talks">Why recurring partnerships beat one-off talks</h3>
+<ol>
+<li><strong>Economics.</strong> One-off workshops cap Dorina at ~$400–800 per school interaction and force perpetual re-selling. A single Growth partnership ($6,000–10,000/yr) equals roughly 10–20 individual workshops sold with one negotiation, one contract, and one relationship to maintain. Five partnerships can outperform fifty scattered talks — with far lower sales overhead.</li>
+<li><strong>Outcomes.</strong> Emotional wellbeing is not built in one evening. Parents change habits through repetition and follow-up; children build confidence over a series, not a session. Schools that buy calendars see behavior change; schools that buy talks see applause. Only the first produces testimonials worth having.</li>
+<li><strong>The school's own logic.</strong> Beirut's private schools compete on holistic offerings in a dollarized fee market (top-tier fees run ~$14,000–22,000/yr). A named, year-round wellbeing partner is enrollment-marketing material ("our school–family wellbeing program"); a one-time speaker is a forgotten line in a newsletter. The annual calendar makes Dorina part of the school's identity, not its event list.</li>
+<li><strong>Defensibility.</strong> A partner embedded in the October–June calendar, known to the parent association, and trusted by the counselor is very hard to displace. A speaker is trivially replaceable.</li>
+<li><strong>Institutional path.</strong> Recurring school contracts are exactly the asset base that justifies the Phase 2 institutional vehicle (naming shortlist pending trademark checks) — an initiative sells calendars; an individual sells evenings.</li>
+</ol>
+<p><strong>Operating rule:</strong> every rung is designed to sell the next rung. The door-opener talk ends with a feedback form and a booked follow-up meeting. The paid workshop proposal always includes the term/annual option on the same page. The term package renewal conversation is an annual-upgrade conversation.</p>
+<hr />
+<h2 id="2-workshop-catalog-track-1-parent-workshops">2. Workshop Catalog — Track 1: Parent Workshops</h2>
+<p><strong>Track defaults (unless stated):</strong> duration 2 hours; capacity up to ~40 parents; bilingual delivery (Arabic-led with English support, or English-led with Arabic support — set per school, see §8); format: interactive seminar with pair exercises, live demonstrations, and a printed take-home tool sheet. <strong>Pricing per workshop:</strong> premium $400–800; community $200–400; NGO-funded $250–500 (funder-paid) — working ranges in USD, to validate in first 10 school conversations.</p>
+<hr />
+<h3 id="p1-talk-so-they-listen-everyday-parentchild-communication">P1. Talk So They Listen — Everyday Parent–Child Communication</h3>
+<p><strong>AR:</strong> «كلمات تصل: التواصل اليومي بين الأهل والأبناء»</p>
+<p>Most family conflict is not a discipline problem — it is a communication pattern problem. This workshop gives parents a small set of concrete phrasing and listening tools that change the daily tone at home within a week.</p>
+<ul>
+<li><strong>Audience:</strong> parents of children aged 4–15 (mixed welcome)</li>
+<li><strong>Duration / format / capacity:</strong> 2h · interactive seminar · up to 40</li>
+<li><strong>Learning outcomes — parents will be able to:</strong><br />
+  1. Replace the three most common conversation-killers (interrogating, lecturing, dismissing) with connection-first openers<br />
+  2. Use reflective listening ("name it to tame it") when a child is upset<br />
+  3. Apply the "connect before correct" sequence in real situations<br />
+  4. Choose age-appropriate language for hard topics<br />
+  5. Run a 10-minute daily "check-in ritual" that fits Lebanese family schedules</li>
+<li><strong>Sample agenda:</strong> 0:00–0:15 welcome, framing, live poll of top frustrations · 0:15–0:35 why children stop talking (patterns, not blame) · 0:35–0:55 tool 1: connection-first openers + pair practice · 0:55–1:15 tool 2: reflective listening demo + practice · 1:15–1:30 tool 3: connect-before-correct, real scenarios from the room · 1:30–1:50 building the daily check-in ritual; troubleshooting objections ("no time," "teens won't talk") · 1:50–2:00 commitments, take-home sheet, feedback form</li>
+<li><strong>Materials:</strong> bilingual tool sheet (1 page), scenario cards, flipchart, projector optional</li>
+</ul>
+<hr />
+<h3 id="p2-calm-starts-at-home-emotional-regulation-for-the-whole-family">P2. Calm Starts at Home — Emotional Regulation for the Whole Family</h3>
+<p><strong>AR:</strong> «الهدوء يبدأ من البيت: تنظيم المشاعر في العائلة»</p>
+<p>Children borrow their calm from adults — and in stressful times, parents' own regulation is the first tool. This workshop teaches parents to manage their own reactions and coach children through big emotions without shame or escalation.</p>
+<ul>
+<li><strong>Audience:</strong> parents of children aged 3–12 (adaptable to teens)</li>
+<li><strong>Duration / format / capacity:</strong> 2h · interactive seminar with guided practice · up to 40</li>
+<li><strong>Learning outcomes:</strong><br />
+  1. Recognize their own escalation signals before shouting starts<br />
+  2. Use two 60-second self-regulation techniques (breath + reframe) in the moment<br />
+  3. Co-regulate a distressed child using a 4-step calm sequence<br />
+  4. Distinguish "big feelings" from "bad behavior" and respond to each correctly<br />
+  5. Set up a family "calm corner" that children actually use</li>
+<li><strong>Sample agenda:</strong> 0:00–0:15 welcome + "what pushes your buttons" anonymous cards · 0:15–0:35 how stress moves through a family (simple, non-clinical model) · 0:35–0:55 parent self-regulation toolkit + guided practice · 0:55–1:15 the 4-step co-regulation sequence, live demo · 1:15–1:35 scenario practice in pairs (tantrum, homework meltdown, sibling fight) · 1:35–1:50 designing the home calm corner; realistic routines · 1:50–2:00 commitments, tool sheet, feedback form</li>
+<li><strong>Materials:</strong> bilingual tool sheet, calm-corner starter checklist, anonymous cards</li>
+</ul>
+<hr />
+<h3 id="p3-firm-and-kind-discipline-without-daily-battles">P3. Firm and Kind — Discipline Without Daily Battles</h3>
+<p><strong>AR:</strong> «حزم وحنان: تربية من دون معارك يومية»</p>
+<p>Parents don't have to choose between being obeyed and being close. This workshop replaces the punishment-vs-permissiveness tug-of-war with a clear structure of limits, consequences, and repair that reduces conflict within days.</p>
+<ul>
+<li><strong>Audience:</strong> parents of children aged 3–14; strong fit for community schools</li>
+<li><strong>Duration / format / capacity:</strong> 2h · interactive seminar · up to 40</li>
+<li><strong>Learning outcomes:</strong><br />
+  1. Set limits in one calm sentence instead of repeated warnings<br />
+  2. Use natural and logical consequences instead of threats and bribes<br />
+  3. De-escalate power struggles with the "two real choices" technique<br />
+  4. Repair after conflict without undermining the limit<br />
+  5. Align both parents (and grandparents) on one consistent approach</li>
+<li><strong>Sample agenda:</strong> 0:00–0:15 welcome + the discipline myths quiz · 0:15–0:35 why punishment escalates and permissiveness backfires · 0:35–0:55 limit-setting language lab (rewrite real phrases from the room) · 0:55–1:15 consequences that teach: worked examples by age · 1:15–1:35 power-struggle scenarios + two-real-choices practice · 1:35–1:50 the repair conversation; getting the whole household aligned · 1:50–2:00 personal action plan, tool sheet, feedback form</li>
+<li><strong>Materials:</strong> bilingual tool sheet, "phrases that work" pocket card, myths quiz handout</li>
+</ul>
+<hr />
+<h3 id="p4-beside-my-anxious-child-practical-support-for-worry-and-fear">P4. Beside My Anxious Child — Practical Support for Worry and Fear</h3>
+<p><strong>AR:</strong> «إلى جانب طفلي القلق: دعم عملي للمخاوف والقلق»</p>
+<p>Anxiety in Lebanese children is documented and widespread — and most parents respond with either reassurance loops or frustration, both of which feed the worry. This workshop gives parents a non-clinical, evidence-informed support role: how to listen, coach brave behavior, and know when to seek professional help.</p>
+<ul>
+<li><strong>Audience:</strong> parents of children aged 5–15; essential in all segments post-2024</li>
+<li><strong>Duration / format / capacity:</strong> 2h · interactive seminar · up to 40 (works well at 20–25 for depth)</li>
+<li><strong>Learning outcomes:</strong><br />
+  1. Recognize how worry shows up by age (stomachaches, avoidance, clinginess, irritability)<br />
+  2. Stop the reassurance loop and use validating-plus-coaching language instead<br />
+  3. Guide a child through a simple calm-body routine they can use at school<br />
+  4. Build a gradual "brave ladder" for avoided situations (school gate, exams, sleep)<br />
+  5. Identify the signs that warrant referral to the school counselor or a licensed professional — and how to raise it without stigma</li>
+<li><strong>Sample agenda:</strong> 0:00–0:15 welcome + normalizing (what the data says, without alarm) · 0:15–0:35 how worry works in a child's body and mind (plain-language model) · 0:35–0:55 what helps vs. what feeds it; the reassurance trap · 0:55–1:15 validating-plus-coaching scripts, pair practice · 1:15–1:35 calm-body routine + building a brave ladder, worked example · 1:35–1:50 when and how to seek professional support; referral pathways (counselor, licensed professionals) · 1:50–2:00 commitments, tool sheet, feedback form</li>
+<li><strong>Materials:</strong> bilingual tool sheet, brave-ladder template, referral guidance card (aligned with school counselor)</li>
+<li><strong>Note:</strong> explicitly framed as parental support skills, <strong>not</strong> treatment of anxiety disorders.</li>
+</ul>
+<hr />
+<h3 id="p5-roots-of-confidence-building-self-esteem-that-lasts">P5. Roots of Confidence — Building Self-Esteem That Lasts</h3>
+<p><strong>AR:</strong> «جذور الثقة: نبني تقدير الذات عند أبنائنا»</p>
+<p>Confidence is not built by praise — it is built by competence, contribution, and how adults respond to failure. This workshop shows parents how everyday moments (homework, chores, losing a match) become confidence deposits or withdrawals.</p>
+<ul>
+<li><strong>Audience:</strong> parents of children aged 4–15</li>
+<li><strong>Duration / format / capacity:</strong> 2h · interactive seminar · up to 40</li>
+<li><strong>Learning outcomes:</strong><br />
+  1. Distinguish praise that inflates from feedback that builds ("process praise")<br />
+  2. Use failure moments as confidence-building conversations<br />
+  3. Assign age-appropriate responsibility that grows real competence<br />
+  4. Protect self-esteem from comparison (siblings, grades, social media)<br />
+  5. Spot and gently counter negative self-talk in their child</li>
+<li><strong>Sample agenda:</strong> 0:00–0:15 welcome + "confident child" picture exercise · 0:15–0:35 the confidence equation: competence + belonging + safe failure · 0:35–0:55 praise lab: rewriting real praise into process feedback · 0:55–1:15 the failure conversation: scripts and pair practice · 1:15–1:35 responsibility ladder by age; comparison traps (grades, cousins, Instagram) · 1:35–1:50 answering negative self-talk; each parent drafts one weekly confidence ritual · 1:50–2:00 commitments, tool sheet, feedback form</li>
+<li><strong>Materials:</strong> bilingual tool sheet, responsibility ladder handout, praise-rewrite cards</li>
+</ul>
+<hr />
+<h3 id="p6-school-stress-a-family-toolkit-for-exams-homework-and-pressure">P6. School Stress — A Family Toolkit for Exams, Homework and Pressure</h3>
+<p><strong>AR:</strong> «ضغط المدرسة: أدوات عائلية للامتحانات والواجبات»</p>
+<p>The Lebanese curriculum load is heavy, and family evenings often collapse into homework wars and exam dread. This workshop turns parents from pressure amplifiers into pressure regulators — with routines that protect both grades and the relationship.</p>
+<ul>
+<li><strong>Audience:</strong> parents of children aged 8–15; peak demand around exam periods (schedule Nov and May)</li>
+<li><strong>Duration / format / capacity:</strong> 2h · interactive seminar · up to 40</li>
+<li><strong>Learning outcomes:</strong><br />
+  1. Separate the parent's role (structure, calm) from the student's role (the work itself)<br />
+  2. Set up a homework routine that ends nightly battles<br />
+  3. Use a pre-exam family protocol (sleep, review pacing, morning script)<br />
+  4. Respond to a bad grade in a way that improves the next one<br />
+  5. Recognize overload and burnout signals and adjust before the child breaks down</li>
+<li><strong>Sample agenda:</strong> 0:00–0:15 welcome + "our evenings look like…" poll · 0:15–0:35 how pressure helps and how it breaks (the inverted-U, in plain language) · 0:35–0:55 the homework contract: roles, place, timing, phones · 0:55–1:15 exam-week family protocol, worked example on a real calendar · 1:15–1:35 the bad-grade conversation: scripts and practice · 1:35–1:50 overload check: signals and adjustments; aligning with teachers · 1:50–2:00 commitments, tool sheet, feedback form</li>
+<li><strong>Materials:</strong> bilingual tool sheet, homework contract template, exam-week planner</li>
+</ul>
+<hr />
+<h3 id="p7-the-language-of-feelings-helping-children-express-emotions">P7. The Language of Feelings — Helping Children Express Emotions</h3>
+<p><strong>AR:</strong> «لغة المشاعر: نساعد أطفالنا على التعبير»</p>
+<p>"He keeps it all inside" and "she explodes over nothing" are two faces of the same gap: emotional vocabulary. This workshop equips parents to grow their child's feelings language day by day — the foundation skill under confidence, anxiety support, and communication.</p>
+<ul>
+<li><strong>Audience:</strong> parents of children aged 3–12 (with a teen adaptation segment)</li>
+<li><strong>Duration / format / capacity:</strong> 2h · interactive seminar · up to 40</li>
+<li><strong>Learning outcomes:</strong><br />
+  1. Model emotional vocabulary naturally in Arabic and English at home<br />
+  2. Use everyday openers (car rides, meals, bedtime) to invite expression without interrogating<br />
+  3. Respond to expressed feelings so the child shares more, not less, next time<br />
+  4. Use drawing, play, and stories as expression channels for younger or quieter children<br />
+  5. Handle "unacceptable" feelings (anger at a sibling, jealousy) without shutting them down</li>
+<li><strong>Sample agenda:</strong> 0:00–0:15 welcome + how many feeling words can we name in 60 seconds (AR+EN) · 0:15–0:35 why expression matters; suppression vs. explosion · 0:35–0:55 vocabulary-building habits: mealtime, bedtime, car-ride rituals · 0:55–1:15 the response that opens vs. the response that closes; pair practice · 1:15–1:35 play, drawing and story techniques (live demo) · 1:35–1:50 hard feelings without punishment; teen adaptations · 1:50–2:00 commitments, tool sheet, feedback form</li>
+<li><strong>Materials:</strong> bilingual feelings-wheel handout (AR/EN), conversation-opener cards, tool sheet</li>
+</ul>
+<hr />
+<h2 id="3-workshop-catalog-track-2-child-support-workshop-series">3. Workshop Catalog — Track 2: Child Support Workshop Series</h2>
+<p><strong>Track defaults:</strong> each offer is a <strong>series of 4–6 sessions</strong> (45–60 min each for ages 6–9; 60 min for 10–12; 60–75 min for 13–15), small groups of <strong>8–15 children</strong>, activity-based (games, drawing, movement, role-play, guided discussion). <strong>Pricing per series:</strong> premium $600–1,200; community $300–600 — working ranges in USD, to validate in first 10 school conversations.</p>
+<blockquote>
+<p><strong>SAFEGUARDING NOTE — applies to every child workshop, non-negotiable:</strong><br />
+- A member of school staff (counselor, teacher, or designated safeguarding lead) is <strong>present in the room for every session</strong>. Dorina never works with a child 1:1 unobserved.<br />
+- <strong>Written parental consent</strong> is collected by the school before session 1 (bilingual consent form provided by Dorina).<br />
+- All content is <strong>non-clinical</strong>: skills, games, and coaching-style tools — no therapy, no diagnosis, no processing of trauma. Any concern about a child is reported to the school's counselor/safeguarding lead per the school's own policy, in the spirit of Law 422 (2002) and MEHE child protection policy.<br />
+- Sessions run on school premises during school-approved hours.</p>
+</blockquote>
+<hr />
+<h3 id="c1-the-confidence-club-self-confidence-series">C1. The Confidence Club — Self-Confidence Series</h3>
+<p><strong>AR:</strong> «نادي الثقة»</p>
+<p>A playful, progressive series where children discover strengths, practice speaking up, and learn that mistakes are part of getting good at things. Children leave with a personal "strengths card" and a habit of trying.</p>
+<ul>
+<li><strong>Age bands:</strong> 6–9 (games and story-based) · 10–12 (challenges and team missions) · 13–15 (identity, voice, and public-speaking micro-challenges)</li>
+<li><strong>Series:</strong> 5 sessions · group 8–15 · school classroom or activity room</li>
+<li><strong>Learning outcomes:</strong><br />
+  1. Name at least three personal strengths with real examples<br />
+  2. Use a simple "brave voice" routine to speak in front of the group<br />
+  3. Reframe a mistake as information ("what I'd try next")<br />
+  4. Give and receive positive peer feedback<br />
+  5. Complete a personal challenge chosen in session 1</li>
+<li><strong>Sample session agenda (session 2, ages 6–9, 45 min):</strong> 0:00–0:08 arrival ritual + energy game · 0:08–0:20 story: the character who thought they couldn't · 0:20–0:35 strengths treasure hunt (pair activity) · 0:35–0:43 brave voice circle (each child shares one strength) · 0:43–0:45 sticker/strengths-card update + goodbye ritual</li>
+<li><strong>Materials:</strong> strengths cards, story cards, challenge tracker poster, stickers; staff-present sign-off sheet</li>
+<li><strong>Capacity:</strong> 8–15 per group; multiple groups schedulable per day</li>
+</ul>
+<hr />
+<h3 id="c2-my-feelings-in-colors-emotional-expression-series">C2. My Feelings in Colors — Emotional Expression Series</h3>
+<p><strong>AR:</strong> «مشاعري بالألوان»</p>
+<p>Through art, movement, and story, children build a feelings vocabulary in Arabic and English and safe ways to show what's inside. Especially valuable for quieter children and post-stress school communities.</p>
+<ul>
+<li><strong>Age bands:</strong> 6–9 (color, drawing, puppets) · 10–12 (comics, journaling, drama) · 13–15 (creative writing, music, guided discussion)</li>
+<li><strong>Series:</strong> 4 sessions · group 8–15</li>
+<li><strong>Learning outcomes:</strong><br />
+  1. Name and differentiate at least eight feelings (AR + EN)<br />
+  2. Match body sensations to feelings ("where do I feel it?")<br />
+  3. Express a feeling through a chosen channel (drawing, words, movement)<br />
+  4. Use one healthy release strategy for big feelings<br />
+  5. Ask a trusted adult for help using a simple script</li>
+<li><strong>Sample session agenda (session 1, ages 10–12, 60 min):</strong> 0:00–0:10 welcome + group agreements (kindness, pass allowed, staff introduced) · 0:10–0:25 feelings wheel game (AR/EN) · 0:25–0:45 comic strip: "a day with a big feeling" · 0:45–0:55 gallery walk + voluntary sharing · 0:55–1:00 calm-breath close + take-home mini card</li>
+<li><strong>Materials:</strong> art supplies, bilingual feelings wheel, comic templates, group-agreement poster</li>
+<li><strong>Capacity:</strong> 8–15 per group</li>
+</ul>
+<hr />
+<h3 id="c3-calm-and-brave-stress-worry-skills-series-non-clinical">C3. Calm and Brave — Stress &amp; Worry Skills Series (non-clinical)</h3>
+<p><strong>AR:</strong> «هادئ وشجاع»</p>
+<p>Children learn what worry feels like, why everybody has it, and a toolkit of calm-body and brave-thinking skills they can use at the school gate, before exams, and at bedtime. Skills-based and normalizing — never diagnostic.</p>
+<ul>
+<li><strong>Age bands:</strong> 6–9 (worry monster games, breathing buddies) · 10–12 (worry vs. facts detective work) · 13–15 (exam stress, thought tools, sleep habits)</li>
+<li><strong>Series:</strong> 6 sessions · group 8–12 (kept smaller deliberately)</li>
+<li><strong>Learning outcomes:</strong><br />
+  1. Explain worry as a normal alarm that sometimes rings too loudly<br />
+  2. Use two calm-body techniques (belly breathing, 5-senses grounding) independently<br />
+  3. Sort "worry thoughts" from "helpful facts" in everyday examples<br />
+  4. Take one small brave step per week toward something avoided<br />
+  5. Know which adults to talk to when worry feels too big</li>
+<li><strong>Sample session agenda (session 3, ages 6–9, 45 min):</strong> 0:00–0:08 arrival + weather-of-feelings check-in · 0:08–0:18 review: our calm-breath practice wins · 0:18–0:33 the worry monster shrinks when we name it (drawing activity) · 0:33–0:42 5-senses grounding game · 0:42–0:45 brave-step of the week + goodbye ritual</li>
+<li><strong>Materials:</strong> breathing buddies (soft toys, ages 6–9), worry/fact sorting cards, brave-step tracker</li>
+<li><strong>Capacity:</strong> 8–12 per group</li>
+<li><strong>Note:</strong> children showing significant distress are flagged to the present staff member and school counselor per school policy — referral, never on-the-spot intervention.</li>
+</ul>
+<hr />
+<h3 id="c4-focus-power-attention-motivation-series">C4. Focus Power — Attention &amp; Motivation Series</h3>
+<p><strong>AR:</strong> «قوة التركيز»</p>
+<p>A practical series that turns focus into a trainable game: children learn how attention works, build personal study rituals, and connect effort to goals they actually care about.</p>
+<ul>
+<li><strong>Age bands:</strong> 6–9 (attention games, movement breaks) · 10–12 (study rituals, distraction plans) · 13–15 (phones, goal-setting, exam planning)</li>
+<li><strong>Series:</strong> 4 sessions · group 8–15</li>
+<li><strong>Learning outcomes:</strong><br />
+  1. Describe attention as a muscle that trains and tires<br />
+  2. Use a personal focus ritual (clear desk, timer, movement break)<br />
+  3. Build a simple distraction plan (including phone parking for 13–15)<br />
+  4. Break a big task into steps and start with the smallest one<br />
+  5. Link effort to a personally chosen goal</li>
+<li><strong>Sample session agenda (session 2, ages 10–12, 60 min):</strong> 0:00–0:10 focus warm-up game (progressively harder) · 0:10–0:25 my distraction map: what steals my attention · 0:25–0:45 build-your-ritual lab (timers, desk setup, break rules) · 0:45–0:55 team challenge applying the ritual · 0:55–1:00 commitment card + close</li>
+<li><strong>Materials:</strong> timers, distraction-map worksheets, ritual-builder cards, commitment cards</li>
+<li><strong>Capacity:</strong> 8–15 per group</li>
+</ul>
+<hr />
+<h3 id="c5-friendship-skills-social-confidence-series">C5. Friendship Skills — Social Confidence Series</h3>
+<p><strong>AR:</strong> «مهارات الصداقة»</p>
+<p>Role-play-rich sessions on joining groups, sharing, resolving small conflicts, and handling exclusion and teasing — the daily social terrain that shapes how children feel about school.</p>
+<ul>
+<li><strong>Age bands:</strong> 6–9 (turn-taking, joining play, kind words) · 10–12 (conflict repair, gossip, inclusion) · 13–15 (peer pressure, boundaries, online friendship dynamics)</li>
+<li><strong>Series:</strong> 5 sessions · group 8–15</li>
+<li><strong>Learning outcomes:</strong><br />
+  1. Use a friendly "joining in" script for games and groups<br />
+  2. Resolve a small conflict with a 3-step repair (stop, say, solve)<br />
+  3. Respond to teasing with two calm comeback options<br />
+  4. Recognize exclusion and practice one inclusion behavior<br />
+  5. Say no to peer pressure while keeping their dignity (10+)</li>
+<li><strong>Sample session agenda (session 4, ages 6–9, 45 min):</strong> 0:00–0:08 hello circle + friendship compliment game · 0:08–0:20 puppet scene: the argument over the game · 0:20–0:35 3-step repair practice in pairs · 0:35–0:42 role-play carousel with coach feedback · 0:42–0:45 friendship pledge + goodbye ritual</li>
+<li><strong>Materials:</strong> puppets (younger bands), scenario cards, role-play props, pledge poster</li>
+<li><strong>Capacity:</strong> 8–15 per group</li>
+</ul>
+<hr />
+<h3 id="c6-i-bounce-back-resilience-positive-identity-series">C6. I Bounce Back — Resilience &amp; Positive Identity Series</h3>
+<p><strong>AR:</strong> «أنهض من جديد»</p>
+<p>The capstone series: children build a story of themselves as capable people who can face setbacks — grounded in their strengths, their people, and their culture. Designed to be especially meaningful in community and NGO settings.</p>
+<ul>
+<li><strong>Age bands:</strong> 6–9 (bounce-back heroes, helper maps) · 10–12 (setback stories, strengths shields) · 13–15 (identity, values, "who I'm becoming")</li>
+<li><strong>Series:</strong> 6 sessions · group 8–15</li>
+<li><strong>Learning outcomes:</strong><br />
+  1. Tell a personal "I got through it" story with a beginning, middle, and end<br />
+  2. Map their circle of support (family, school, community) and how to activate it<br />
+  3. Use self-encouragement phrases instead of self-criticism after setbacks<br />
+  4. Identify three personal values or strengths that define them beyond grades<br />
+  5. Create a personal "bounce-back plan" for a hard week</li>
+<li><strong>Sample session agenda (session 5, ages 13–15, 75 min):</strong> 0:00–0:10 check-in + music/mood opener · 0:10–0:30 values card sort: what I stand for · 0:30–0:50 my strengths shield (create + explain in pairs) · 0:50–1:05 setback rehearsal: applying the shield to a real scenario · 1:05–1:15 bounce-back plan draft + closing circle</li>
+<li><strong>Materials:</strong> values cards, shield templates, helper-map worksheets, art supplies</li>
+<li><strong>Capacity:</strong> 8–15 per group</li>
+</ul>
+<hr />
+<h2 id="4-track-3-school-partnership-packages-flagship">4. Track 3 — School Partnership Packages (Flagship)</h2>
+<p>Annual agreements aligned to the Lebanese school year (October–June). All prices are <strong>working ranges in USD, to validate in first 10 school conversations</strong>.</p>
+<h3 id="package-inclusion-table">Package inclusion table</h3>
+<table>
+<thead>
+<tr>
+<th>Inclusion</th>
+<th><strong>Essentials</strong><br>$2,500–4,000/yr</th>
+<th><strong>Growth</strong><br>$6,000–10,000/yr</th>
+<th><strong>Flagship</strong><br>$12,000–18,000/yr</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Parent workshops (2h, Track 1 catalog)</td>
+<td>1 per term (3/yr)</td>
+<td>Monthly during school year (8–9/yr)</td>
+<td>Monthly + exam-season specials (10–11/yr)</td>
+</tr>
+<tr>
+<td>Child workshop series (Track 2)</td>
+<td>—</td>
+<td>2 series/yr (school selects)</td>
+<td>4 series/yr across age bands</td>
+</tr>
+<tr>
+<td>Teacher wellbeing mini-sessions (60–90 min)</td>
+<td>—</td>
+<td>1 per term (3/yr)</td>
+<td>1 per term + new-staff onboarding session</td>
+</tr>
+<tr>
+<td>School-wide awareness campaign (posters, take-home sheets, assembly slot)</td>
+<td>1/yr</td>
+<td>2/yr</td>
+<td>3/yr, co-branded with school</td>
+</tr>
+<tr>
+<td>Annual wellbeing calendar (co-designed, Oct–Jun)</td>
+<td>Basic (fixed dates)</td>
+<td>Full (co-designed with counselor)</td>
+<td>Full + mid-year review and re-plan</td>
+</tr>
+<tr>
+<td>Parent feedback reporting to leadership</td>
+<td>End-of-year summary</td>
+<td>Per-term dashboard</td>
+<td>Per-event report + term dashboard + year report</td>
+</tr>
+<tr>
+<td>Counselor coordination meetings</td>
+<td>1/term</td>
+<td>1/term</td>
+<td>Monthly</td>
+</tr>
+<tr>
+<td>Custom support plan for school priorities</td>
+<td>—</td>
+<td>1 focus theme/yr</td>
+<td>Up to 3 themes/yr, custom-built</td>
+</tr>
+<tr>
+<td>Priority scheduling &amp; crisis-period responsiveness*</td>
+<td>—</td>
+<td>—</td>
+<td>Included</td>
+</tr>
+<tr>
+<td>Enrollment-marketing kit (program description for school website/brochure, bilingual)</td>
+<td>—</td>
+<td>Included</td>
+<td>Included + parent-facing launch event</td>
+</tr>
+<tr>
+<td>Bilingual delivery (AR/EN)</td>
+<td>Included</td>
+<td>Included</td>
+<td>Included</td>
+</tr>
+<tr>
+<td>Online fallback for any session (see §8)</td>
+<td>Included</td>
+<td>Included</td>
+<td>Included</td>
+</tr>
+</tbody>
+</table>
+<p>* "Crisis-period responsiveness" = priority rescheduling and adapted community sessions during national instability — supportive, non-clinical framing only.</p>
+<h3 id="sample-annual-calendar-growth-package-octjun">Sample annual calendar — Growth package (Oct–Jun)</h3>
+<table>
+<thead>
+<tr>
+<th>Month</th>
+<th>Parent workshop</th>
+<th>Child series</th>
+<th>Teacher/other</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Oct</td>
+<td>P1 Talk So They Listen (launch)</td>
+<td>—</td>
+<td>Kickoff + counselor planning meeting</td>
+</tr>
+<tr>
+<td>Nov</td>
+<td>P6 School Stress (pre-exams)</td>
+<td>C4 Focus Power begins (ages 10–12)</td>
+<td>Teacher mini-session 1: calm classrooms</td>
+</tr>
+<tr>
+<td>Dec</td>
+<td>P7 Language of Feelings</td>
+<td>C4 continues/ends</td>
+<td>Awareness campaign 1: Feelings Week</td>
+</tr>
+<tr>
+<td>Jan</td>
+<td>P2 Calm Starts at Home</td>
+<td>—</td>
+<td>Counselor check-in</td>
+</tr>
+<tr>
+<td>Feb</td>
+<td>P3 Firm and Kind</td>
+<td>C3 Calm and Brave begins (ages 6–9)</td>
+<td>Teacher mini-session 2: teacher stress toolkit</td>
+</tr>
+<tr>
+<td>Mar</td>
+<td>P4 Beside My Anxious Child</td>
+<td>C3 continues</td>
+<td>Counselor check-in</td>
+</tr>
+<tr>
+<td>Apr</td>
+<td>P5 Roots of Confidence</td>
+<td>C3 ends</td>
+<td>Awareness campaign 2: Confidence Week</td>
+</tr>
+<tr>
+<td>May</td>
+<td>P6 School Stress (exam edition)</td>
+<td>—</td>
+<td>Teacher mini-session 3: end-of-year energy</td>
+</tr>
+<tr>
+<td>Jun</td>
+<td>Closing parent session + year in review</td>
+<td>—</td>
+<td>Leadership report + renewal meeting</td>
+</tr>
+</tbody>
+</table>
+<h3 id="payment-terms-options">Payment terms options</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Structure</th>
+<th>Best for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Per-term invoicing (recommended default)</td>
+<td>3 equal invoices: Oct, Jan, Apr</td>
+<td>Most schools; matches tuition cash flow</td>
+</tr>
+<tr>
+<td>Annual upfront (–5% courtesy adjustment, optional lever)</td>
+<td>1 invoice in Sep/Oct</td>
+<td>Well-funded premium schools</td>
+</tr>
+<tr>
+<td>Monthly</td>
+<td>9 equal payments Oct–Jun</td>
+<td>Community schools managing cash flow</td>
+</tr>
+<tr>
+<td>Funder-billed</td>
+<td>Invoice to NGO/funder per grant milestones</td>
+<td>NGO context</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Lebanon payment reality (caveated):</strong> the market operates largely in "fresh USD" — cash or international transfer; local-bank cheques are often impractical. Contracts should state currency (USD), payment method (cash against receipt, OMT/Whish-type transfer, or international wire for institutions/funders), and timing. These mechanics <strong>must be validated per school in the first 10 conversations</strong> — some institutions have functioning USD accounts, others operate cash-first.</p>
+<hr />
+<h2 id="5-the-pilot-door-opener-offer">5. The Pilot / Door-Opener Offer</h2>
+<p><strong>Offer name:</strong> <em>Raising Confident Kids in Stressful Times</em> — a 60–90 minute evening talk for parents.<br />
+<strong>AR:</strong> «نربّي أولاداً واثقين في زمن الضغوط» — لقاء للأهل (٦٠–٩٠ دقيقة)</p>
+<p><strong>Price posture:</strong> free for the first 3–5 premium schools (positioned as "we are selecting a small number of Beirut schools for our launch series"); $150–300 token fee for community schools (a token fee protects perceived value and attendance) — working ranges in USD, to validate in first 10 school conversations.</p>
+<h3 id="exact-structure-90-min-version">Exact structure (90-min version)</h3>
+<table>
+<thead>
+<tr>
+<th>Time</th>
+<th>Segment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0:00–0:10</td>
+<td>School introduces Dorina (intro script provided by us); warm bilingual opening; one-line framing: practical tools, not theory</td>
+</tr>
+<tr>
+<td>0:10–0:25</td>
+<td>The moment we're in: what Lebanese children are carrying (UNICEF data, delivered with hope, not fear) and why parents are the most powerful protective factor</td>
+</tr>
+<tr>
+<td>0:25–0:45</td>
+<td>Tool 1 — the confidence-building response to failure (live demo + parent pair practice)</td>
+</tr>
+<tr>
+<td>0:45–1:05</td>
+<td>Tool 2 — the 60-second calm sequence for stressful moments (guided practice in the room)</td>
+</tr>
+<tr>
+<td>1:05–1:20</td>
+<td>Tool 3 — the daily 10-minute connection ritual; Q&amp;A</td>
+</tr>
+<tr>
+<td>1:20–1:30</td>
+<td>Close: what a year of this looks like (one slide on the three tracks), feedback form completed <strong>in the room</strong>, next-step announcement</td>
+</tr>
+</tbody>
+</table>
+<h3 id="what-the-school-receives">What the school receives</h3>
+<ul>
+<li>Fully prepared bilingual session (AR/EN mix set with the school in advance)</li>
+<li>Bilingual take-home tool sheet for every parent (school logo can be added)</li>
+<li>Promotion kit: WhatsApp invitation text (AR+EN), poster file, reminder message</li>
+<li>Post-event summary for leadership: attendance, feedback scores, top parent concerns (anonymized)</li>
+</ul>
+<h3 id="conversion-mechanism-the-whole-point">Conversion mechanism (the whole point)</h3>
+<ol>
+<li><strong>Feedback form in the room</strong> (§8 sample form) — captures satisfaction score, topic votes for future workshops, and an opt-in line: "I would attend a monthly session like this: yes/no."</li>
+<li><strong>Topic votes become the proposal.</strong> The follow-up proposal to the school opens with <em>their own parents' data</em>: "68% of your parents rated the session 9–10; the top requested topics were school stress and discipline without conflict."</li>
+<li><strong>Follow-up meeting booked on the spot.</strong> Before leaving the building, Dorina books a 30-minute debrief with the principal/counselor within 7 days ("I'll bring you the parent feedback summary"). The debrief agenda: feedback review → term package or annual partnership proposal → pilot-pricing credit (pilot fee, if paid, is credited against a signed annual package).</li>
+<li><strong>48-hour follow-up email</strong> with the summary PDF and the proposal, referencing the booked meeting.</li>
+</ol>
+<p><strong>Rule:</strong> never leave a pilot without (a) completed feedback forms and (b) a calendared follow-up meeting. A pilot without these is a donated evening, not a door-opener.</p>
+<hr />
+<h2 id="6-segment-adaptations-same-offers-three-voices">6. Segment Adaptations — Same Offers, Three Voices</h2>
+<p>The catalog and packages are identical in skeleton across segments; <strong>tone, examples, pricing posture, and paperwork change</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Premium private/international</th>
+<th>Community-focused schools</th>
+<th>NGO / social-impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tone</td>
+<td>Formal, polished, outcome-driven, high-trust</td>
+<td>Warm, practical, accessible, family-centered</td>
+<td>Mission-driven, inclusive, trauma-sensitive, supportive</td>
+</tr>
+<tr>
+<td>Framing of the same workshop (e.g., P3)</td>
+<td>"Modern discipline frameworks that strengthen parent–school cooperation and student self-regulation"</td>
+<td>"Fewer battles at home — practical steps that work by next week"</td>
+<td>"Safe, consistent parenting that helps children feel secure through difficult times"</td>
+</tr>
+<tr>
+<td>Examples used</td>
+<td>Exam pressure, university-track stress, screen time, bilingual households</td>
+<td>Homework wars, sibling conflict, extended-family dynamics, budget-free tools</td>
+<td>Displacement stress, community strain, safety and routine, free/low-cost tools</td>
+</tr>
+<tr>
+<td>Data emphasis</td>
+<td>Emotional intelligence ↔ performance; parent engagement as school differentiator</td>
+<td>Everyday relief and family harmony</td>
+<td>Resilience, emotional safety, protective factors; alignment with MoPH/MEHE wellbeing agenda</td>
+</tr>
+<tr>
+<td>Pricing posture</td>
+<td>Top of ranges; annual packages led first; enrollment-marketing value stressed</td>
+<td>Middle/lower ranges; per-term payment; token-fee pilot</td>
+<td>Per-project quotes tied to funder budgets; sliding scale; <strong>never free-unlimited</strong></td>
+</tr>
+<tr>
+<td>Language default</td>
+<td>English-led with Arabic support (confirm per school)</td>
+<td>Arabic-led with English support</td>
+<td>Arabic-led; materials fully bilingual</td>
+</tr>
+<tr>
+<td>Funder language (NGO only)</td>
+<td>—</td>
+<td>—</td>
+<td>Proposals use MHPSS-adjacent, non-clinical vocabulary: "psychosocial support-informed, skills-based group sessions," "community and family resilience," "child safeguarding compliant," "measurable outputs: sessions delivered, caregivers reached, pre/post confidence self-ratings." Deliverables framed as outputs/outcomes with per-session unit costs for grant reporting.</td>
+</tr>
+<tr>
+<td>Paperwork</td>
+<td>Service agreement + invoice; safeguarding annex</td>
+<td>Simple letter agreement + receipts</td>
+<td>MoU with NGO; alignment with donor compliance; child-protection policy annex mandatory</td>
+</tr>
+</tbody>
+</table>
+<p><strong>NGO positioning note:</strong> NGOs (Himaya, Embrace, War Child, Right To Play, and similar) are treated as <strong>partners and referral pathways, not competitors</strong>. Dorina's NGO-context role: caregiver-facing and child-group skills sessions inside their programs, funder-billed.</p>
+<hr />
+<h2 id="7-pricing-logic-rate-card">7. Pricing Logic &amp; Rate Card</h2>
+<p><strong>Logic in one paragraph:</strong> price anchors to the <em>partnership</em>, not the hour. Single workshops are priced high enough that the annual package is obviously better value per session (a Growth package works out cheaper per delivered event than buying events one by one), pushing schools up the ladder. Premium schools pay top-of-range because the offer feeds their enrollment story in a dollarized fee market; community schools pay accessible mid-range; NGO work is funder-financed at sustainable rates. Dorina's time is protected: nothing is free after the pilot.</p>
+<h3 id="rate-card-all-figures-are-working-ranges-in-usd-to-validate-in-first-10-school-conversations">Rate card — all figures are working ranges in USD, to validate in first 10 school conversations</h3>
+<table>
+<thead>
+<tr>
+<th>Offer</th>
+<th>Premium</th>
+<th>Community</th>
+<th>NGO context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Door-opener talk (60–90 min)</td>
+<td>Free (first 3–5 schools only)</td>
+<td>$150–300 token fee</td>
+<td>Free/token within a funded pilot only</td>
+</tr>
+<tr>
+<td>Single parent workshop (2h, ≤40 parents)</td>
+<td>$400–800</td>
+<td>$200–400</td>
+<td>$250–500 (funder-paid)</td>
+</tr>
+<tr>
+<td>Child workshop series (4–6 sessions, small group)</td>
+<td>$600–1,200/series</td>
+<td>$300–600/series</td>
+<td>Per-project quote, funder budget</td>
+</tr>
+<tr>
+<td>Half-day school wellbeing event</td>
+<td>$800–1,500</td>
+<td>Scaled quote</td>
+<td>Per-project quote</td>
+</tr>
+<tr>
+<td>Essentials partnership (annual)</td>
+<td>$2,500–4,000</td>
+<td>Lower band of range</td>
+<td>Funder-structured equivalent</td>
+</tr>
+<tr>
+<td>Growth partnership (annual)</td>
+<td>$6,000–10,000</td>
+<td>Lower band of range</td>
+<td>Funder-structured equivalent</td>
+</tr>
+<tr>
+<td>Flagship partnership (annual)</td>
+<td>$12,000–18,000</td>
+<td>Rarely applicable</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Private family coaching (1:1, non-school)</td>
+<td>$60–120/session</td>
+<td>$60–120/session</td>
+<td>Referral/sliding scale</td>
+</tr>
+</tbody>
+</table>
+<h3 id="discount-policy">Discount policy</h3>
+<ul>
+<li><strong>Never free beyond the pilot.</strong> The door-opener is the only free unit, and only for the first 3–5 premium schools. Everything after has a price.</li>
+<li><strong>Scholarship seats instead of discounts.</strong> When a school pleads budget, hold the rate and offer funded inclusion: e.g., "the package stays at $X, and includes 10 scholarship seats in child series for families the counselor nominates." This protects rate integrity, gives the school a story, and serves the mission.</li>
+<li><strong>Acceptable levers:</strong> annual-upfront courtesy adjustment (~5%), pilot-fee credit against a signed annual package, multi-school (same network) pricing on request.</li>
+<li><strong>Unacceptable:</strong> "free this term and we'll see," unpaid "exposure" events after the pilot phase, undocumented verbal discounts.</li>
+</ul>
+<h3 id="explicitly-excluded-from-all-school-offers">Explicitly excluded from all school offers</h3>
+<ul>
+<li><strong>1:1 clinical or therapeutic work with children</strong> — not offered in schools under any package. Concerns are referred to the school counselor and licensed professionals. (Private <em>family coaching</em> for parents exists as a separate non-school service, §9 — coaching, not therapy.)</li>
+<li>Diagnosis, treatment, or medical/psychological assessment of any kind</li>
+<li>Crisis intervention or replacing the school's counselor/psychologist</li>
+<li>Sessions with children without staff present and parental consent</li>
+</ul>
+<hr />
+<h2 id="8-delivery-logistics">8. Delivery Logistics</h2>
+<h3 id="bilingual-delivery-models">Bilingual delivery models</h3>
+<table>
+<thead>
+<tr>
+<th>Model</th>
+<th>Description</th>
+<th>Best for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arabic-led, English support</td>
+<td>Session runs in warm MSA/Lebanese register; slides and tool sheets bilingual; English summaries for key tools</td>
+<td>Community schools, NGO programs, most parent groups</td>
+</tr>
+<tr>
+<td>English-led, Arabic support</td>
+<td>Session in English; Arabic slide line + Arabic tool sheet; Arabic Q&amp;A welcomed</td>
+<td>International schools, mixed expat/local parent bodies</td>
+</tr>
+<tr>
+<td>Fully mixed</td>
+<td>Alternating by segment, decided with school; every printed word bilingual</td>
+<td>Bilingual premium schools</td>
+</tr>
+</tbody>
+</table>
+<p>Language model is confirmed with the school <strong>at booking</strong>, in writing, and printed materials are always bilingual regardless of spoken model.</p>
+<h3 id="group-sizes">Group sizes</h3>
+<ul>
+<li>Parent workshops: up to 40 (sweet spot 20–35); door-opener talk can scale to 60–80 with reduced interactivity</li>
+<li>Child series: 8–15 (8–12 for Calm and Brave); split into multiple groups rather than exceed</li>
+<li>Teacher mini-sessions: up to 25</li>
+</ul>
+<h3 id="room-tech-needs-sent-to-school-as-a-one-page-checklist">Room &amp; tech needs (sent to school as a one-page checklist)</h3>
+<ul>
+<li>Room with movable chairs (circle/pairs possible); child sessions need floor space</li>
+<li>Projector + screen (parent sessions); flipchart + markers always</li>
+<li>Microphone for 40+; water; printing of tool sheets by school or delivered by Dorina (cost included)</li>
+<li>For child sessions: the designated staff member confirmed by name in advance; consent forms returned before session 1</li>
+</ul>
+<h3 id="online-fallback-instability-contingency">Online fallback (instability contingency)</h3>
+<p>Given Lebanon's recurring disruptions (security events, strikes, fuel/electricity, weather), <strong>every contracted session carries an automatic online fallback</strong>, pre-agreed in the contract:</p>
+<ul>
+<li>Parent workshops → Zoom/Teams webinar version (90 min, adapted interactivity, same tool sheets as PDF); WhatsApp voice-note micro-summary for parents who cannot join live</li>
+<li>Child series → sessions pause and reschedule by default (online child groups only if the school requests, with staff co-hosting online and consent covering online delivery)</li>
+<li>Trigger: either party may invoke fallback up to 4 hours before start; no session is "lost" — delivered online or rescheduled within 3 weeks</li>
+<li>Connectivity reality: sessions designed to survive camera-off/low-bandwidth participation; materials sent in advance</li>
+</ul>
+<h3 id="evaluation-feedback">Evaluation &amp; feedback</h3>
+<p>Every parent session ends with a 2-minute paper (or QR) form; results are aggregated into the school-facing report and Dorina's testimonial pipeline (target NPS ≥ 8.5/10).</p>
+<p><strong>Sample 8-question parent feedback form (bilingual; EN shown, AR mirror on same sheet):</strong></p>
+<ol>
+<li>Overall, how valuable was today's session? (1–10) · «بشكل عام، ما مدى فائدة جلسة اليوم؟ (١–١٠)»</li>
+<li>How likely are you to recommend this session to another parent? (1–10)</li>
+<li>Which tool from today will you try first at home? (open)</li>
+<li>How confident do you feel applying it? (1–5)</li>
+<li>Which topics should we cover next? (tick up to 3: communication / calm at home / discipline / anxiety support / confidence / school stress / expressing feelings / other: ___)</li>
+<li>Would you attend a monthly session like this at your school? (Yes / No / Maybe)</li>
+<li>Preferred language for future sessions: (Arabic / English / Mixed)</li>
+<li>One sentence we may quote (optional — name optional): ______  □ You may use my comment publicly</li>
+</ol>
+<hr />
+<h2 id="9-upsell-adjacent-revenue">9. Upsell &amp; Adjacent Revenue</h2>
+<table>
+<thead>
+<tr>
+<th>Offer</th>
+<th>Description</th>
+<th>Price (working ranges in USD, to validate in first 10 school conversations)</th>
+<th>Channel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Private family coaching (non-school)</td>
+<td>1:1 coaching sessions with parents (and parent–child pairs where appropriate, parent present throughout) on the family's specific challenges. Coaching-based tools; explicitly not therapy; referral to licensed professionals when clinical needs appear. Booked privately, never sold from the school stage — offered via tool sheets' contact line and follow-up channels.</td>
+<td>$60–120/session; packages of 4–6 sessions</td>
+<td>Direct from parent-workshop audiences</td>
+</tr>
+<tr>
+<td>Teacher wellbeing mini-sessions</td>
+<td>60–90 min staff sessions: teacher stress toolkit, calm classroom routines, teacher–parent communication. Sold standalone to schools not yet in a package (and included in Growth/Flagship).</td>
+<td>Priced within single-workshop ranges ($200–800 by segment)</td>
+<td>School leadership; teacher-day calendars</td>
+</tr>
+<tr>
+<td>Parent association / committee talks</td>
+<td>Evening talks hosted by parent associations rather than administrations — often the easiest paid entry when leadership is slow. Same catalog, association-billed.</td>
+<td>Single-workshop ranges by segment</td>
+<td>Parent committees, alumni networks</td>
+</tr>
+<tr>
+<td>Half-day wellbeing events</td>
+<td>Themed school events (Confidence Day, Feelings Week launch) combining assembly, parent talk, and activity stations.</td>
+<td>$800–1,500 premium; scaled for other segments</td>
+<td>Upsell within partnerships or standalone</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Strategic function:</strong> family coaching diversifies income beyond school budgets and deepens results (which feed testimonials); teacher sessions and association talks are alternative doors into the same partnership ladder — every adjacent offer routes back to Track 3.</p>
+<hr />
+<p><em>All names, prices, and package structures in this document are working proposals for AK and Dorina to validate — pricing in the first 10 school conversations, naming and any institutional vehicle via trademark/registry checks.</em></p></article>
+    <nav class="footer-nav"><a href="LOGO_BRAND_KIT.html">← Previous<br>Logo &amp; Brand Kit</a><span></span><a href="SCHOOL_OUTREACH_PLAYBOOK.html">Next →<br>School Outreach Playbook</a></nav>
+  </section>
+</main>
+<script>
+document.querySelectorAll('.article p, .article li, .article td, .article blockquote').forEach(el=>{if(/[؀-ۿ]/.test(el.textContent)) el.setAttribute('dir','auto');});
+</script>
+</body></html>

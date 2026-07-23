@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Logo &amp; Brand Kit — Dorina School Wellbeing Strategy</title>
+<style>
+:root{
+  --teal:#164F4A;--teal-2:#0F3835;--sand:#F4E8D2;--sand-2:#FBF7EF;--apricot:#EBA36B;--rose:#B86B5B;
+  --ink:#182220;--muted:#60706C;--line:#E6D9C5;--card:#FFFDF8;--white:#fff;--shadow:0 20px 55px rgba(31,45,42,.12);
+  --radius:22px;--content:900px;--nav:330px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:linear-gradient(180deg,var(--sand-2),#fff 42%,#f7efe1);color:var(--ink);font:16px/1.68 Georgia,'Times New Roman',serif;text-rendering:optimizeLegibility}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 8% 8%,rgba(235,163,107,.18),transparent 26%),radial-gradient(circle at 92% 20%,rgba(22,79,74,.10),transparent 30%);pointer-events:none;z-index:-1}
+a{color:var(--teal);text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--rose)}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(251,247,239,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 28px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}.mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,var(--teal),#24756c);display:grid;place-items:center;color:#fff;font:700 20px Arial,sans-serif;box-shadow:0 10px 25px rgba(22,79,74,.2)}.brand-text{font-family:Arial,sans-serif;font-weight:700;letter-spacing:.02em}.brand-sub{display:block;font-weight:500;color:var(--muted);font-size:12px;letter-spacing:.04em;text-transform:uppercase}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{font-family:Arial,sans-serif;border:1px solid var(--line);background:var(--white);color:var(--teal);padding:9px 13px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:700}.btn.primary{background:var(--teal);color:#fff;border-color:var(--teal)}
+.shell{display:grid;grid-template-columns:var(--nav) minmax(0,1fr);gap:30px;max-width:1380px;margin:0 auto;padding:34px 28px 80px}.sidebar{position:sticky;top:82px;height:calc(100vh - 105px);overflow:auto;align-self:start;background:rgba(255,253,248,.84);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:0 14px 35px rgba(31,45,42,.08)}
+.sidebar h2{font:800 13px/1.2 Arial,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0 0 14px}.nav-list{list-style:none;margin:0;padding:0;display:grid;gap:7px}.nav-list a{display:block;text-decoration:none;border-radius:14px;padding:10px 11px;color:var(--ink);font:700 14px/1.3 Arial,sans-serif}.nav-list a:hover,.nav-list a.active{background:var(--sand);color:var(--teal)}.nav-list span{display:block;color:var(--muted);font-weight:500;font-size:12px;margin-top:3px}.mini-toc{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}.mini-toc a{display:block;font:500 13px/1.35 Arial,sans-serif;color:var(--muted);text-decoration:none;padding:6px 0 6px 10px;border-left:2px solid transparent}.mini-toc a:hover{color:var(--teal);border-left-color:var(--apricot)}.mini-toc .h3{padding-left:24px;font-size:12px}
+.content{min-width:0}.hero{background:linear-gradient(135deg,var(--teal),var(--teal-2));color:#fff;border-radius:30px;padding:42px 44px;margin-bottom:24px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero::after{content:'نبتة';position:absolute;right:34px;bottom:-18px;font:800 96px/1 Arial,sans-serif;color:rgba(255,255,255,.08)}.eyebrow{font:800 12px/1 Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#F5D2A6;margin-bottom:14px}.hero h1{font:700 clamp(32px,5vw,58px)/1.05 Georgia,'Times New Roman',serif;margin:0 0 15px;max-width:880px}.hero p{max-width:820px;margin:0;color:rgba(255,255,255,.88);font:18px/1.6 Arial,sans-serif}.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.pill{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.09);border-radius:999px;padding:7px 11px;font:700 12px/1 Arial,sans-serif;color:#fff}
+.article{background:rgba(255,253,248,.94);border:1px solid var(--line);border-radius:30px;padding:46px min(6vw,72px);box-shadow:var(--shadow);max-width:1050px}.article h1{font-size:44px;line-height:1.08;margin:0 0 24px;color:var(--teal)}.article h2{font-size:29px;line-height:1.18;margin:46px 0 15px;color:var(--teal);padding-top:8px;border-top:1px solid var(--line)}.article h3{font-size:21px;line-height:1.25;margin:30px 0 10px;color:#243b37}.article h4{font:800 15px/1.3 Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:var(--rose);margin:24px 0 8px}.article p{margin:0 0 16px}.article strong{color:#203b37}.article blockquote{margin:24px 0;padding:20px 24px;background:#F6EDDE;border-left:5px solid var(--apricot);border-radius:0 18px 18px 0}.article ul,.article ol{padding-left:28px;margin:0 0 20px}.article li{margin:6px 0}.article hr{border:0;border-top:1px solid var(--line);margin:36px 0}.article code{background:#F2E8DA;border:1px solid #E2D2BA;border-radius:7px;padding:2px 5px;font-family:Consolas,monospace;font-size:.9em}.article pre{overflow:auto;background:#132b28;color:#f8f1e6;border-radius:18px;padding:18px}.article table{width:100%;border-collapse:separate;border-spacing:0;margin:22px 0;border:1px solid var(--line);border-radius:18px;background:#fff;table-layout:auto;overflow:hidden}.article th,.article td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;min-width:0;overflow-wrap:anywhere}.article th{background:#F4E8D2;color:var(--teal);font:800 13px/1.3 Arial,sans-serif;text-align:left}.article tr:last-child td{border-bottom:0}.article img{max-width:100%;border-radius:16px}.article [dir='rtl'],.article :lang(ar){font-family:Tahoma,Arial,sans-serif}.doc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:24px}.doc-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;text-decoration:none;color:var(--ink);box-shadow:0 10px 26px rgba(31,45,42,.07)}.doc-card:hover{transform:translateY(-2px);box-shadow:0 16px 35px rgba(31,45,42,.11)}.doc-card b{display:block;color:var(--teal);font:800 18px/1.2 Arial,sans-serif;margin-bottom:6px}.doc-card span{color:var(--muted);font:14px/1.45 Arial,sans-serif}.footer-nav{display:flex;justify-content:space-between;gap:18px;margin-top:26px;max-width:1050px}.footer-nav a{flex:1;background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;text-decoration:none;font:700 14px/1.4 Arial,sans-serif}.footer-nav a:last-child{text-align:right}.print-note{display:none}
+@media(max-width:980px){.shell{grid-template-columns:1fr;padding:18px}.sidebar{position:relative;top:0;height:auto}.topbar{position:relative;padding:14px 18px}.hero{padding:30px 24px}.article{padding:30px 22px}.actions{display:none}.footer-nav{flex-direction:column}.footer-nav a:last-child{text-align:left}}
+@media print{body{background:#fff}.topbar,.sidebar,.footer-nav{display:none}.shell{display:block;padding:0}.hero{box-shadow:none;border-radius:0;color:#111;background:#fff;border-bottom:2px solid #ddd}.hero::after{display:none}.article{box-shadow:none;border:0;border-radius:0;max-width:none;padding:20px}.article h2{break-after:avoid}.article table{display:table}.print-note{display:block}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="mark">D</span><span class="brand-text">Dorina Strategy<span class="brand-sub">Beirut School Wellbeing</span></span></a>
+  <nav class="actions"><a class="btn" href="index.html">Index</a><button class="btn" onclick="window.print()">Print / Save PDF</button></nav>
+</header>
+<main class="shell">
+  <aside class="sidebar"><h2>Documents</h2><ul class="nav-list"><li><a href="index.html">Start Here / Package Index<span>Overview and reading order</span></a></li>
+<li><a href="DORINA_SENDABLE_SUMMARY.html">Sendable Summary for Dorina<span>Warm executive summary to share first</span></a></li>
+<li><a href="MASTER_PLAN.html">A-to-Z Strategic Plan<span>Market, positioning, go-to-market and KPIs</span></a></li>
+<li><a href="BRAND_STRATEGY.html">Brand Strategy<span>Personal brand now, consulting company later</span></a></li>
+<li><a class="active" href="LOGO_BRAND_KIT.html">Logo &amp; Brand Kit<span>Logo concepts, colors, typography and usage</span></a></li>
+<li><a href="OFFER_ARCHITECTURE.html">Offer Architecture<span>Workshops, pilots, packages and pricing logic</span></a></li>
+<li><a href="SCHOOL_OUTREACH_PLAYBOOK.html">School Outreach Playbook<span>Targets, scripts, meetings and follow-ups</span></a></li>
+<li><a href="EXECUTIVE_PRESENCE_LINKEDIN_X_PR.html">Executive Presence / LinkedIn / X / PR<span>Profile, content calendar and media angles</span></a></li>
+<li><a href="90_DAY_ACTION_PLAN.html">90-Day Action Plan<span>Weekly execution roadmap</span></a></li>
+<li><a href="SCHOOL_PITCH_DECK_OUTLINE.html">School Pitch Deck Outline<span>Slide-by-slide deck structure</span></a></li>
+<li><a href="BILINGUAL_COPY_BANK.html">Bilingual Copy Bank<span>English and Arabic copy blocks</span></a></li>
+<li><a href="RISK_ETHICS_COMPLIANCE.html">Risk, Ethics &amp; Compliance<span>Guardrails, consent, safety and disclaimers</span></a></li></ul><div class="mini-toc"><h2>On this page</h2>
+<a class="h2" href="#dorina-last-name-parent-child-emotional-wellbeing">Dorina [Last Name] — Parent &amp; Child Emotional Wellbeing</a>
+<a class="h3" href="#logo-concepts-color-typography-usage-rules-production-kit">Logo Concepts, Color, Typography, Usage Rules &amp; Production Kit</a>
+<a class="h2" href="#1-design-brief">1. Design Brief</a>
+<a class="h3" href="#who-the-identity-must-convince">Who the identity must convince</a>
+<a class="h3" href="#where-it-must-perform-priority-contexts">Where it must perform (priority contexts)</a>
+<a class="h3" href="#the-feel">The feel</a>
+<a class="h2" href="#2-three-logo-concepts">2. Three Logo Concepts</a>
+<a class="h3" href="#concept-a-seedling-embrace-recommended">Concept A — &quot;Seedling Embrace&quot; ⭐ RECOMMENDED</a>
+<a class="h3" href="#concept-b-two-voices">Concept B — &quot;Two Voices&quot;</a>
+<a class="h3" href="#concept-c-rising-sun-school">Concept C — &quot;Rising Sun School&quot;</a>
+<a class="h3" href="#recommendation">Recommendation</a>
+<a class="h2" href="#3-color-system">3. Color System</a>
+<a class="h3" href="#palette-exact-do-not-resample-or-improve">Palette (exact — do not resample or &quot;improve&quot;)</a>
+<a class="h3" href="#60-30-10-usage-rule">60 / 30 / 10 usage rule</a>
+<a class="h3" href="#accessibility-contrast-wcag-21-targets">Accessibility &amp; contrast (WCAG 2.1 targets)</a>
+<a class="h3" href="#colors-to-avoid-and-why">Colors to avoid — and why</a>
+<a class="h2" href="#4-typography">4. Typography</a>
+<a class="h3" href="#type-stack">Type stack</a>
+<a class="h3" href="#scale-print-a4-slides">Scale (print A4 / slides)</a>
+<a class="h3" href="#arabic-typesetting-rules-non-negotiable">Arabic typesetting rules (non-negotiable)</a>
+<a class="h2" href="#5-usage-rules">5. Usage Rules</a>
+<a class="h3" href="#clear-space">Clear space</a>
+<a class="h3" href="#minimum-sizes">Minimum sizes</a>
+<a class="h3" href="#forbidden-alterations">Forbidden alterations</a>
+</div></aside>
+  <section class="content">
+    <div class="hero"><div class="eyebrow">Dorina · Beirut · Arabic + English</div><h1>Logo &amp; Brand Kit</h1><p>Logo concepts, colors, typography and usage</p><div class="meta"><span class="pill">School-facing</span><span class="pill">Parent & Child Wellbeing</span><span class="pill">Personal brand now → consulting vehicle later</span></div></div>
+    <article class="article"><h1 id="logobrandkitmd">LOGO_BRAND_KIT.md</h1>
+<h2 id="dorina-last-name-parent-child-emotional-wellbeing">Dorina [Last Name] — Parent &amp; Child Emotional Wellbeing</h2>
+<h3 id="logo-concepts-color-typography-usage-rules-production-kit">Logo Concepts, Color, Typography, Usage Rules &amp; Production Kit</h3>
+<blockquote>
+<p><strong>Scope note.</strong> This is the visual identity companion to <code>BRAND_STRATEGY.md</code>. It serves the Layer 1 personal brand now and is pre-built to extend into the Layer 2 initiative (recommended name <strong>Nabta | نبتة</strong>, pending trademark/commercial-registry checks) without a rebrand. Everything here can be handed directly to a designer or used with AI image tools (§6).</p>
+</blockquote>
+<hr />
+<h2 id="1-design-brief">1. Design Brief</h2>
+<h3 id="who-the-identity-must-convince">Who the identity must convince</h3>
+<table>
+<thead>
+<tr>
+<th>Audience</th>
+<th>Context of first contact</th>
+<th>What the identity must signal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>School directors &amp; boards (premium private/international)</td>
+<td>Emailed proposal PDF, LinkedIn profile</td>
+<td>Credible, established, safe to put in front of parents; worth a paid contract</td>
+</tr>
+<tr>
+<td>School counselors &amp; coordinators</td>
+<td>One-pager, meeting handout</td>
+<td>Professional peer, complementary to their work, non-clinical</td>
+</tr>
+<tr>
+<td>Parents (community + premium)</td>
+<td>WhatsApp avatar/flyer, Instagram, workshop slides</td>
+<td>Warm, trustworthy, "for people like me," bilingual</td>
+</tr>
+<tr>
+<td>NGO / program officers</td>
+<td>Proposal documents, partnership decks</td>
+<td>Mission-aligned, ethical, structured</td>
+</tr>
+<tr>
+<td>Media / podcast producers</td>
+<td>LinkedIn banner, press bio headshot</td>
+<td>A clear expert with a clear topic</td>
+</tr>
+</tbody>
+</table>
+<h3 id="where-it-must-perform-priority-contexts">Where it must perform (priority contexts)</h3>
+<ol>
+<li><strong>School proposal covers and one-pagers</strong> (A4 print + PDF) — the money context.</li>
+<li><strong>WhatsApp avatar</strong> — tiny circle, ~128 px; most Beirut parent communication happens here.</li>
+<li><strong>LinkedIn banner</strong> (1584×396) and profile.</li>
+<li><strong>Workshop slides</strong> (16:9), projected in variable classroom lighting.</li>
+<li><strong>Certificates of participation</strong> for parents (print, premium feel).</li>
+<li>Instagram tiles, email signature, feedback forms, name badge.</li>
+</ol>
+<h3 id="the-feel">The feel</h3>
+<p><strong>"Confident care."</strong> Warm-professional. Calm, organic, growing. Think: a well-designed family education foundation — not a hospital, not a nursery, not a corporate consultancy.</p>
+<p><strong>Hard exclusions:</strong> no clinical/medical symbols (no brain, no cross, no couch, no stethoscope, no heartbeat line), no childish clip-art (no crayon fonts, no cartoon children, no rainbows), no fear imagery, no hypnosis imagery (no spirals, no pendulums, no closed eyes) — the brand never leads with hypnotherapy and the logo must not either.</p>
+<hr />
+<h2 id="2-three-logo-concepts">2. Three Logo Concepts</h2>
+<p>All three share the palette (§3), the type system (§4), and the requirement to work in EN-only, AR-only, and bilingual lockups. Concept A is the recommended direction per the agreed foundation.</p>
+<hr />
+<h3 id="concept-a-seedling-embrace-recommended">Concept A — "Seedling Embrace" ⭐ RECOMMENDED</h3>
+<p><strong>Metaphor.</strong> A young seedling (the child) growing inside an embracing curve (the parent — and, at the institutional layer, the school community). Growth held by care. This is the exact agreed direction: <em>abstract mark combining a growing leaf/seedling + embracing curve</em>, and it pre-loads the Nabta ("seedling") name for Layer 2 — one mark serves both layers.</p>
+<p><strong>Composition &amp; geometry.</strong><br />
+- Built on a circle grid. The <strong>embracing curve</strong> is a thick, open arc — roughly 270° of a circle, drawn with a stroke weight ~1/5 of the mark's diameter, opening at the upper right (openness = non-institutional warmth; an unbroken circle would feel closed/clinical).<br />
+- The arc's terminal at the bottom tapers and curls slightly inward, like an arm ending in a gentle hold.<br />
+- From the lower third of the enclosed space, the <strong>seedling</strong> rises: a single slim stem curving 8–10° off vertical (organic, not rigid), carrying <strong>two leaves</strong> — one smaller, lower leaf and one larger, upper leaf. Two leaves = parent and child; also reads as a sprout's first true leaves.<br />
+- Leaves are drawn as vesica-piscis (lens) shapes from the same circle grid, so curve tension matches the arc — the whole mark feels like one family of curves.<br />
+- <strong>Negative space:</strong> the gap between the upper leaf and the arc opening forms a subtle upward "release" — the child growing beyond the embrace, not trapped inside it. In the well-balanced version, the space between stem and arc on the left suggests a person's profile leaning in (do not force this; if it emerges from the geometry, keep it).<br />
+- <strong>Color logic:</strong> arc in Deep Teal <code>#1F6F6B</code>; leaves in Apricot <code>#F2A65A</code> (upper) and Deep Teal (lower) — or both teal with an apricot stem-tip for restraint. On dark backgrounds: arc in Soft White <code>#FAF7F2</code>, leaves in Apricot.</p>
+<p><strong>Primary lockup.</strong> Mark left, wordmark right (horizontal): "Dorina [Last Name]" in IBM Plex Sans SemiBold, Ink <code>#2B2B2B</code>, with the descriptor "Parent &amp; Child Emotional Wellbeing" in Regular, Deep Teal, letterspaced +2%, on a second line. Mark height = 2.2× the name's cap height. A stacked version (mark above centered text) serves square formats.</p>
+<p><strong>Bilingual AR/EN lockup behavior.</strong><br />
+- <strong>Bilingual formal (proposal covers, certificates):</strong> mark centered; EN wordmark to the left of the mark reading toward it, AR wordmark <strong>دورينا [اسم العائلة]</strong> (IBM Plex Sans Arabic SemiBold) to the right — each language reads <em>toward</em> the shared symbol. Descriptors below in respective languages.<br />
+- <strong>AR-first contexts:</strong> mirror the horizontal lockup — mark on the <strong>right</strong>, Arabic wordmark to its left (RTL reading order starts at the mark). The mark itself is <strong>not</strong> mirrored: its opening stays upper-right in all versions (asymmetric organic marks may keep one orientation; mirroring would change the leaf gesture).<br />
+- Arabic descriptor: <strong>التوازن العاطفي للأهل والأبناء</strong> (natural MSA, warm register).<br />
+- Never stack Arabic above English in the same lockup with different visual weight — equal size, equal weight, always.</p>
+<p><strong>Monochrome.</strong> Single-color versions in Ink, Deep Teal, or Soft White (reversed). The mark is pure solid shapes — no gradients, no overlaps requiring transparency — so one-color reproduction (fax-grade, embroidery, stamp) is lossless by design.</p>
+<p><strong>Small-size behavior.</strong> At ≤32 px (WhatsApp avatar, favicon): use the <strong>mark only</strong>, no text, on a Warm Sand <code>#E8DCC8</code> or Deep Teal circle. Below 24 px, switch to the simplified cut: arc + single leaf (drop the smaller leaf), stroke weights bumped +15%. Test target: recognizable at 16 px favicon.</p>
+<p><strong>Why it wins:</strong> direct match to the agreed direction; unique metaphor (embrace + growth in one gesture); scales from favicon to banner; already <em>is</em> the Nabta symbol when Layer 2 launches.</p>
+<hr />
+<h3 id="concept-b-two-voices">Concept B — "Two Voices"</h3>
+<p><strong>Metaphor.</strong> Parent–child communication as the heart of wellbeing: two abstract speech forms — one larger, one smaller — leaning toward each other, together forming a soft implied heart. Conversation as care.</p>
+<p><strong>Composition &amp; geometry.</strong><br />
+- Two <strong>rounded asymmetric speech-bubble forms</strong> built from superellipse curves (no sharp bubble "tails" — instead, each form has one softly drawn-out corner pointing toward the other, like turned heads).<br />
+- The larger form (parent, Deep Teal) sits lower-left; the smaller (child, Apricot) upper-right, overlapping the larger by ~15%. The <strong>overlap zone</strong> is the key: rendered in a blended deeper shade (or, in flat production, a cut showing Warm Sand background) shaped as a <strong>leaf/seed</strong> — what the conversation grows.<br />
+- <strong>Negative space:</strong> the outer silhouette of the two forms together approximates a tilted heart — felt, not literal. The gap beneath the child form gives it "lift," as if rising.<br />
+- Corner radii from a shared radius scale (r, 1.6r, 2.5r) so both forms feel related, like family.</p>
+<p><strong>Primary lockup.</strong> Stacked: mark above, "Dorina [Last Name]" centered beneath in IBM Plex Sans SemiBold, descriptor line under it. The two-form mark is wider than tall, so horizontal lockups place it left at 2× cap height.</p>
+<p><strong>Bilingual behavior.</strong> Same rules as Concept A (mark-anchored, RTL mirror of <em>layout</em> only). A pleasant accident: in AR-first layouts with the mark on the right, the smaller "child" form naturally leads the reading eye. The two-voices metaphor is itself bilingual — the two forms can subtly stand for the two languages in bilingual campaign use.</p>
+<p><strong>Monochrome.</strong> The overlap must switch from blended color to a <strong>white (background) gap</strong> of 1.5% of mark width between the forms, with the leaf shape knocked out. Slightly more production care than Concept A.</p>
+<p><strong>Small-size behavior.</strong> Good at 32 px; at ≤24 px the overlap leaf disappears — use the two forms with a knockout gap only. Weakest of the three at favicon size because two shapes + gap demand more pixels.</p>
+<p><strong>Risks.</strong> Speech-bubble marks are common in coaching/communication branding (differentiation depends on execution quality); metaphor centers Track 1 (parent communication) more than the school-partnership story; does not connect to the Nabta name — Layer 2 would need a symbol evolution.</p>
+<hr />
+<h3 id="concept-c-rising-sun-school">Concept C — "Rising Sun School"</h3>
+<p><strong>Metaphor.</strong> A sunrise over an open book that doubles as a horizon line: new beginnings, learning, hope — wellbeing dawning over the school day. Speaks most directly to institutions.</p>
+<p><strong>Composition &amp; geometry.</strong><br />
+- Lower element: an <strong>open book drawn as two gentle upward arcs</strong> meeting at a shallow center V — deliberately minimal so it reads equally as <em>book</em> and <em>horizon</em> (and, at a squint, as open welcoming hands — a valued third reading).<br />
+- Upper element: a <strong>half-sun</strong> — solid semicircle in Apricot <code>#F2A65A</code> — rising from behind the center of the book/horizon, offset slightly left of center for organic asymmetry.<br />
+- <strong>Rays:</strong> three short rounded-cap strokes fanned above the sun at 30°/90°/150°. Three rays = the three tracks (parents, children, school partnership) — a quiet internal story for the pitch deck.<br />
+- <strong>Negative space:</strong> the gap between sun and book arcs is a constant channel (breathing room = calm); the V between the book arcs points up at the sun — subtle "lifting" gesture.<br />
+- Book/horizon in Deep Teal; sun and rays Apricot; on dark backgrounds, book in Soft White.</p>
+<p><strong>Primary lockup.</strong> Naturally wide and grounded — strongest as a stacked mark above centered text (title-page energy). Horizontal lockup works but the mark needs 2.4× cap height to keep ray detail.</p>
+<p><strong>Bilingual behavior.</strong> Fully symmetric mark — identical in LTR and RTL layouts with zero adjustments (its unique advantage). Bilingual certificate lockup: mark centered top, EN line left-aligned left column, AR line right-aligned right column, mirrored margins.</p>
+<p><strong>Monochrome.</strong> Solid shapes, clean one-color. Caution: in monochrome the sun semicircle can read as a setting sun in bottom-heavy compositions — always keep the mark upper-positioned on the page.</p>
+<p><strong>Small-size behavior.</strong> At ≤32 px drop the rays (they clog); sun + book alone still read. At 16 px it risks reading as a generic "sunrise icon" — the most generic of the three at tiny sizes.</p>
+<p><strong>Risks.</strong> Sunrise-over-book is a well-worn education-sector trope (many school and ministry logos nearby — an originality search is a must if chosen); it says "school/education" louder than "family/care," under-serving the parent-facing half of the brand; no link to the Nabta name.</p>
+<hr />
+<h3 id="recommendation">Recommendation</h3>
+<p><strong>Proceed with Concept A — "Seedling Embrace"</strong> as the primary identity; keep Concept B as the alternate if stakeholders want a communication-centered story. Concept C is the fallback for a strictly institutional audience but is the least differentiated. Decision gate: Dorina + AK review AI-generated drafts (§6) of all three before commissioning final vectors.</p>
+<hr />
+<h2 id="3-color-system">3. Color System</h2>
+<h3 id="palette-exact-do-not-resample-or-improve">Palette (exact — do not resample or "improve")</h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Name</th>
+<th>HEX</th>
+<th>Emotional job</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary</td>
+<td><strong>Deep Teal</strong></td>
+<td><code>#1F6F6B</code></td>
+<td>Trust, calm, credibility — the brand's anchor</td>
+</tr>
+<tr>
+<td>Background</td>
+<td><strong>Warm Sand</strong></td>
+<td><code>#E8DCC8</code></td>
+<td>Warmth, humanity, softness</td>
+</tr>
+<tr>
+<td>Accent</td>
+<td><strong>Apricot</strong></td>
+<td><code>#F2A65A</code></td>
+<td>Child energy, optimism, highlights</td>
+</tr>
+<tr>
+<td>Text</td>
+<td><strong>Ink</strong></td>
+<td><code>#2B2B2B</code></td>
+<td>Body text, quiet authority (never pure black <code>#000000</code>)</td>
+</tr>
+<tr>
+<td>Base</td>
+<td><strong>Soft White</strong></td>
+<td><code>#FAF7F2</code></td>
+<td>Page/screen base — warm, not clinical white</td>
+</tr>
+</tbody>
+</table>
+<h3 id="60-30-10-usage-rule">60 / 30 / 10 usage rule</h3>
+<ul>
+<li><strong>60% — Soft White + Warm Sand.</strong> Page grounds, slide backgrounds, breathing space. Soft White for text-heavy surfaces; Warm Sand for section bands, sidebars, pull-quote panels.</li>
+<li><strong>30% — Deep Teal.</strong> Headlines, the logo, cover bands, table headers, footer bars, primary buttons. Teal is the recognition color: a school should associate "that calm teal" with Dorina.</li>
+<li><strong>10% — Apricot.</strong> Strictly rationed: one accent per view — a key statistic, an icon, the active step, a divider, the CTA. If a layout has three apricot elements, remove two. Scarcity is what makes it feel like child energy rather than noise.</li>
+<li>Ink rides along as text and doesn't count in the ratio.</li>
+</ul>
+<h3 id="accessibility-contrast-wcag-21-targets">Accessibility &amp; contrast (WCAG 2.1 targets)</h3>
+<table>
+<thead>
+<tr>
+<th>Combination</th>
+<th>Approx. ratio</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ink <code>#2B2B2B</code> on Soft White <code>#FAF7F2</code></td>
+<td>~13:1</td>
+<td>✅ Body text — excellent</td>
+</tr>
+<tr>
+<td>Ink on Warm Sand <code>#E8DCC8</code></td>
+<td>~9:1</td>
+<td>✅ Body text on sand panels</td>
+</tr>
+<tr>
+<td>Deep Teal <code>#1F6F6B</code> on Soft White</td>
+<td>~5.4:1</td>
+<td>✅ Text at any size (AA)</td>
+</tr>
+<tr>
+<td>Soft White on Deep Teal</td>
+<td>~5.4:1</td>
+<td>✅ Reversed headlines, buttons</td>
+</tr>
+<tr>
+<td>Apricot <code>#F2A65A</code> on Soft White</td>
+<td>~2.1:1</td>
+<td>❌ <strong>Never for text.</strong> Graphics/large decorative shapes only</td>
+</tr>
+<tr>
+<td>Apricot on Deep Teal</td>
+<td>~2.6:1</td>
+<td>⚠️ Large display text (≥24 px bold) and graphic elements only — verify per use</td>
+</tr>
+<tr>
+<td>Ink on Apricot</td>
+<td>~6:1</td>
+<td>✅ Small labels/badges on apricot chips</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rules:</strong> body text is Ink on Soft White/Warm Sand, or Soft White on Deep Teal — nothing else. Apricot is a <em>shape</em> color, not a <em>text</em> color (exception: Ink text on apricot chips). Run final artwork through a contrast checker (e.g., WebAIM) before print/publish — the ratios above are working values for design decisions.</p>
+<h3 id="colors-to-avoid-and-why">Colors to avoid — and why</h3>
+<ul>
+<li><strong>Clinical blue-white</strong> (hospital blues <code>#0057B8</code>-family + stark <code>#FFFFFF</code>): reads as medical/pharma — the exact association this non-clinical brand must never trigger.</li>
+<li><strong>Alarm red / warning orange-red</strong> (<code>#D32F2F</code>-family): fear-based signaling; contradicts the no-alarm tone rule. Even feedback forms use teal, not red, for "needs attention."</li>
+<li><strong>Pure black <code>#000000</code>:</strong> harsh; always Ink <code>#2B2B2B</code>.</li>
+<li><strong>Neon/candy brights and rainbow sets:</strong> childish clip-art territory.</li>
+<li><strong>Grays as a scheme:</strong> cold/corporate; warmth must survive even in "neutral" layouts — use Warm Sand tints instead of gray.</li>
+</ul>
+<hr />
+<h2 id="4-typography">4. Typography</h2>
+<h3 id="type-stack">Type stack</h3>
+<table>
+<thead>
+<tr>
+<th>Use</th>
+<th>Latin (EN)</th>
+<th>Arabic (AR)</th>
+<th>Weights licensed/used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Everything (default)</td>
+<td><strong>IBM Plex Sans</strong></td>
+<td><strong>IBM Plex Sans Arabic</strong></td>
+<td>Light 300, Regular 400, Medium 500, SemiBold 600, Bold 700</td>
+</tr>
+<tr>
+<td>Display option (premium collateral: certificates, proposal covers, event titles)</td>
+<td><strong>Fraunces</strong> (soft serif)</td>
+<td>— (no forced Arabic serif; use IBM Plex Sans Arabic SemiBold instead)</td>
+<td>SemiBold 600, Bold 700</td>
+</tr>
+<tr>
+<td>Fallbacks (email/docs where fonts can't embed)</td>
+<td>Segoe UI / Arial</td>
+<td>Segoe UI (Arabic) / Tahoma</td>
+<td>—</td>
+</tr>
+</tbody>
+</table>
+<p>IBM Plex Sans + IBM Plex Sans Arabic are a genuinely harmonized pair (matched weights, compatible proportions) and are free under the Open Font License — bilingual consistency with zero licensing cost. Fraunces adds warmth to premium EN moments; never use it for body text or UI.</p>
+<h3 id="scale-print-a4-slides">Scale (print A4 / slides)</h3>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Size (A4 print)</th>
+<th>Size (16:9 slides)</th>
+<th>Weight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>H1 / cover title</td>
+<td>28–34 pt</td>
+<td>40–48 pt</td>
+<td>SemiBold (or Fraunces SemiBold, EN premium)</td>
+</tr>
+<tr>
+<td>H2 / section</td>
+<td>18–22 pt</td>
+<td>30–34 pt</td>
+<td>SemiBold</td>
+</tr>
+<tr>
+<td>H3 / sub</td>
+<td>13–15 pt</td>
+<td>22–26 pt</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td>Body</td>
+<td>10.5–11.5 pt</td>
+<td>18–22 pt</td>
+<td>Regular</td>
+</tr>
+<tr>
+<td>Caption / footnote</td>
+<td>8.5–9 pt</td>
+<td>14–16 pt</td>
+<td>Regular, Deep Teal or 70% Ink</td>
+</tr>
+</tbody>
+</table>
+<p>Line-height: 1.45–1.6 for Latin body; headlines 1.15–1.25.</p>
+<h3 id="arabic-typesetting-rules-non-negotiable">Arabic typesetting rules (non-negotiable)</h3>
+<ol>
+<li><strong>Never fake-italicize Arabic.</strong> No oblique/skew transforms, ever — slanting breaks the script's structure and reads as broken. For emphasis in Arabic use weight (Medium/SemiBold) or Deep Teal color instead.</li>
+<li><strong>Never letterspace (track) Arabic.</strong> Tracking breaks the connected letterforms. Latin small-caps letterspacing tricks have no Arabic equivalent — don't attempt one.</li>
+<li><strong>Line-height:</strong> Arabic needs more vertical room — set AR body at 1.6–1.8 (vs 1.45–1.6 Latin) so ascenders, dots, and diacritics never clip.</li>
+<li><strong>Size compensation:</strong> at equal point size Arabic appears slightly smaller; set AR +5–10% when it sits beside Latin in one layout, and optically align baselines.</li>
+<li><strong>Mirrored layouts:</strong> AR documents are full RTL mirrors — text right-aligned, margins mirrored, logo lockup at top-<strong>right</strong>, page numbers mirrored, tables reading right-to-left, arrows/progress icons flipped. (The logo <em>mark</em> itself is never mirrored — §2.)</li>
+<li><strong>Numerals:</strong> use Western Arabic numerals (1, 2, 3) consistently in both languages — standard for Lebanon and keeps prices/dates identical across versions.</li>
+<li><strong>Punctuation:</strong> Arabic comma «،» and question mark «؟» in AR text; never Latin punctuation inside Arabic sentences.</li>
+<li><strong>Bilingual pages:</strong> prefer two mirrored columns (EN left-aligned left, AR right-aligned right) or clean stacked blocks — never interleave languages line-by-line in one paragraph.</li>
+<li><strong>Warm MSA register:</strong> typography carries voice — generous line-height, restrained weight contrast, no ALL-CAPS-equivalent shouting in either script.</li>
+</ol>
+<hr />
+<h2 id="5-usage-rules">5. Usage Rules</h2>
+<h3 id="clear-space">Clear space</h3>
+<p>Minimum clear space around any lockup = <strong>height of the leaf element</strong> ("x") on all four sides (fallback: 50% of mark height). Nothing enters this zone — no text, photos, page edges, other logos. On partner/school co-branded materials, separate logos by at least 2x with a 1 px Warm Sand-tint divider if needed.</p>
+<h3 id="minimum-sizes">Minimum sizes</h3>
+<table>
+<thead>
+<tr>
+<th>Asset</th>
+<th>Minimum</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Full horizontal lockup (print)</td>
+<td>30 mm wide</td>
+</tr>
+<tr>
+<td>Full lockup (screen)</td>
+<td>140 px wide</td>
+</tr>
+<tr>
+<td>Stacked lockup</td>
+<td>22 mm / 110 px</td>
+</tr>
+<tr>
+<td>Mark only</td>
+<td>8 mm / 24 px</td>
+</tr>
+<tr>
+<td>Mark, simplified cut (single leaf)</td>
+<td>16 px (favicon floor)</td>
+</tr>
+</tbody>
+</table>
+<p>Below minimums: drop to the next simpler asset (lockup → stacked → mark → simplified mark). Never scale below floor.</p>
+<h3 id="forbidden-alterations">Forbidden alterations</h3>
+<p>Never: stretch/squash or rotate; recolor outside the palette; add gradients, bevels, drop shadows, outlines, or glows; place on busy photos without the approved scrim (Deep Teal at 80% or Warm Sand at 90%); redraw or "adjust" curves; change fonts in the lockup; mirror the mark; attach taglines into the lockup (taglines live in layout, not inside the logo); crop the mark; use old drafts after final approval; pair with any medical symbol or other project's branding.</p>
+<h3 id="photography-style">Photography style</h3>
+<ul>
+<li><strong>Real over stock.</strong> Warm, natural-light photos of real Beirut classrooms, workshops, and families. Golden-hour warmth, Warm Sand/teal-compatible tones; avoid cold fluorescent casts (correct white balance toward warm).</li>
+<li><strong>Candid over posed.</strong> Hands raised in a workshop, a parent listening, children collaborating — not staged smiles at the camera.</li>
+<li><strong>Diverse and local.</strong> Reflect the real mix of Beirut school communities — veiled and unveiled mothers, fathers present (fathers are chronically missing from parenting imagery — include them deliberately), varied ages and backgrounds.</li>
+<li><strong>Banned clichés:</strong> head-in-hands "stressed parent" stock, sad child in dark corner, brain graphics, therapy-couch scenes, generic multi-ethnic-circle-of-hands stock, anything watermarked.</li>
+<li><strong>Child-photo consent rule (absolute):</strong> no identifiable child appears in any material without a <strong>signed parental/guardian consent form</strong> specifying the exact use, <em>and</em> alignment with the school's own safeguarding/media policy. Default composition style: children from behind, hands-and-activity crops, or defocused backgrounds — so most materials need no identifiable children at all. When in doubt, shoot the parents and the room, not the kids.</li>
+<li>Duotone treatment (Deep Teal shadows / Warm Sand highlights) is approved for banners and social tiles where photo quality varies.</li>
+</ul>
+<hr />
+<h2 id="6-ready-to-use-ai-image-generation-prompts">6. Ready-to-Use AI Image-Generation Prompts</h2>
+<p>For Midjourney / DALL·E / similar. Outputs are <strong>concept drafts for direction approval and designer reference — final logos must be redrawn as clean vectors by a designer</strong> (AI output is not production vector art and has unclear trademark standing). Append <code>--no text, letters, words, watermark</code> in Midjourney (or state "no text" for DALL·E) on logo prompts; AI-generated lettering is unusable.</p>
+<p><strong>Prompt 1 — Logo Concept A: Seedling Embrace (recommended)</strong></p>
+<blockquote>
+<p>Minimalist flat vector logo mark, a young seedling with two leaves growing inside an open embracing arc, the arc like a protective arm curving around the sprout with an opening at the upper right, smooth geometric curves built on circle geometry, deep teal #1F6F6B arc, warm apricot #F2A65A upper leaf, on soft warm white #FAF7F2 background, warm professional wellbeing brand for families and schools, elegant negative space, no gradients, flat design, centered, plenty of whitespace — no text, no letters, no watermark</p>
+</blockquote>
+<p><strong>Prompt 2 — Logo Concept B: Two Voices</strong></p>
+<blockquote>
+<p>Minimalist flat vector logo mark, two abstract rounded speech-bubble shapes leaning toward each other, one larger in deep teal #1F6F6B and one smaller in warm apricot #F2A65A, softly overlapping so their overlap forms a small leaf shape, together their silhouette subtly suggests a heart, smooth superellipse curves, soft warm white #FAF7F2 background, warm professional parent-child communication brand, flat design, elegant negative space, centered — no text, no letters, no watermark</p>
+</blockquote>
+<p><strong>Prompt 3 — Logo Concept C: Rising Sun School</strong></p>
+<blockquote>
+<p>Minimalist flat vector logo mark, a warm apricot #F2A65A half sun rising with three short rounded rays above a stylized open book drawn as two gentle deep teal #1F6F6B upward arcs that also read as a horizon line, calm symmetrical composition, generous negative space between sun and book, soft warm white #FAF7F2 background, hopeful education and wellbeing brand, flat design, no gradients, centered — no text, no letters, no watermark</p>
+</blockquote>
+<p><strong>Prompt 4 — LinkedIn banner (1584×396)</strong></p>
+<blockquote>
+<p>Wide horizontal banner 1584x396, warm professional background for a parent and child emotional wellbeing expert in Beirut, soft warm white #FAF7F2 base transitioning to a warm sand #E8DCC8 panel on the right, elegant abstract deep teal #1F6F6B flowing curve along the bottom suggesting an embracing arc, one small apricot #F2A65A leaf accent, subtle soft-focus warm classroom light in the far right edge, calm, generous empty space on the left for text overlay, flat modern design, no people's faces, no text, no watermark</p>
+</blockquote>
+<p><strong>Prompt 5 — Workshop slide template (16:9)</strong></p>
+<blockquote>
+<p>Clean presentation slide background 16:9, soft warm white #FAF7F2 base, thin deep teal #1F6F6B header band across the top, warm sand #E8DCC8 side panel on the left third with a subtle single-line seedling illustration in teal, one small apricot #F2A65A dot accent, calm warm professional education wellbeing aesthetic, flat minimal design, large empty content area, no text, no watermark, no clutter</p>
+</blockquote>
+<p><strong>Prompt 6 — One-pager header (A4)</strong></p>
+<blockquote>
+<p>Elegant A4 document header design, top fifth of the page, deep teal #1F6F6B band with a smooth organic bottom edge like a gentle wave, small warm apricot #F2A65A seedling accent at the right end of the band, soft warm white #FAF7F2 page below, warm sand #E8DCC8 thin divider line, warm professional wellbeing consultancy feel for schools and families, flat vector style, balanced negative space, no text, no watermark</p>
+</blockquote>
+<p><strong>Workflow:</strong> generate 4–8 variants per logo prompt → shortlist with Dorina → hand the chosen references + this document to the designer for vector redraw and bilingual lockup construction.</p>
+<hr />
+<h2 id="7-designer-handoff-checklist-deliverables">7. Designer Handoff Checklist &amp; Deliverables</h2>
+<h3 id="handoff-package-to-designer-input">Handoff package to designer (input)</h3>
+<ul>
+<li>[ ] This document + <code>BRAND_STRATEGY.md</code> §7–8</li>
+<li>[ ] Chosen AI concept references (approved variant + rejected ones annotated "why not")</li>
+<li>[ ] Exact hexes (§3) and font files/links (IBM Plex Sans, IBM Plex Sans Arabic, Fraunces — Google Fonts)</li>
+<li>[ ] Final confirmed spellings: "Dorina [Last Name]" (Latin) and "دورينا [اسم العائلة]" (Arabic) — <strong>blockers until confirmed</strong></li>
+<li>[ ] Descriptor lines EN + AR (from §2, Concept A)</li>
+<li>[ ] Note: build lockup templates for future initiative name (Nabta — pending checks) using the same mark — do not publish</li>
+</ul>
+<h3 id="quality-gates-before-acceptance">Quality gates before acceptance</h3>
+<ul>
+<li>[ ] Mark works in pure monochrome (one color, no tints)</li>
+<li>[ ] Mark legible at 16 px (favicon test) and crisp at 128 px (WhatsApp circle test)</li>
+<li>[ ] AR and EN lockups optically balanced (Arabic sized +5–10%, baselines aligned, no fake italics, no tracked Arabic)</li>
+<li>[ ] RTL layout sheet included (mark placement top-right, mirrored margins)</li>
+<li>[ ] All colors exactly on-palette; contrast rules of §3 respected in the mini styleguide</li>
+<li>[ ] Clear-space and minimum-size specs drawn into the styleguide page</li>
+<li>[ ] No medical symbols, spirals, or clip-art crept in during refinement</li>
+<li>[ ] Vector paths clean: expanded strokes, no clipping masks, no stray points</li>
+</ul>
+<h3 id="file-deliverables-final-kit">File deliverables (final kit)</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Files</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Master vectors</td>
+<td>SVG + AI/EPS + PDF: mark; simplified mark; horizontal, stacked, EN-only, AR-only, bilingual lockups — each in full color, Deep Teal mono, Ink mono, Soft White reversed</td>
+</tr>
+<tr>
+<td>Raster</td>
+<td>PNG (transparent) each asset at 512 / 1024 / 2048 px; JPG on Soft White and Deep Teal</td>
+</tr>
+<tr>
+<td>Favicon / app</td>
+<td>ICO (16/32/48) + 180 px apple-touch + 512 px maskable PNG (simplified mark)</td>
+</tr>
+<tr>
+<td>Social kit</td>
+<td>WhatsApp avatar 640×640; LinkedIn profile 400×400 + banner 1584×396; Instagram profile 320×320 + post 1080×1080 and story 1080×1920 templates; X avatar 400×400 + header 1500×500</td>
+</tr>
+<tr>
+<td>Templates</td>
+<td>A4 one-pager header/footer; proposal cover (EN + AR mirrored); 16:9 slide master (title, section, content, bilingual layouts); certificate of participation (EN + AR); email signature (HTML-safe PNG)</td>
+</tr>
+<tr>
+<td>Styleguide</td>
+<td>6–10 page mini brand guide PDF (logo, clear space, sizes, color, type incl. Arabic rules, photo style, don'ts)</td>
+</tr>
+<tr>
+<td>Fonts</td>
+<td>Links + license notes (OFL) for IBM Plex Sans, IBM Plex Sans Arabic, Fraunces</td>
+</tr>
+<tr>
+<td>Future-ready (hold, unpublished)</td>
+<td>Nabta lockup templates (same mark + initiative wordmark AR/EN) — activated only after trademark/registry clearance and the 2–3-partnership trigger</td>
+</tr>
+</tbody>
+</table>
+<h3 id="acceptance-sign-off">Acceptance sign-off</h3>
+<ul>
+<li>[ ] Dorina approves on-screen and in print proof (colors shift on paper — check Warm Sand especially)</li>
+<li>[ ] AK verifies checklist above complete</li>
+<li>[ ] Assets archived in one master folder with version tag (e.g., <code>DorinaBrand_v1.0_2026-09</code>); no superseded drafts left in circulation</li>
+</ul>
+<hr />
+<p><em>End of LOGO_BRAND_KIT.md. Strategic rationale in <code>BRAND_STRATEGY.md</code>; channel applications in <code>EXECUTIVE_PRESENCE_LINKEDIN_X_PR.md</code>; Arabic copy in <code>BILINGUAL_COPY_BANK.md</code>.</em></p></article>
+    <nav class="footer-nav"><a href="BRAND_STRATEGY.html">← Previous<br>Brand Strategy</a><span></span><a href="OFFER_ARCHITECTURE.html">Next →<br>Offer Architecture</a></nav>
+  </section>
+</main>
+<script>
+document.querySelectorAll('.article p, .article li, .article td, .article blockquote').forEach(el=>{if(/[؀-ۿ]/.test(el.textContent)) el.setAttribute('dir','auto');});
+</script>
+</body></html>

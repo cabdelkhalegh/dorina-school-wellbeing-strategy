@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brand Strategy — Dorina School Wellbeing Strategy</title>
+<style>
+:root{
+  --teal:#164F4A;--teal-2:#0F3835;--sand:#F4E8D2;--sand-2:#FBF7EF;--apricot:#EBA36B;--rose:#B86B5B;
+  --ink:#182220;--muted:#60706C;--line:#E6D9C5;--card:#FFFDF8;--white:#fff;--shadow:0 20px 55px rgba(31,45,42,.12);
+  --radius:22px;--content:900px;--nav:330px;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:linear-gradient(180deg,var(--sand-2),#fff 42%,#f7efe1);color:var(--ink);font:16px/1.68 Georgia,'Times New Roman',serif;text-rendering:optimizeLegibility}
+body::before{content:'';position:fixed;inset:0;background:radial-gradient(circle at 8% 8%,rgba(235,163,107,.18),transparent 26%),radial-gradient(circle at 92% 20%,rgba(22,79,74,.10),transparent 30%);pointer-events:none;z-index:-1}
+a{color:var(--teal);text-decoration-thickness:1px;text-underline-offset:3px} a:hover{color:var(--rose)}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(251,247,239,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 28px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}.mark{width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,var(--teal),#24756c);display:grid;place-items:center;color:#fff;font:700 20px Arial,sans-serif;box-shadow:0 10px 25px rgba(22,79,74,.2)}.brand-text{font-family:Arial,sans-serif;font-weight:700;letter-spacing:.02em}.brand-sub{display:block;font-weight:500;color:var(--muted);font-size:12px;letter-spacing:.04em;text-transform:uppercase}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{font-family:Arial,sans-serif;border:1px solid var(--line);background:var(--white);color:var(--teal);padding:9px 13px;border-radius:999px;text-decoration:none;font-size:13px;font-weight:700}.btn.primary{background:var(--teal);color:#fff;border-color:var(--teal)}
+.shell{display:grid;grid-template-columns:var(--nav) minmax(0,1fr);gap:30px;max-width:1380px;margin:0 auto;padding:34px 28px 80px}.sidebar{position:sticky;top:82px;height:calc(100vh - 105px);overflow:auto;align-self:start;background:rgba(255,253,248,.84);border:1px solid var(--line);border-radius:var(--radius);padding:20px;box-shadow:0 14px 35px rgba(31,45,42,.08)}
+.sidebar h2{font:800 13px/1.2 Arial,sans-serif;text-transform:uppercase;letter-spacing:.12em;color:var(--muted);margin:0 0 14px}.nav-list{list-style:none;margin:0;padding:0;display:grid;gap:7px}.nav-list a{display:block;text-decoration:none;border-radius:14px;padding:10px 11px;color:var(--ink);font:700 14px/1.3 Arial,sans-serif}.nav-list a:hover,.nav-list a.active{background:var(--sand);color:var(--teal)}.nav-list span{display:block;color:var(--muted);font-weight:500;font-size:12px;margin-top:3px}.mini-toc{margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}.mini-toc a{display:block;font:500 13px/1.35 Arial,sans-serif;color:var(--muted);text-decoration:none;padding:6px 0 6px 10px;border-left:2px solid transparent}.mini-toc a:hover{color:var(--teal);border-left-color:var(--apricot)}.mini-toc .h3{padding-left:24px;font-size:12px}
+.content{min-width:0}.hero{background:linear-gradient(135deg,var(--teal),var(--teal-2));color:#fff;border-radius:30px;padding:42px 44px;margin-bottom:24px;box-shadow:var(--shadow);position:relative;overflow:hidden}.hero::after{content:'نبتة';position:absolute;right:34px;bottom:-18px;font:800 96px/1 Arial,sans-serif;color:rgba(255,255,255,.08)}.eyebrow{font:800 12px/1 Arial,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#F5D2A6;margin-bottom:14px}.hero h1{font:700 clamp(32px,5vw,58px)/1.05 Georgia,'Times New Roman',serif;margin:0 0 15px;max-width:880px}.hero p{max-width:820px;margin:0;color:rgba(255,255,255,.88);font:18px/1.6 Arial,sans-serif}.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}.pill{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.09);border-radius:999px;padding:7px 11px;font:700 12px/1 Arial,sans-serif;color:#fff}
+.article{background:rgba(255,253,248,.94);border:1px solid var(--line);border-radius:30px;padding:46px min(6vw,72px);box-shadow:var(--shadow);max-width:1050px}.article h1{font-size:44px;line-height:1.08;margin:0 0 24px;color:var(--teal)}.article h2{font-size:29px;line-height:1.18;margin:46px 0 15px;color:var(--teal);padding-top:8px;border-top:1px solid var(--line)}.article h3{font-size:21px;line-height:1.25;margin:30px 0 10px;color:#243b37}.article h4{font:800 15px/1.3 Arial,sans-serif;text-transform:uppercase;letter-spacing:.05em;color:var(--rose);margin:24px 0 8px}.article p{margin:0 0 16px}.article strong{color:#203b37}.article blockquote{margin:24px 0;padding:20px 24px;background:#F6EDDE;border-left:5px solid var(--apricot);border-radius:0 18px 18px 0}.article ul,.article ol{padding-left:28px;margin:0 0 20px}.article li{margin:6px 0}.article hr{border:0;border-top:1px solid var(--line);margin:36px 0}.article code{background:#F2E8DA;border:1px solid #E2D2BA;border-radius:7px;padding:2px 5px;font-family:Consolas,monospace;font-size:.9em}.article pre{overflow:auto;background:#132b28;color:#f8f1e6;border-radius:18px;padding:18px}.article table{width:100%;border-collapse:separate;border-spacing:0;margin:22px 0;border:1px solid var(--line);border-radius:18px;background:#fff;table-layout:auto;overflow:hidden}.article th,.article td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top;min-width:0;overflow-wrap:anywhere}.article th{background:#F4E8D2;color:var(--teal);font:800 13px/1.3 Arial,sans-serif;text-align:left}.article tr:last-child td{border-bottom:0}.article img{max-width:100%;border-radius:16px}.article [dir='rtl'],.article :lang(ar){font-family:Tahoma,Arial,sans-serif}.doc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:24px}.doc-card{display:block;background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px;text-decoration:none;color:var(--ink);box-shadow:0 10px 26px rgba(31,45,42,.07)}.doc-card:hover{transform:translateY(-2px);box-shadow:0 16px 35px rgba(31,45,42,.11)}.doc-card b{display:block;color:var(--teal);font:800 18px/1.2 Arial,sans-serif;margin-bottom:6px}.doc-card span{color:var(--muted);font:14px/1.45 Arial,sans-serif}.footer-nav{display:flex;justify-content:space-between;gap:18px;margin-top:26px;max-width:1050px}.footer-nav a{flex:1;background:#fff;border:1px solid var(--line);border-radius:18px;padding:16px;text-decoration:none;font:700 14px/1.4 Arial,sans-serif}.footer-nav a:last-child{text-align:right}.print-note{display:none}
+@media(max-width:980px){.shell{grid-template-columns:1fr;padding:18px}.sidebar{position:relative;top:0;height:auto}.topbar{position:relative;padding:14px 18px}.hero{padding:30px 24px}.article{padding:30px 22px}.actions{display:none}.footer-nav{flex-direction:column}.footer-nav a:last-child{text-align:left}}
+@media print{body{background:#fff}.topbar,.sidebar,.footer-nav{display:none}.shell{display:block;padding:0}.hero{box-shadow:none;border-radius:0;color:#111;background:#fff;border-bottom:2px solid #ddd}.hero::after{display:none}.article{box-shadow:none;border:0;border-radius:0;max-width:none;padding:20px}.article h2{break-after:avoid}.article table{display:table}.print-note{display:block}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="index.html"><span class="mark">D</span><span class="brand-text">Dorina Strategy<span class="brand-sub">Beirut School Wellbeing</span></span></a>
+  <nav class="actions"><a class="btn" href="index.html">Index</a><button class="btn" onclick="window.print()">Print / Save PDF</button></nav>
+</header>
+<main class="shell">
+  <aside class="sidebar"><h2>Documents</h2><ul class="nav-list"><li><a href="index.html">Start Here / Package Index<span>Overview and reading order</span></a></li>
+<li><a href="DORINA_SENDABLE_SUMMARY.html">Sendable Summary for Dorina<span>Warm executive summary to share first</span></a></li>
+<li><a href="MASTER_PLAN.html">A-to-Z Strategic Plan<span>Market, positioning, go-to-market and KPIs</span></a></li>
+<li><a class="active" href="BRAND_STRATEGY.html">Brand Strategy<span>Personal brand now, consulting company later</span></a></li>
+<li><a href="LOGO_BRAND_KIT.html">Logo &amp; Brand Kit<span>Logo concepts, colors, typography and usage</span></a></li>
+<li><a href="OFFER_ARCHITECTURE.html">Offer Architecture<span>Workshops, pilots, packages and pricing logic</span></a></li>
+<li><a href="SCHOOL_OUTREACH_PLAYBOOK.html">School Outreach Playbook<span>Targets, scripts, meetings and follow-ups</span></a></li>
+<li><a href="EXECUTIVE_PRESENCE_LINKEDIN_X_PR.html">Executive Presence / LinkedIn / X / PR<span>Profile, content calendar and media angles</span></a></li>
+<li><a href="90_DAY_ACTION_PLAN.html">90-Day Action Plan<span>Weekly execution roadmap</span></a></li>
+<li><a href="SCHOOL_PITCH_DECK_OUTLINE.html">School Pitch Deck Outline<span>Slide-by-slide deck structure</span></a></li>
+<li><a href="BILINGUAL_COPY_BANK.html">Bilingual Copy Bank<span>English and Arabic copy blocks</span></a></li>
+<li><a href="RISK_ETHICS_COMPLIANCE.html">Risk, Ethics &amp; Compliance<span>Guardrails, consent, safety and disclaimers</span></a></li></ul><div class="mini-toc"><h2>On this page</h2>
+<a class="h2" href="#dorina-last-name-parent-child-emotional-wellbeing">Dorina [Last Name] — Parent &amp; Child Emotional Wellbeing</a>
+<a class="h3" href="#brand-strategy-personal-brand-now-institutional-initiative-later">Brand Strategy: Personal Brand Now, Institutional Initiative Later</a>
+<a class="h2" href="#1-brand-vision-mission">1. Brand Vision &amp; Mission</a>
+<a class="h3" href="#vision">Vision</a>
+<a class="h3" href="#mission">Mission</a>
+<a class="h3" href="#what-the-brand-stands-for-strategic-pillars">What the brand stands for (strategic pillars)</a>
+<a class="h2" href="#2-two-layer-brand-architecture">2. Two-Layer Brand Architecture</a>
+<a class="h3" href="#layer-1-the-dorina-personal-brand-live-now">Layer 1 — The Dorina Personal Brand (LIVE NOW)</a>
+<a class="h3" href="#layer-2-the-initiative-launch-later">Layer 2 — The Initiative (LAUNCH LATER)</a>
+<a class="h3" href="#how-the-two-layers-connect">How the two layers connect</a>
+<a class="h3" href="#when-to-launch-layer-2-the-trigger">When to launch Layer 2 — the trigger</a>
+<a class="h2" href="#3-naming">3. Naming</a>
+<a class="h3" href="#31-personal-brand-naming-layer-1">3.1 Personal brand naming (Layer 1)</a>
+<a class="h3" href="#32-initiative-naming-shortlist-layer-2">3.2 Initiative naming shortlist (Layer 2)</a>
+<a class="h3" href="#33-recommendation">3.3 Recommendation</a>
+<a class="h2" href="#4-taglines">4. Taglines</a>
+<a class="h3" href="#layer-1-dorina-personal-brand">Layer 1 — Dorina personal brand</a>
+<a class="h3" href="#layer-2-nabta-initiative">Layer 2 — Nabta (initiative)</a>
+<a class="h2" href="#5-brand-personality-archetype">5. Brand Personality &amp; Archetype</a>
+<a class="h3" href="#archetype-caregiversage-blend-approx-6040">Archetype: Caregiver–Sage blend (approx. 60/40)</a>
+<a class="h3" href="#six-tone-of-voice-rules-with-dodont-pairs">Six tone-of-voice rules (with do/don&#x27;t pairs)</a>
+<a class="h2" href="#6-messaging-hierarchy">6. Messaging Hierarchy</a>
+<a class="h3" href="#level-1-one-liner-15-words">Level 1 — One-liner (≤15 words)</a>
+<a class="h3" href="#level-2-elevator-pitch-60-words-20-seconds-spoken">Level 2 — Elevator pitch (~60 words, 20 seconds spoken)</a>
+</div></aside>
+  <section class="content">
+    <div class="hero"><div class="eyebrow">Dorina · Beirut · Arabic + English</div><h1>Brand Strategy</h1><p>Personal brand now, consulting company later</p><div class="meta"><span class="pill">School-facing</span><span class="pill">Parent & Child Wellbeing</span><span class="pill">Personal brand now → consulting vehicle later</span></div></div>
+    <article class="article"><h1 id="brandstrategymd">BRAND_STRATEGY.md</h1>
+<h2 id="dorina-last-name-parent-child-emotional-wellbeing">Dorina [Last Name] — Parent &amp; Child Emotional Wellbeing</h2>
+<h3 id="brand-strategy-personal-brand-now-institutional-initiative-later">Brand Strategy: Personal Brand Now, Institutional Initiative Later</h3>
+<blockquote>
+<p><strong>Scope note.</strong> This document defines the brand system for Dorina's school-facing wellbeing practice in Beirut, Lebanon. It covers vision, two-layer brand architecture, naming, taglines, personality, tone of voice, messaging hierarchy, visual direction (summary — full system in <code>LOGO_BRAND_KIT.md</code>), brand rules, and a rollout roadmap synchronized with <code>90_DAY_ACTION_PLAN.md</code> (23 July – 25 October 2026). Arabic copy blocks referenced here live in full in <code>BILINGUAL_COPY_BANK.md</code>.</p>
+</blockquote>
+<hr />
+<h2 id="1-brand-vision-mission">1. Brand Vision &amp; Mission</h2>
+<h3 id="vision">Vision</h3>
+<p><strong>Every school community in Lebanon — starting in Beirut — treats children's emotional wellbeing as a shared, everyday practice between home and school, not a crisis response.</strong></p>
+<p>Lebanon's children are carrying an extraordinary emotional load. UNICEF's 2025 child-focused rapid assessment found that 72% of caregivers reported their children showing anxiety or nervousness, and 62% reported sadness or depression following the 2024 escalation (<a href="https://www.unicef.org/press-releases/decline-childrens-mental-health-nutrition-and-education-after-war-lebanon-unicef">UNICEF</a>). At the same time, the Ministry of Public Health's National Mental Health Strategy 2024–2030 explicitly aims to link schools with community wellbeing support (<a href="https://www.moph.gov.lb/en/Pages/6/553/the-national-mental-health-program">MoPH</a>). The need is documented; the institutional momentum exists; what is missing is a bilingual, parent-focused, coaching-based, non-clinical partner schools can actually hire. That is the space this brand exists to own.</p>
+<h3 id="mission">Mission</h3>
+<p><strong>Dorina helps schools and families strengthen children's emotional wellbeing through practical parent–child support, coaching-based tools, and bilingual workshops adapted to each school community.</strong></p>
+<p>This is the fixed core positioning statement. Every asset — LinkedIn header, proposal cover, workshop slide, media bio — should carry this sentence or a close paraphrase of it.</p>
+<h3 id="what-the-brand-stands-for-strategic-pillars">What the brand stands for (strategic pillars)</h3>
+<table>
+<thead>
+<tr>
+<th>Pillar</th>
+<th>What it means in practice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Practical, not theoretical</strong></td>
+<td>Every workshop ends with tools a parent can use at the dinner table that same evening.</td>
+</tr>
+<tr>
+<td><strong>Bilingual by design</strong></td>
+<td>Arabic and English are equal citizens — sessions, materials, and the brand itself work natively in both.</td>
+</tr>
+<tr>
+<td><strong>Complementary, never replacing</strong></td>
+<td>Dorina works alongside school counselors, psychologists, and NGOs — never as a substitute for licensed clinical care. Referral to licensed professionals is built into the model.</td>
+</tr>
+<tr>
+<td><strong>School–family partnership</strong></td>
+<td>The child is supported best when home and school pull in the same direction. The brand always addresses both.</td>
+</tr>
+<tr>
+<td><strong>Warm professionalism</strong></td>
+<td>Credible enough for a premium school board; warm enough for an anxious parent on a Tuesday evening.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-two-layer-brand-architecture">2. Two-Layer Brand Architecture</h2>
+<p>The brief requires keeping both paths open: Dorina personally as the expert/facilitator, and a future organization/initiative for a more institutional school-facing offer. We formalize this as a deliberate <strong>two-layer architecture</strong> rather than an undecided fork.</p>
+<h3 id="layer-1-the-dorina-personal-brand-live-now">Layer 1 — The Dorina Personal Brand (LIVE NOW)</h3>
+<p><strong>Name format:</strong> <em>Dorina [Last Name] — Parent &amp; Child Emotional Wellbeing</em> (last name placeholder until confirmed).</p>
+<p>This is the brand doing the work for the next 6–12 months:</p>
+<ul>
+<li><strong>Trust is personal in this market.</strong> Beirut school directors, counselors, and parent committees buy people they trust before they buy programs. A face, a voice, a track record — that is what opens doors.</li>
+<li><strong>Speed.</strong> A personal brand needs no registration, no logo committee, no legal setup. Dorina can rewrite her LinkedIn profile this week and email a school director on Monday.</li>
+<li><strong>Credential carrier.</strong> Certified practitioner trainings in coaching and therapeutic modalities (Master in Clinical Hypnotherapy, Master in NLP / Coaching, Master in Time Line Therapy) belong to a person, not an entity. They are Dorina's proof, presented as supporting credibility — never the headline.</li>
+<li><strong>Content engine.</strong> LinkedIn, X, PR, and podcast appearances all run on the personal brand. Media wants an expert, not an anonymous initiative.</li>
+</ul>
+<p><strong>Layer 1 owns:</strong> LinkedIn/X presence, media appearances, the pilot workshops, discovery meetings, thought-leadership content, parent-facing warmth.</p>
+<h3 id="layer-2-the-initiative-launch-later">Layer 2 — The Initiative (LAUNCH LATER)</h3>
+<p><strong>Recommended name (pending checks):</strong> <strong>Nabta | نبتة — School–Family Wellbeing</strong> (see §3).</p>
+<p>An institutional vehicle serving school contracts:</p>
+<ul>
+<li><strong>Institutions buy from institutions.</strong> An annual partnership contract (the flagship Track 3 offer, $12,000–18,000/yr at the top tier — range to validate) is easier for a school board to approve when the counterparty is a named program with a framework, materials, and an identity — not "a freelancer."</li>
+<li><strong>Scalability.</strong> An initiative can eventually carry associate facilitators, licensed content, teacher-training modules, and NGO project contracts without everything routing through Dorina's calendar.</li>
+<li><strong>Procurement and funding.</strong> NGOs and donor-funded school programs (e.g., in the mold of the UNESCO–MEHE MHPSS program) contract with entities. An initiative name with a mission statement fits a funding proposal; a personal name is harder.</li>
+<li><strong>Longevity and exit optionality.</strong> A brand that outlives any single engagement is an asset Dorina owns.</li>
+</ul>
+<p><strong>Layer 2 owns:</strong> annual partnership contracts, proposals and MOUs, program frameworks ("the Nabta Wellbeing Calendar"), certificates, NGO/funder-facing documents.</p>
+<h3 id="how-the-two-layers-connect">How the two layers connect</h3>
+<p>The layers are <strong>not</strong> parallel competing brands; they are one story told at two altitudes:</p>
+<ul>
+<li><strong>Shared positioning.</strong> Both use the same core positioning sentence, the same palette, the same typography, the same tone. Nabta looks like the institutional expression of Dorina's practice — because it is.</li>
+<li><strong>Endorsement flows upward at first, downward later.</strong> In year one, Dorina's personal credibility endorses the initiative ("founded by Dorina [Last Name]"). Over time, the initiative's track record ("delivered in 12 Beirut schools") endorses Dorina back.</li>
+<li><strong>Combined signature.</strong> Once Layer 2 launches, all formal communications use:</li>
+</ul>
+<blockquote>
+<p><strong>Dorina [Last Name], Founder of Nabta — School–Family Wellbeing</strong></p>
+</blockquote>
+<p>This signature is the hinge of the whole architecture: personal trust + institutional weight in one line. It appears in email signatures, proposal covers, LinkedIn headline (secondary line), speaker bios, and certificates.</p>
+<h3 id="when-to-launch-layer-2-the-trigger">When to launch Layer 2 — the trigger</h3>
+<p><strong>Do not launch the initiative on day one.</strong> Launch it when there is proof to pour into it. The defined trigger:</p>
+<blockquote>
+<p><strong>Launch Layer 2 when 2–3 school partnerships are signed</strong> (any tier — Essentials, Growth, or Flagship).</p>
+</blockquote>
+<p>Rationale: at that point (a) there are testimonials and delivery photos to populate an institutional identity, (b) recurring contracts justify the legal/registration cost, (c) the name can debut as "the initiative behind the programs at [School A] and [School B]" instead of an empty shell. Based on the 90-day plan's KPI of one signed partnership by day 90, the realistic Layer 2 launch window is <strong>Q1 2027</strong>, with naming, trademark, and registry checks completed beforehand (see roadmap, §9).</p>
+<p>Until the trigger: use the descriptive umbrella <em>"Parent &amp; Child Emotional Wellbeing Workshops for Schools in Beirut"</em> (or the premium variant <em>"School–Family Emotional Wellbeing Programs"</em>) on proposals — descriptive, credible, and requiring no registration.</p>
+<hr />
+<h2 id="3-naming">3. Naming</h2>
+<blockquote>
+<p><strong>Universal caveat (repeat on every naming discussion):</strong> No name below has been verified for trademark availability, Lebanese commercial-registry availability, or domain/social-handle availability. All options require checks with a Lebanese IP/commercial lawyer and registry searches <strong>before</strong> any public use, printing, or registration. Treat every recommendation as "recommended pending checks."</p>
+</blockquote>
+<h3 id="31-personal-brand-naming-layer-1">3.1 Personal brand naming (Layer 1)</h3>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Form</th>
+<th>Assessment</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Dorina [Last Name]</strong> (full name)</td>
+<td>"Dorina [Last Name] — Parent &amp; Child Emotional Wellbeing"</td>
+<td><strong>Recommended.</strong> Full names read as professional and search-distinct; essential for LinkedIn, PR, and proposals.</td>
+</tr>
+<tr>
+<td><strong>Dorina</strong> (first name only)</td>
+<td>"Dorina — Emotional Wellbeing for Families"</td>
+<td>Warm and memorable for parent-facing/social contexts; too informal alone for school boards and media. Use as the <em>spoken</em> short form, not the formal identity.</td>
+</tr>
+<tr>
+<td><strong>Coach Dorina / Ms. Dorina</strong></td>
+<td>Title-prefixed</td>
+<td>Avoid as brand name. "Coach" narrows perception; titles date quickly. Facilitators may naturally be called "Ms. Dorina" in workshops — fine verbally, not on paper.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Descriptor line.</strong> Always pair the name with the descriptor <em>Parent &amp; Child Emotional Wellbeing</em> — the name says who, the descriptor says what, and neither leads with any therapy modality.</p>
+<p><strong>Arabic transliteration.</strong> Standardize <strong>دورينا</strong> for "Dorina" (natural, unambiguous, matches the fixed Arabic core line). The last name's Arabic spelling must be confirmed with Dorina herself — family-name transliterations in Lebanon often have an established French/English spelling and a preferred Arabic form; pick one of each and never vary it (consistency matters for search and for school records). Rules once fixed:</p>
+<ul>
+<li>One Latin spelling, one Arabic spelling, everywhere (LinkedIn, WhatsApp, certificates, invoices).</li>
+<li>Arabic-first documents: <strong>دورينا [اسم العائلة]</strong> with the Latin form in parentheses on first mention.</li>
+<li>Never mix scripts within one lockup line.</li>
+</ul>
+<h3 id="32-initiative-naming-shortlist-layer-2">3.2 Initiative naming shortlist (Layer 2)</h3>
+<p>All candidates from the agreed shortlist. Evaluation criteria: meaning fit, bilingual performance (pronounceable in AR and EN), warmth without childishness, collision risk in Lebanon, and lockup behavior.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Name</th>
+<th>Meaning</th>
+<th>Pros</th>
+<th>Cons / Risks</th>
+<th>Collision check needed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Nabta | نبتة</strong></td>
+<td>"Seedling" — a young plant beginning to grow</td>
+<td>Perfect metaphor for child development; short (2 syllables); easy for non-Arabic speakers to say; visually generative (pairs with the seedling logo direction); warm without being cutesy; works as "Nabta School–Family Wellbeing"</td>
+<td>Common noun — trademark distinctiveness will rely on the combined mark + logo; possible small businesses using the name regionally</td>
+<td>Lebanese commercial registry + trademark class search (education/training); domain + social handles</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>Ghars | غرس</strong></td>
+<td>"Planting / nurturing" — the act of planting</td>
+<td>Active verb energy ("we plant"); dignified classical resonance; strong in Arabic-first contexts</td>
+<td>Harder for English speakers (guttural غ); reads slightly formal/religious-register to some ears; less warm than Nabta</td>
+<td>Registry + trademark; check regional education initiatives using "Ghars"</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>Sanad | سند</strong></td>
+<td>"Support / backing / someone to lean on"</td>
+<td>Emotionally precise — exactly what the offer is; beloved word in Lebanese usage</td>
+<td><strong>Known collision risk: SANAD Hospice (Lebanon) and other regional "Sanad" organizations.</strong> In a sensitivity-heavy sector, being confused with a palliative-care org is a real problem</td>
+<td><strong>Mandatory</strong> conflict check; likely disqualifying</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>Jouzour | جذور</strong></td>
+<td>"Roots"</td>
+<td>Depth, stability, belonging; nice pairing with growth imagery</td>
+<td><strong>Known collision risk: Jouzour Loubnan (established Lebanese reforestation NGO)</strong> — high local recognition; confusion nearly guaranteed in Lebanon</td>
+<td><strong>Mandatory</strong> conflict check; likely disqualifying</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>Awladuna | أولادنا</strong></td>
+<td>"Our children"</td>
+<td>Instantly understood mission; inclusive ("our"); strong for community/NGO contexts</td>
+<td>Longer; generic (many parenting pages/groups use it); weak distinctiveness for trademark; less premium for private-school contracts</td>
+<td>Search social platforms and registry — expect crowding</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>The School–Family Wellbeing Initiative</strong> (EN descriptive fallback)</td>
+<td>Literal descriptor</td>
+<td>Zero explanation needed; safe; useful as a <em>sub-line</em> under any Arabic name</td>
+<td>Not ownable, not memorable, clumsy in Arabic; a label, not a brand</td>
+<td>None needed (descriptive) — but also not protectable</td>
+</tr>
+</tbody>
+</table>
+<h3 id="33-recommendation">3.3 Recommendation</h3>
+<p><strong>Nabta | نبتة</strong> — full form: <strong>Nabta — School–Family Wellbeing | نبتة — برنامج التوازن العاطفي بين المدرسة والعائلة</strong></p>
+<p>Why Nabta wins:</p>
+<ol>
+<li><strong>Metaphor with a job.</strong> A seedling needs soil (family), light (school), and consistent care (the program). The metaphor explains the three-track model without a single extra word, and it feeds directly into the recommended "Seedling Embrace" logo concept (see <code>LOGO_BRAND_KIT.md</code>).</li>
+<li><strong>Bilingual grace.</strong> "Nabta" is effortless in English and beautiful in Arabic — rare in this shortlist.</li>
+<li><strong>Clean risk profile.</strong> Unlike Sanad and Jouzour, no <em>known</em> Lebanese institutional collision — though this is precisely what the formal checks must confirm.</li>
+<li><strong>Room to grow.</strong> "Nabta Wellbeing Calendar," "Nabta Parent Circles," "Nabta Teacher Sessions" — the name extends naturally into product naming.</li>
+</ol>
+<p><strong>Runner-up:</strong> Ghars (if Nabta fails checks). <strong>Eliminate early:</strong> Sanad and Jouzour unless checks surprise us. <strong>Keep:</strong> the English descriptive fallback as the permanent explanatory sub-line under Nabta.</p>
+<p><strong>Pre-launch checklist for the chosen name:</strong> Lebanese trademark search (Ministry of Economy &amp; Trade, relevant Nice classes — 41 education/training at minimum) → commercial registry search → domain check (nabta-wellbeing.com or similar; exact .com likely taken for a common noun — a modified domain is acceptable) → Instagram/LinkedIn/Facebook handle check → Google search in AR and EN for confusable organizations in education/health.</p>
+<hr />
+<h2 id="4-taglines">4. Taglines</h2>
+<h3 id="layer-1-dorina-personal-brand">Layer 1 — Dorina personal brand</h3>
+<p><strong>English options:</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tagline</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Practical tools for calmer homes and stronger children.</strong></td>
+<td><strong>Recommended.</strong> Concrete, benefit-led, zero jargon; works for every segment.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Raising confident children, together.</td>
+<td>Warm; "together" carries the school–family idea.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Where home and school grow together.</td>
+<td>Partnership-forward; best for Track 3 contexts.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Emotional wellbeing, made practical.</td>
+<td>Punchy positioning line; slightly abstract alone.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Helping parents raise emotionally strong children.</td>
+<td>Clear parent-facing promise; excludes the school side.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Arabic options</strong> (natural, warm MSA — not machine-literal):</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tagline</th>
+<th>Back-translation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>أدوات عملية لبيوتٍ أهدأ وأطفالٍ أقوى.</strong></td>
+<td>Practical tools for calmer homes and stronger children. <strong>Recommended</strong> (mirrors EN pick).</td>
+</tr>
+<tr>
+<td>2</td>
+<td>معًا نربّي أطفالًا واثقين.</td>
+<td>Together we raise confident children.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>حين يتعاون البيت والمدرسة، يزدهر الطفل.</td>
+<td>When home and school cooperate, the child flourishes.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>التوازن العاطفي… بخطوات عملية.</td>
+<td>Emotional balance… in practical steps.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>دعمٌ حقيقي للأهل، وثقة أكبر للأبناء.</td>
+<td>Real support for parents, greater confidence for children.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="layer-2-nabta-initiative">Layer 2 — Nabta (initiative)</h3>
+<p><strong>English options:</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tagline</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>Where wellbeing takes root.</strong></td>
+<td><strong>Recommended.</strong> Owns the seedling metaphor; institutional yet warm.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Growing emotionally strong school communities.</td>
+<td>Clear B2B promise; a touch long.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Rooted in care, growing with every child.</td>
+<td>Lyrical; good for campaign use.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>The school–family wellbeing partner.</td>
+<td>Category-claiming; best on proposals.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Small seeds, strong children.</td>
+<td>Memorable; slightly slogan-like for contracts.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Arabic options:</strong></p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Tagline</th>
+<th>Back-translation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>نزرع الثقة، فينمو الأطفال.</strong></td>
+<td>We plant confidence, and children grow. <strong>Recommended</strong> — active, warm, on-metaphor.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>حيث تنمو الطمأنينة في قلب المدرسة.</td>
+<td>Where reassurance grows at the heart of the school.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>من بذرةٍ صغيرة، طفلٌ واثق.</td>
+<td>From a small seed, a confident child.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>شريك المدرسة والعائلة في رعاية الطفل.</td>
+<td>The school and family's partner in caring for the child.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>نبتة… لينمو كل طفل بأمان.</td>
+<td>Nabta… so every child grows in safety.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Usage rule:</strong> one tagline per layer, used consistently for at least 12 months. The recommended EN/AR pairs are translations-in-spirit of each other, so bilingual materials never carry two different ideas.</p>
+<hr />
+<h2 id="5-brand-personality-archetype">5. Brand Personality &amp; Archetype</h2>
+<h3 id="archetype-caregiversage-blend-approx-6040">Archetype: Caregiver–Sage blend (approx. 60/40)</h3>
+<ul>
+<li><strong>Caregiver (dominant):</strong> protects, nurtures, reassures. This is why parents come and why schools trust her around children. Expressed as: warmth, patience, "you are not a bad parent" energy, safety-first practice.</li>
+<li><strong>Sage (supporting):</strong> knows, teaches, clarifies. This is why premium schools pay. Expressed as: frameworks, evidence-aware language, calm authority, structured programs.</li>
+</ul>
+<p>The blend produces the brand's signature feel: <strong>"confident care."</strong> Never clinical coldness (pure Sage risk), never soft vagueness (pure Caregiver risk).</p>
+<p><strong>Personality in five adjectives:</strong> warm, practical, credible, bilingual, steady.</p>
+<p><strong>Never:</strong> alarmist, preachy, mystical, clinical, salesy.</p>
+<h3 id="six-tone-of-voice-rules-with-dodont-pairs">Six tone-of-voice rules (with do/don't pairs)</h3>
+<p><strong>Rule 1 — Lead with the child and the family, never with the modality.</strong> <em>(school-facing)</em><br />
+- ✅ <strong>Do:</strong> "This workshop gives parents practical tools to support anxious children at home and reinforce what your counselors are doing at school."<br />
+- ❌ <strong>Don't:</strong> "As a Master in Clinical Hypnotherapy, Dorina uses hypnotherapy and NLP techniques with your students."</p>
+<p><strong>Rule 2 — Speak plainly; translate every concept into a kitchen-table sentence.</strong> <em>(parent-facing)</em><br />
+- ✅ <strong>Do:</strong> "You'll learn what to say — and what not to say — when your child comes home upset about school."<br />
+- ❌ <strong>Don't:</strong> "Participants will acquire co-regulation competencies and psychoeducational frameworks for affect management."</p>
+<p><strong>Rule 3 — Reassure, never alarm. No fear-based marketing, ever.</strong> <em>(social)</em><br />
+- ✅ <strong>Do:</strong> "Most children argue about homework. Here are three ways to lower the temperature tonight."<br />
+- ❌ <strong>Don't:</strong> "Is your child silently suffering? Ignoring these warning signs could damage them for life."</p>
+<p><strong>Rule 4 — Stay firmly non-clinical; support and refer, never diagnose or treat.</strong> <em>(all contexts)</em><br />
+- ✅ <strong>Do:</strong> "These are wellbeing tools, not therapy. When a child needs specialized care, we help families connect with licensed professionals."<br />
+- ❌ <strong>Don't:</strong> "We treat childhood anxiety and can resolve trauma in a few sessions."</p>
+<p><strong>Rule 5 — Honor both languages equally; write Arabic warm and natural, never machine-literal.</strong> <em>(parent-facing / social)</em><br />
+- ✅ <strong>Do:</strong> "كيف نساعد أولادنا على التعبير عن مشاعرهم من دون خوف؟ ورشة عملية للأهل باللغتين العربية والإنجليزية."<br />
+- ❌ <strong>Don't:</strong> English post with a stiff word-for-word Arabic translation pasted underneath ("الورشة سوف تقوم بتمكين الوالدين من أجل إدارة العواطف").</p>
+<p><strong>Rule 6 — Show partnership, not performance; the school is the hero of its own story.</strong> <em>(school-facing)</em><br />
+- ✅ <strong>Do:</strong> "Your school already invests in student wellbeing — this program extends that care into families' homes."<br />
+- ❌ <strong>Don't:</strong> "Schools are failing to address the emotional crisis. Dorina fixes what your staff can't."</p>
+<hr />
+<h2 id="6-messaging-hierarchy">6. Messaging Hierarchy</h2>
+<p>Four nested levels, each expanding the last. English masters below; Arabic versions live in <code>BILINGUAL_COPY_BANK.md</code>.</p>
+<h3 id="level-1-one-liner-15-words">Level 1 — One-liner (≤15 words)</h3>
+<blockquote>
+<p><strong>Bilingual parent &amp; child emotional wellbeing workshops and year-round school partnerships in Beirut.</strong></p>
+</blockquote>
+<p>Use: LinkedIn headline, email signature line 2, social bios, one-pager header.</p>
+<h3 id="level-2-elevator-pitch-60-words-20-seconds-spoken">Level 2 — Elevator pitch (~60 words, 20 seconds spoken)</h3>
+<blockquote>
+<p>Dorina helps schools and families strengthen children's emotional wellbeing through practical parent–child support, coaching-based tools, and bilingual workshops adapted to each school community. She runs parent workshops, child confidence and resilience sessions, and year-round school wellbeing partnerships across Beirut — in Arabic and English — always working alongside school counselors, never replacing them. It starts with a single pilot workshop.</p>
+</blockquote>
+<p>Use: discovery meetings, phone introductions, podcast intros, "About" openers.</p>
+<h3 id="level-3-100-word-boilerplate">Level 3 — 100-word boilerplate</h3>
+<blockquote>
+<p>Dorina [Last Name] is a Beirut-based parent–child emotional wellbeing facilitator working with schools, parents, and children across Lebanon in Arabic and English. Her workshops give parents practical tools for calmer communication, confident discipline, and supporting anxious children — and give children skills for self-esteem, emotional expression, and resilience. Beyond single workshops, Dorina partners with schools on year-round wellbeing programs: monthly parent sessions, child workshops, teacher–parent collaboration, and annual wellbeing calendars. Her training includes certified practitioner qualifications in coaching and therapeutic modalities — Master in Clinical Hypnotherapy, Master in NLP / Coaching, and Master in Time Line Therapy. Her approach is practical, non-clinical, and complementary to school counseling teams.</p>
+</blockquote>
+<p>Use: proposal "About" sections, press releases, event programs, website About page.</p>
+<h3 id="level-4-full-bio-220-words">Level 4 — Full bio (~220 words)</h3>
+<blockquote>
+<p>Dorina [Last Name] is a parent–child emotional wellbeing facilitator based in Beirut, Lebanon, working in Arabic and English with schools, parent communities, and children.</p>
+<p>Her work answers a question nearly every Lebanese school is asking today: how do we support children's emotional wellbeing when families are stretched and pressures on children keep rising? Dorina's answer is practical and partnership-based. For parents, she delivers workshops on calmer communication, emotional regulation at home, discipline without constant conflict, and supporting anxious children. For children, she runs small-group sessions building self-confidence, emotional expression, focus, and resilience — always with school staff present and full parental consent. For schools, she designs year-round wellbeing partnerships: monthly parent sessions, child workshop series, teacher–parent collaboration sessions, awareness campaigns, and an annual wellbeing calendar tailored to each community.</p>
+<p>Dorina's training includes certified practitioner qualifications in coaching and therapeutic modalities: Master in Clinical Hypnotherapy, Master in NLP / Coaching, and Master in Time Line Therapy. She works in a strictly non-clinical, trauma-sensitive frame — offering tools and support, not diagnosis or treatment — and refers families to licensed professionals whenever specialized care is needed.</p>
+<p>Her programs adapt to each school's context, from premium private and international schools to community schools and NGO education programs, and are delivered bilingually to meet each audience where it is.</p>
+</blockquote>
+<p>Use: speaker profiles, media kits, website, long-form proposals.</p>
+<p><strong>Hierarchy rule:</strong> lower levels must never contradict higher ones; credentials appear from Level 3 onward only, always after the value story, always with the exact wording.</p>
+<hr />
+<h2 id="7-visual-identity-direction-summary">7. Visual Identity Direction (Summary)</h2>
+<p>Full specifications, logo concepts, and production rules live in <strong><code>LOGO_BRAND_KIT.md</code></strong>. Summary for strategic alignment:</p>
+<ul>
+<li><strong>Palette:</strong> Deep Teal <code>#1F6F6B</code> (trust/calm — primary), Warm Sand <code>#E8DCC8</code> (warmth — background), Apricot <code>#F2A65A</code> (child energy — accent), Ink <code>#2B2B2B</code> (text), Soft White <code>#FAF7F2</code> (base). Deliberately <em>not</em> clinical blue-and-white, <em>not</em> primary-color kindergarten branding.</li>
+<li><strong>Typography:</strong> IBM Plex Sans (EN) + IBM Plex Sans Arabic (AR) — a genuinely harmonized bilingual pair; Fraunces as optional display serif for premium collateral warmth.</li>
+<li><strong>Logo direction:</strong> an abstract mark combining a growing leaf/seedling with an embracing curve (parent/child) — recommended concept "Seedling Embrace." No medical symbols (no brain, no cross, no couch), no childish clip-art. Must perform in AR-only, EN-only, and bilingual lockups.</li>
+<li><strong>Visual tone:</strong> warm-professional; real photography of Beirut classrooms and families (with strict consent rules) over stock clichés.</li>
+<li><strong>One system, two layers:</strong> Layer 1 (Dorina) and Layer 2 (Nabta) share palette and type; Nabta adds the symbol as its primary mark, so the future launch feels like a natural growth of the existing identity, not a rebrand.</li>
+</ul>
+<hr />
+<h2 id="8-brand-dos-donts">8. Brand Dos &amp; Don'ts</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>✅ Do</th>
+<th>❌ Don't</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Lead every first line with parenting, emotional wellbeing, coaching, resilience, child confidence, or school–family partnership</td>
+<td><strong>Never mention hypnotherapy in the first line</strong> (or headline, or subject line) of any school-, parent-, or public-facing material</td>
+</tr>
+<tr>
+<td>2</td>
+<td>State credentials <strong>exactly</strong>: <em>Master in Clinical Hypnotherapy; Master in NLP / Coaching; Master in Time Line Therapy</em> — framed as "certified practitioner trainings in coaching and therapeutic modalities," appearing after the value story</td>
+<td>Alter, abbreviate, or misspell credentials ("Master NPL," "time lie therapy"); imply medical licensure</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Use non-clinical language: "support," "tools," "skills," "wellbeing"; refer families to licensed professionals when needed</td>
+<td>Claim diagnosis, treatment, therapy for medical conditions, trauma <em>treatment</em>, or any replacement of school counselors/psychologists</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Follow child-protection practice: school staff present in child workshops, parental consent forms, alignment with school safeguarding policy and the spirit of Law 422 (2002)</td>
+<td>Work 1:1 with a child unobserved; photograph children without written consent; store child data casually</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Present prices as ranges "to validate in the first conversations"</td>
+<td>Publish fixed public price lists before market validation</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Caveat all initiative names as "pending trademark and commercial-registry checks"</td>
+<td>Print, register, or publicly launch "Nabta" (or any name) before checks clear</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Write Arabic as natural, warm MSA appropriate for Lebanon</td>
+<td>Publish machine-literal Arabic; fake-italicize or stretch Arabic script</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Use the fixed palette, fonts, and one consistent name spelling per script</td>
+<td>Use clinical blue-white schemes, alarm red, medical symbols, or vary name spellings between assets</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Frame NGOs (Himaya, Embrace, War Child, Right To Play) and school counselors as partners and referral allies</td>
+<td>Position against them as competitors, or criticize schools' current wellbeing efforts</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Keep every asset Dorina-specific and this-project-specific</td>
+<td>Reference any other project, client, or venture in any Dorina material</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="9-brand-rollout-roadmap-23-july-25-october-2026">9. Brand Rollout Roadmap (23 July – 25 October 2026)</h2>
+<p>Synchronized with <code>90_DAY_ACTION_PLAN.md</code>. School-year timing: Lebanese schools resume late September/early October — August is build month, September is outreach peak, October is delivery and conversion.</p>
+<h3 id="phase-a-foundation-weeks-12-23-july-9-aug">Phase A — Foundation (Weeks 1–2 · 23 July – 9 Aug)</h3>
+<ul>
+<li>Confirm last name usage + fixed AR/EN spellings with Dorina. <strong>Gate: Dorina approves.</strong></li>
+<li>Adopt core positioning sentence, Layer 1 name format, recommended taglines (EN+AR).</li>
+<li>Finalize this strategy + visual direction; commission logo from <code>LOGO_BRAND_KIT.md</code> (or generate AI drafts for designer refinement).</li>
+<li>Rewrite LinkedIn profile (per <code>EXECUTIVE_PRESENCE_LINKEDIN_X_PR.md</code>) using Level 1–3 messaging.</li>
+<li>Begin (background, low cost): preliminary registry/trademark screening of Nabta + shortlist.</li>
+</ul>
+<h3 id="phase-b-asset-build-weeks-35-10-30-aug">Phase B — Asset Build (Weeks 3–5 · 10 – 30 Aug)</h3>
+<ul>
+<li>Logo v1 delivered; apply to: one-pager, proposal template, workshop slide master, WhatsApp avatar, LinkedIn banner, email signature with Level 1 one-liner.</li>
+<li><code>BILINGUAL_COPY_BANK.md</code> blocks finalized (AR versions of §6 hierarchy).</li>
+<li>Photography: first branded portrait set of Dorina (warm, professional, per photo guidance in the brand kit).</li>
+<li><strong>Gate: AK + Dorina sign off on full Layer 1 identity before any school sees it.</strong></li>
+</ul>
+<h3 id="phase-c-visible-launch-weeks-69-31-aug-27-sep">Phase C — Visible Launch (Weeks 6–9 · 31 Aug – 27 Sep)</h3>
+<ul>
+<li>LinkedIn content engine live (12+ posts across the 90 days), all on-brand and bilingual where natural.</li>
+<li>Outreach wave to target schools using branded one-pager and proposal template (per <code>SCHOOL_OUTREACH_PLAYBOOK.md</code>) under the umbrella title <em>Parent &amp; Child Emotional Wellbeing Workshops for Schools in Beirut</em>.</li>
+<li>First media/podcast pitch using the Level 3 boilerplate.</li>
+</ul>
+<h3 id="phase-d-proof-conversion-weeks-1013-28-sep-25-oct">Phase D — Proof &amp; Conversion (Weeks 10–13 · 28 Sep – 25 Oct)</h3>
+<ul>
+<li>Pilot workshops delivered fully on-brand (slides, feedback forms, certificates of participation for parents).</li>
+<li>Capture proof assets: testimonials (2 target), consented photos, NPS ≥ 8.5 feedback data — these become the future Nabta launch material.</li>
+<li>First annual partnership proposals issued under the premium umbrella <em>School–Family Emotional Wellbeing Programs</em>.</li>
+<li>Day-90 review: if partnership momentum confirms the trigger trajectory, greenlight full legal checks for Nabta.</li>
+</ul>
+<h3 id="phase-e-layer-2-preparation-postday-90-indicative-q1-2027">Phase E — Layer 2 Preparation (post–day 90, indicative Q1 2027)</h3>
+<ul>
+<li><strong>Trigger check: 2–3 partnerships signed → launch Nabta.</strong></li>
+<li>Complete trademark/registry clearance → register entity → activate Nabta lockups (already designed in the brand kit) → switch formal signature to <strong>"Dorina [Last Name], Founder of Nabta — School–Family Wellbeing"</strong> → announce via LinkedIn + PR with school proof stories.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Milestone</th>
+<th>Target date</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Names/spellings confirmed with Dorina</td>
+<td>1 Aug 2026</td>
+<td>Dorina + AK</td>
+</tr>
+<tr>
+<td>Layer 1 identity signed off</td>
+<td>30 Aug 2026</td>
+<td>Dorina + AK</td>
+</tr>
+<tr>
+<td>All outreach assets branded</td>
+<td>6 Sep 2026</td>
+<td>AK</td>
+</tr>
+<tr>
+<td>First on-brand pilot delivered</td>
+<td>mid-Oct 2026</td>
+<td>Dorina</td>
+</tr>
+<tr>
+<td>Day-90 brand review + Nabta go/no-go on checks</td>
+<td>25 Oct 2026</td>
+<td>AK + Dorina</td>
+</tr>
+<tr>
+<td>Nabta launch (if trigger met + checks clear)</td>
+<td>Q1 2027</td>
+<td>Dorina + AK</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><em>End of BRAND_STRATEGY.md. Companion documents: <code>LOGO_BRAND_KIT.md</code> (visual system), <code>BILINGUAL_COPY_BANK.md</code> (Arabic copy), <code>EXECUTIVE_PRESENCE_LINKEDIN_X_PR.md</code> (channel execution), <code>90_DAY_ACTION_PLAN.md</code> (weekly plan).</em></p></article>
+    <nav class="footer-nav"><a href="MASTER_PLAN.html">← Previous<br>A-to-Z Strategic Plan</a><span></span><a href="LOGO_BRAND_KIT.html">Next →<br>Logo &amp; Brand Kit</a></nav>
+  </section>
+</main>
+<script>
+document.querySelectorAll('.article p, .article li, .article td, .article blockquote').forEach(el=>{if(/[؀-ۿ]/.test(el.textContent)) el.setAttribute('dir','auto');});
+</script>
+</body></html>
